@@ -1,5 +1,11 @@
 {
   "name": "nurse_and_doc",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "tailwindcss": "^0.6.6"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
 }
