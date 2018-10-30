@@ -25,5 +25,7 @@ module NurseAndDoc
       generate.controller_specs false
       generate.system_tests = false
     end
+    config.i18n.available_locales = [:se, :en]
+    config.i18n.default_locale = :en
   end
 end
