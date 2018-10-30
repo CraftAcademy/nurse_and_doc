@@ -8,4 +8,4 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
-import "../css/tailwind.css"
+import "../css/tailwind.scss"
