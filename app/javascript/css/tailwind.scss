@@ -4,16 +4,29 @@
 
 @tailwind utilities;
 
-.left-grid {
-    @apply w-1/4 flex flex-wrap -mb-4 mb-4 bg-grey-light h-screen ;
-}
 
-.contain-grid {
-    @apply  flex flex-wrap -mb-4 px-2 bg-grey h-screen ;
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1px 1px;
+    grid-template-areas: "sidebar jobs shifts";
 }
-
-.right-grid {
-    @apply w-1/4 px-2  h-screen ;
+  
+.sidebar { 
+    grid-area: sidebar; 
+    border: dashed black;
+}
+  
+.jobs { 
+    grid-area: jobs;
+    border: dashed black; 
+}
+  
+.shifts { 
+    grid-area: shifts;
+    border: dashed black; 
 }
 
 .ca-button {
