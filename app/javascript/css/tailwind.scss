@@ -4,3 +4,63 @@
 
 @tailwind utilities;
 
+.ca-button {
+    @apply bg-orange-ca text-white ml-4 py-2 px-3 no-underline ;
+}
+
+
+.ca-button:hover {
+    @apply bg-orange-ca-light ;
+}
+
+.ca-button-transparent {
+    @apply flex-no-shrink border-transparent border-4 text-grey text-sm py-1 px-2 rounded ;
+}
+
+.ca-button-transparent:hover {
+    @apply text-grey-darker ;
+}
+
+.ca-header-link {
+    @apply inline-block py-2 px-3 text-grey-darkest no-underline ;
+}
+
+.ca-header-link:hover {
+    @apply text-grey-darker ;
+}
+
+.ca-footer-header {
+    @apply inline-block py-2 px-3 text-white uppercase no-underline font-medium tracking-wide ;
+}
+
+.ca-footer-link {
+    @apply inline-block py-2 px-3 text-white no-underline ;
+}
+
+.ca-footer-link:hover {
+    @apply text-grey-lighter ;
+}
+
+.ca-footer-icon-link {
+    @apply  block flex items-center text-white mr-6 no-underline ;
+}
+
+.ca-footer-icon-link:hover {
+    @apply  text-grey-lighter ;
+}
+
+.ca-footer-copyright {
+    @apply pt-4 mt-4 text-xs text-white border-t border-white text-center ;
+}
+
+.ca-form-label {
+    @apply block uppercase tracking-wide text-grey-darker text-xs mb-2 ; 
+}
+
+.ca-form-input-field {
+    @apply appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight ;
+}
+
+.ca-form-input-field:focus {
+    @apply outline-none bg-white;
+}
