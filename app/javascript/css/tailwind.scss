@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+.contain-grid {
+    @apply 
+}
+
 .ca-button {
     @apply bg-blue text-white ml-4 py-2 px-3 no-underline ;
 }
@@ -19,6 +23,10 @@
 .ca-button-transparent:hover {
     @apply text-grey-darker ;
 }
+
+.header {
+    @apply px-10 py-10 text-left bg-blue-dark text-white text-2xl ;
+} 
 
 .ca-header-link {
     @apply inline-block py-2 px-3 text-grey-darkest no-underline ;

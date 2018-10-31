@@ -1,11 +1,10 @@
-#sidebar.overflow-hidden.shadow-lg.border-t-4.bg-white.mb-4.rounded-b-lg.rounded-t.w-full{:class => "md:w-1/5"}
-  .px-6.py-4.mb-2.mt-4.mb-8
-    .flex.cursor-pointer.border.px-4.py-2.text-lg.text-grey-darkest.border-b-0
-      %svg{:height => "18", :viewbox => "0 0 1792 1792", :width => "18"}
-        .pl-2 Jobs
-    .flex.cursor-pointer.border.px-4.py-2.text-lg.text-grey-darkest.border-b-0
-      %svg{:height => "18", :viewbox => "0 0 2048 1792", :width => "18"}
-        .pl-2 Hospitals
-    .flex.cursor-pointer.border.px-4.py-2.text-lg.text-grey-darkest
-      %svg{:height => "18", :viewbox => "0 0 2048 1792", :width => "18"}
-        .pl-2 Staffing Companies
+#sidebar.bg-white.shadow.w-64.my-2
+  %ul.list-reset
+    %li
+      %a.block.p-4.text-grey-darker.font-bold.border-purple.hover:bg-grey-lighter.border-r-4{:href => "#"} Home
+    %li
+      %a.block.p-4.text-grey-darker.font-bold.border-grey-lighter.hover:border-purple-light.hover:bg-grey-lighter.border-r-4{:href => "#"} Jobs
+    %li
+      %a.block.p-4.text-grey-darker.font-bold.border-grey-lighter.hover:border-purple-light.hover:bg-grey-lighter.border-r-4{:href => "#"} Hospitals
+    %li
+      %a.block.p-4.text-grey-darker.font-bold.border-grey-lighter.hover:border-purple-light.hover:bg-grey-lighter.border-r-4{:href => "#"} Staffing Companies
