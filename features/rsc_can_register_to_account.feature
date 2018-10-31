@@ -6,7 +6,7 @@ Feature: Login capabilities
     I would like to be able to register to the website
 
     Scenario: RSC can sucessfully register to rsc management platform
-        Given I visit the site
+        Given I am on the landing page
         And I click on "Sign up"
         Then I should be on the signup page
         And I fill in "Email" with "email@email.com"
@@ -20,6 +20,7 @@ Feature: Login capabilities
         When I click on the link "Sign up"
         And I fill in the "Email" with "jorge@kalle.com"
         And I fill in the "Password" with "password"
+        And I click on "Sign up"
         Then I should see the message "Invalid Email"
         
     Scenario: Sad path RSC cannot sucessfully register to rsc management platform - password too short
@@ -27,4 +28,5 @@ Feature: Login capabilities
         When I click on the link "Sign up"
         And I fill in the "Email" with "jorge@kalle.com"
         And I fill in the "Password" with "psw"
+        And I click on "Sign up"
         Then I should see the message "Password needs to be minimum 6 characters long"
