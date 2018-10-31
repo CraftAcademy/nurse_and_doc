@@ -5,7 +5,7 @@ Given("the following registered RSC exist") do |table|
 end
 
 Given("I am on the landing page") do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit root_path  
 end
 
 Given("I fill in {string} with {string}") do |string, string2|
