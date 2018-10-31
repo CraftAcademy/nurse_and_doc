@@ -2,31 +2,24 @@
 
 Feature: Login capabilities
     As a RSC,
-    In order to access content,
-    I would like to be able to register to the website
+    In order to access content and have ability to create other RSC users,
+    I would like to be able to register to the website 
 
-    Scenario: RSC can sucessfully register to rsc management platform
+
+    Given the following registered RSC exist
+            | email           | password   | 
+            | email@email.com | mypassword |
+    And the RSC user is logged in as "email@email.com"
+
+    Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I am on the landing page
-        And I click on "Sign up"
-        Then I should be on the signup page
+        And I click on the button "add RSC user"
         And I fill in "Email" with "email@email.com"
-        And I fill in "Password" with "mypassword"
-        And I fill in "Password confirmation" with "mypassword"
-        And I click on "Sign up"
-        Then I should see "You have signed up successfully."
+        And I fill in "Password" with "password"
+        And I click on "Create account"
+        And I click on "Send"
+        Then I should see "You have successfully sent an invitation."
 
-    Scenario: Sad path RSC cannot sucessfully register to rsc management platform - already used email
-        Given I am on the landing page
-        When I click on the link "Sign up"
-        And I fill in the "Email" with "jorge@kalle.com"
-        And I fill in the "Password" with "password"
-        And I click on "Sign up"
-        Then I should see the message "Invalid Email"
         
-    Scenario: Sad path RSC cannot sucessfully register to rsc management platform - password too short
-        Given I am on the landing page
-        When I click on the link "Sign up"
-        And I fill in the "Email" with "jorge@kalle.com"
-        And I fill in the "Password" with "psw"
-        And I click on "Sign up"
-        Then I should see the message "Password needs to be minimum 6 characters long"
+
+
