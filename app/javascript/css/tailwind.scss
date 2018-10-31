@@ -4,8 +4,16 @@
 
 @tailwind utilities;
 
+.left-grid {
+    @apply w-1/4 flex flex-wrap -mb-4 mb-4 bg-grey-light h-screen ;
+}
+
 .contain-grid {
-    @apply 
+    @apply  flex flex-wrap -mb-4 px-2 bg-grey h-screen ;
+}
+
+.right-grid {
+    @apply w-1/4 px-2  h-screen ;
 }
 
 .ca-button {
