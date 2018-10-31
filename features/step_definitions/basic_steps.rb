@@ -4,10 +4,6 @@ Given("the following registered RSC exist") do |table|
     end
 end
 
-Given("the RSC user is logged in as {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-
 Given("I am on the landing page") do
     pending # Write code here that turns the phrase above into concrete actions
 end
