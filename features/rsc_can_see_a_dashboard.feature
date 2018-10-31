@@ -5,7 +5,7 @@ Feature: RSC Dashboard
 
     Scenario: Seeing the dashboard
         Given I am on the dashboard page
-        Then I should see "RSC dashboard"
+        Then I should see "RSC Dashboard"
         And I should see "Jobs" within the "sidebar" section
         And I should see "Staffing Companies"
         And I should see "Gothenburg Hospital"
