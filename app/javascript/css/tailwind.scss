@@ -18,6 +18,13 @@
 #sidebar { 
     grid-area: sidebar;
     border: dashed black;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    li {
+        margin: 5px;
+        list-style-type: none;
+    }
 }
   
 #jobs { 
@@ -31,7 +38,7 @@
 }
 
 .ca-button {
-    @apply bg-blue text-white ml-4 py-2 px-3 no-underline ;
+    @apply bg-blue text-white ml-4 py-2 px-3 no-underline rounded ;
 }
 
 .ca-button:hover {
