@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
+  def index
+  end
+  
   def new
   end
 
   def create
+    binding.pry
     @user = User.create(user_params)
     if @user.persisted?
       redirect_to root_path,  notice:  "RSC user newrsc@email.com created" # add email #{@user.} 
@@ -14,6 +18,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email)
+    params.require(:user).permit(:email, :id)
   end
 end

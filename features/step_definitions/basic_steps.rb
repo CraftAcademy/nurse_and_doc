@@ -5,14 +5,14 @@ Given("the following registered RSC exist") do |table|
 end
 
 Given("I am on the create RSC page") do
-    visit new_user_session_path
+    visit new_user_path
 end
 
 Given("I fill in {string} with {string}") do |field, content|
     fill_in field, with: content
 end
 
-Given("I click on {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Given("I click on {string}") do |link|
+    click_on link
 end
   
