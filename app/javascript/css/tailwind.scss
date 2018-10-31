@@ -29,7 +29,15 @@
   
 #jobs { 
     grid-area: jobs;
-    border: dashed black; 
+    border: dashed black;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    li {
+        margin: 5px;
+        align-items: left;
+        list-style-type: none;
+    } 
 }
   
 #shifts { 
