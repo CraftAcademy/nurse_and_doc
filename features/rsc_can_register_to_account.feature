@@ -12,13 +12,10 @@ Feature: Login capabilities
     And the RSC user is logged in as "email@email.com"
 
     Scenario: RSC can sucessfully add another RSC user to access the platform
-        Given I am on the landing page
-        And I click on "add RSC user"
-        And I fill in "Email" with "email@email.com"
-        And I fill in "Password" with "password"
+        Given I am on the create RSC page
+        And I fill in "Email" with "newrsc@email.com"
         And I click on "Create account"
-        And I click on "Send"
-        Then I should see "You have successfully sent an invitation."
+        Then I should see "RSC user newrsc@email.com created"
 
         
 

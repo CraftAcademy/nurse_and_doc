@@ -4,8 +4,8 @@ Given("the following registered RSC exist") do |table|
     end
 end
 
-Given("I am on the landing page") do
-    visit root_path  
+Given("I am on the create RSC page") do
+    visit new_user_session_path
 end
 
 Given("I fill in {string} with {string}") do |string, string2|

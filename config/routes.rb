@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/create'
+  root controller: :users, action: :new
   devise_for :users
   scope '(:locale)', locale: /en|sv/ do
   end
