@@ -7,24 +7,25 @@
 
 .grid-container {
     display: grid;
-    height: 100%;
+    height: 90vh;
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 1fr;
-    grid-gap: 1px 1px;
+    grid-gap: 10px;
+    margin: 10px 5px;
     grid-template-areas: "sidebar jobs shifts";
 }
   
-.sidebar { 
+#sidebar { 
     grid-area: sidebar;
     border: dashed black;
 }
   
-.jobs { 
+#jobs { 
     grid-area: jobs;
     border: dashed black; 
 }
   
-.shifts { 
+#shifts { 
     grid-area: shifts;
     border: dashed black; 
 }
