@@ -1,5 +1,3 @@
-@javascript
-
 Feature: RSC Dashboard
     As a RSC,
     In order to create and modify relevant informations to be sent out to RSC,
@@ -12,4 +10,3 @@ Feature: RSC Dashboard
         And I should see "Hospitals" within the "sidebar" section
         And I should see "Staffing Companies" within the "sidebar" section
         And I should see "Job 1"
-
