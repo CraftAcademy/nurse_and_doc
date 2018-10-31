@@ -5,7 +5,7 @@ Feature: Login capabilities
     In order to access content and have ability to create other RSC users,
     I would like to be able to register to the website 
 
-
+    Background: 
     Given the following registered RSC exist
             | email           | password   | 
             | email@email.com | mypassword |
@@ -13,7 +13,7 @@ Feature: Login capabilities
 
     Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I am on the landing page
-        And I click on the button "add RSC user"
+        And I click on "add RSC user"
         And I fill in "Email" with "email@email.com"
         And I fill in "Password" with "password"
         And I click on "Create account"
