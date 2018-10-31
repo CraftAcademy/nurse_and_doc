@@ -14,7 +14,7 @@ Feature: Login capabilities
     Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I am on the create RSC page
         And I fill in "Email" with "newrsc@email.com"
-        And I click on "Create account"
+        And I click on "Create RSC account"
         Then I should see "RSC user newrsc@email.com created"
 
         

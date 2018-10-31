@@ -1,2 +1,9 @@
-%h1 Users#new
-%p Find me in app/views/users/new.html.haml
+= form_with scope: :user, local: true do |form|
+  %p
+    = form.label :email 
+    %br/
+    = form.text_field :email, class: "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+    = form.submit "Create RSC Account", class: "inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker"
+
+
+
