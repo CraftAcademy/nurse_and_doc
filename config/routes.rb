@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root controller: :hospital, action: :index 
+  root controller: :jobs, action: :index 
   scope '(:locale)', locale: /en|sv/ do
   end
 end

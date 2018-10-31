@@ -1,5 +1,5 @@
-Then("I should see {string} within the {string} section") do |content, categories|
-    within(:css, '#categories') {
+Then("I should see {string} within the {string} section") do |content, sidebar|
+    within(:css, '#sidebar') {
       expect(page).to have_content content 
     }  
 end
