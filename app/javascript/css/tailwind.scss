@@ -30,18 +30,21 @@
 #jobs { 
     grid-area: jobs;
     // border: dashed black;
-    align-content: space-between;
+    h1{
+        text-align: center;
+    }
     table {
         width: 90%;
         padding: 5px;
     
         td {
-            padding: 5px;
+            justify-content: center;
         }
         
         tr {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            background-color: blue;
         }
     }
 }
