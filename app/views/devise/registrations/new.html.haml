@@ -1,6 +1,7 @@
 .logincard
   .cardbackground
-    %h2.block.text-blue-dark.text-xl.text-center.font-bold.pb-2 Sign up
+    .cardtext
+      %h2 Sign up
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = devise_error_messages!
       .field

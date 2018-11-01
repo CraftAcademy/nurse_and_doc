@@ -51,3 +51,7 @@
 .signupbutton:focus {
     @apply outline-none shadow-outline;
 }
+
+.cardtext {
+    @apply block text-blue-dark text-sm text-center font-bold pb-2;
+}

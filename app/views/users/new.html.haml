@@ -1,11 +1,12 @@
 = link_to "Logout", destroy_user_session_path, method: :delete
 .logincard
-  .bg-grey-lightest.shadow-md.rounded.px-8.pt-6.pb-8.mb-8
-    %h2.block.text-blue-dark.text-xl.text-center.font-bold.pb-2 Add new RSC user
+  .cardbackground
+    .cardtext
+      %h2 Add new RSC user
     = form_with scope: :user, url: users_path, local: true do |form|
-      .field.pb-2.pt-2
-        = form.label :email, class: "inline-flex leading-tight text-blue-dark text-sm font-bold"
-      .field.pb-2.pt-2
-        = form.text_field :email, class: "block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:shadow-outline", autofocus: true, autocomplete: "email"
-      .field.pb-2.pt-2
-        = form.submit "Create RSC account", class: "bg-blue hover:bg-blue-dark text-white flex-item-center font-bold py-2 px-4 pt-2 mb-2 rounded focus:outline-none focus:shadow-outline"
+      .field
+        = form.label :email, class: "emaillabel"
+      .field
+        = form.text_field :email, class: "emailfield", autofocus: true, autocomplete: "email"
+      .field
+        = form.submit "Create RSC account", class: "signupbutton"
