@@ -7,13 +7,12 @@ class UsersController < ApplicationController
 
   def create
     binding.pry
-    @user = User.from_devise(user_params)
-    if @user.persisted?
-      redirect_to root_path,  notice:  "RSC user newrsc@email.com created" # add email #{@user.} 
-    else
-      flash[:error] = "Fields can't be blank. Your user could not be saved"
-      render :new
-    end
+    user = User.create(user_params.merge(password: Devise.friendly_token[0, 20]))
+    @message = if user.persisted?
+                 'A new user has been created'
+               else
+                 'This did not work'
+               end
   end
 
   private
