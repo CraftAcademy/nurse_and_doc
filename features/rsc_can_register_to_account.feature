@@ -15,7 +15,7 @@ Feature: Login capabilities
         Given I am on the create RSC page
         And I fill in "Email" with "newrsc@email.com"
         And I click on "Create RSC account"
-        Then I should see the message "RSC user newrsc@email.com created"
+        Then I should see the message "RSC user newrsc@email.com created, currently logged in as email@email.com."
     
     Scenario: RSC unsucessfully create another RSC user with invalid email or password
         Given I am on the create RSC page
