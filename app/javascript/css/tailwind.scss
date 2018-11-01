@@ -33,13 +33,24 @@
     display: grid;
     justify-content: center;
     align-content: start;
-    li {
-        margin: 5px;
-        align-items: left;
-        list-style-type: none;
-    } 
 }
-  
+
+table {
+    border: 1px solid black;
+    width: 80%;
+    padding: 5px;
+
+    td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+    
+    tr {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 #shifts { 
     grid-area: shifts;
     border: dashed black; 
