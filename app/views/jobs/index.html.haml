@@ -1,14 +1,8 @@
 .grid-container
   #sidebar
-    %ul
-    %li 
-    %button.ca-button Jobs
-    %li 
-    %button.ca-button Hospitals
-    %li 
-    %button.ca-button Staffing Companies
+    = render partial: 'partials/sidebar'
   #jobs
-    %h1 t('Jobs
+    %h1= t :jobs
     %table
       %tr
         %td Job 1
