@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def create
     binding.pry
-    @user = User.create(user_params)
+    @user = User.from_devise(user_params)
     if @user.persisted?
       redirect_to root_path,  notice:  "RSC user newrsc@email.com created" # add email #{@user.} 
     else
