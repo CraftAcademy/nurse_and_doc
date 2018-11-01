@@ -16,7 +16,11 @@ Feature: Login capabilities
         And I fill in "Email" with "newrsc@email.com"
         And I click on "Create RSC account"
         Then I should see the message "RSC user newrsc@email.com created"
-
-        
+    
+    Scenario: RSC unsucessfully create another RSC user with invalid email or password
+        Given I am on the create RSC page
+        And I fill in "Email" with "new_rsc"
+        And I click on "Create RSC account"
+        Then I should see the message "Invalid Email or password."
 
 
