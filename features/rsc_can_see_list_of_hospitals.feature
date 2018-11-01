@@ -12,8 +12,8 @@ Feature: RSC Can See List of Hospitals
 
     Scenario: 
         Given I am on the hospital page
-        Then I should see "Hospital 1" as a "card" item
-        And I should not see "Hospital 3" as a "card" item
+        Then I should see "Hospital 1" within the ".card" section
+        And I should not see "Hospital 3" within the ".card" section
 
 
 
