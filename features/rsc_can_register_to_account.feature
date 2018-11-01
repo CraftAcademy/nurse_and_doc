@@ -1,6 +1,6 @@
 @javascript
 
-Feature: Login capabilities
+Feature: RSC creates a new rsc user
     As an RSC, 
     In order to have a multiple RSC users in a region,
     I would like to add more RSCs to manage assignments by using their email address
