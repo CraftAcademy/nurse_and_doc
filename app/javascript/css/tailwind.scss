@@ -4,11 +4,10 @@
 
 @tailwind utilities;
 
-
 .grid-container {
     display: grid;
     height: 90vh;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.3fr 0.7fr 0.5fr;
     grid-template-rows: 1fr;
     grid-gap: 10px;
     margin: 10px 5px;
