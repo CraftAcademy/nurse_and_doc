@@ -1,21 +1,21 @@
-.w-full.max-w-lg.container.mx-auto.px-4
-  .bg-grey-lightest.shadow-md.rounded.px-8.pt-6.pb-8.mb-8
+.logincard
+  .cardbackground
     %h2.block.text-blue-dark.text-xl.text-center.font-bold.pb-2 Sign up
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = devise_error_messages!
-      .field.pb-2.pt-2
-        = f.label :email, class: "inline-flex leading-tight text-blue-dark text-sm font-bold"
-        = f.email_field :email, class: "block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:shadow-outline", autofocus: true, autocomplete: "email"
-      .field.pb-2.pt-2
-        = f.label :password, class: "inline-flex text-blue-dark text-sm font-bold mb-2"
+      .field
+        = f.label :email, class: "emaillabel"
+        = f.email_field :email, class: "emailfield", autofocus: true, autocomplete: "email"
+      .field
+        = f.label :password, class: "emaillabel"
         - if @minimum_password_length
           %em
             (#{@minimum_password_length} characters minimum)
           %br/
-          = f.password_field :password, autocomplete: "new-password", class: "block flex shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-      .field.pb-2.pt-2
-        = f.label :password_confirmation, class: "inline-flex text-blue-dark text-sm font-bold mb-2"
-        = f.password_field :password_confirmation, autocomplete: "new-password", class: "block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+          = f.password_field :password, autocomplete: "new-password", class: "passwordfield"
+      .field
+        = f.label :password_confirmation, class: "emaillabel"
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: "emailfield"
       .actions
-        = f.submit "Sign up", class: "bg-blue hover:bg-blue-dark text-white flex-item-center font-bold py-2 px-4 pt-2 mb-2 rounded focus:outline-none focus:shadow-outline"
+        = f.submit "Sign up", class: "signupbutton"
         = render "devise/shared/links"

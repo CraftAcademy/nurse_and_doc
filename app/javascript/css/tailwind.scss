@@ -3,3 +3,51 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.logincard {
+    @apply w-full max-w-lg mx-auto px-4;
+}
+
+.registrationbox {
+    @apply bg-grey-lightest shadow-md rounded px-8 pt-6 pb-8 mb-8;
+}
+
+.cardbackground {
+    @apply bg-grey-lightest shadow-md rounded px-8 pt-6 pb-8 mb-8;
+}
+
+.field {
+    @apply pb-2 pt-2;
+}
+
+.emaillabel {
+    @apply inline-flex leading-tight text-blue-dark text-sm font-bold;
+}
+
+.emailfield {
+    @apply block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
+}
+
+.emailfield:focus {
+    @apply outline-none shadow-outline;
+}
+
+.passwordfield {
+    @apply block flex shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
+}
+
+.passwordfield:focus {
+    @apply outline-none shadow-outline;
+}
+
+.signupbutton {
+    @apply bg-blue text-white font-bold py-2 px-4 pt-2 mb-2 rounded;
+}
+
+.signupbutton:hover {
+    @apply bg-blue-dark;
+}
+
+.signupbutton:focus {
+    @apply outline-none shadow-outline;
+}

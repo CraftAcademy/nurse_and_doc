@@ -1,5 +1,5 @@
 = link_to "Logout", destroy_user_session_path, method: :delete
-.w-full.max-w-lg.container.mx-auto.px-4
+.logincard
   .bg-grey-lightest.shadow-md.rounded.px-8.pt-6.pb-8.mb-8
     %h2.block.text-blue-dark.text-xl.text-center.font-bold.pb-2 Add new RSC user
     = form_with scope: :user, url: users_path, local: true do |form|
