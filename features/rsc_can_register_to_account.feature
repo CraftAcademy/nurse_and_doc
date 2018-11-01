@@ -1,9 +1,9 @@
 @javascript
 
 Feature: Login capabilities
-    As a RSC,
-    In order to access content and have ability to create other RSC users,
-    I would like to be able to register to the website 
+    As an RSC, 
+    In order to have a multiple RSC users in a region,
+    I would like to add more RSCs to manage assignments by using their email address
 
     Background: 
     Given the following registered RSC exist
@@ -22,5 +22,16 @@ Feature: Login capabilities
         And I fill in "Email" with "new_rsc"
         And I click on "Create RSC account"
         Then I should see the message "Invalid Email"
+
+    Scenario: RSC logs out and try to log in with an the incorrect email
+        Given I am on the create RSC page
+        And I click on "Logout"
+        Then I should be on the landing page
+        And I click on "Login"
+        And I fill in "Email" with "wrong@email.com"
+        And I fill in "Password" with "pass"
+        And I click on "Log in"
+        Then I should see the message "Invalid Email or password"
+
 
 

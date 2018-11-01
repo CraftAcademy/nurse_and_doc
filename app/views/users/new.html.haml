@@ -1,3 +1,4 @@
+= link_to "Logout", destroy_user_session_path, method: :delete
 = form_with scope: :user, url: users_path, local: true do |form|
   %p
     = form.label :email 
