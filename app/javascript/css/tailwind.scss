@@ -18,8 +18,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     @apply bg-grey-darkest px-16 py-6 ;
-    span {
-        @apply font-semibold text-4xl text-white tracking-tight ;
+    h1 {
+        @apply font-semibold text-4xl text-white tracking-tight w-full flex-grow ;
     }
 }
 
