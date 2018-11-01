@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
   def index
-    @staffcos = Staffcos.all
+    @staffcos = Staffco.all
   end
 end

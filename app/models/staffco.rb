@@ -1,0 +1,2 @@
+class Staffco < ApplicationRecord
+end
