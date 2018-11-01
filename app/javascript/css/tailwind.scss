@@ -22,7 +22,15 @@
 }
 
 #listitem {
-    @apply flex mt-4 items-center;
+    @apply flex mb-4 items-center;
+}
+
+#hospname {
+    @apply text-left;
+}
+
+#hosp-button {
+    @apply text-right;
 }
 
 .addfieldplaceholder {
