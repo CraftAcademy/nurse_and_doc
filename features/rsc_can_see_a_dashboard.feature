@@ -14,7 +14,7 @@ Feature: RSC Dashboard
     Scenario: RSC can see the dashboard in swedish
         Given I am on the dashboard page
         Then I should see "RSC Dashboard"
-        And I click the "Language" button
+        And I click the "Svenska" link
         Then I should see "Jobb" within the "sidebar" section
         And I should see "Sjukhus" within the "sidebar" section
         And I should see "Bemanningsföretag" within the "sidebar" section
