@@ -15,7 +15,7 @@ Feature: Login capabilities
         Given I am on the create RSC page
         And I fill in "Email" with "newrsc@email.com"
         And I click on "Create RSC account"
-        Then I should see "RSC user newrsc@email.com created"
+        Then I should see the message "RSC user newrsc@email.com created"
 
         
 

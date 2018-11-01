@@ -6,10 +6,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
     user = User.create(user_params.merge(password: Devise.friendly_token[0, 20]))
     @message = if user.persisted?
-                 'A new user has been created'
+                 "RSC user #{User.last.email} created"
                else
                  'This did not work'
                end
