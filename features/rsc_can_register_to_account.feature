@@ -21,6 +21,6 @@ Feature: Login capabilities
         Given I am on the create RSC page
         And I fill in "Email" with "new_rsc"
         And I click on "Create RSC account"
-        Then I should see the message "Invalid Email or password."
+        Then I should see the message "Invalid Email"
 
 

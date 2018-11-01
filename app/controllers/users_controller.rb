@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if user.persisted?
     redirect_to root_path, notice: "RSC user #{User.last.email} created"
     else
-    redirect_to root_path, notice: "Invalid Email or password."
+    redirect_to root_path, notice: "Invalid Email"
     end
   end
 
