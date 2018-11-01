@@ -9,14 +9,11 @@
     height: 90vh;
     grid-template-columns: 0.2fr 0.9fr 0.3fr;
     grid-template-rows: 1fr;
-    // grid-gap: 10px;
-    // margin: 10px 5px;
     grid-template-areas: "sidebar jobs shifts";
 }
   
 #sidebar { 
     grid-area: sidebar;
-    // border: dashed black;
     background-color: lightgray;
     display: grid;
     justify-content: center;
@@ -29,7 +26,6 @@
   
 #jobs { 
     grid-area: jobs;
-    // border: dashed black;
     h1{
         text-align: center;
         padding: 15px;
@@ -40,23 +36,20 @@
         padding: 5px;
     
         td {
-            align-content: center;
+            align-content:right;
         }   
           
         tr {
             display: flex;
             justify-content: space-around;
             margin-bottom: 10px;
-            @apply ml-4 py-2 px-3 bg-blue rounded ;
+            @apply ml-6 py-4 px-3 bg-grey-light rounded ;
         }
     }
 }
 
-
-
 #shifts { 
     grid-area: shifts;
-    border: dashed black; 
 }
 
 .ca-button {
