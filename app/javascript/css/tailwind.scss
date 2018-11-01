@@ -7,28 +7,29 @@
 .grid-container {
     display: grid;
     height: 90vh;
-    grid-template-columns: 0.3fr 0.7fr 0.5fr;
+    grid-template-columns: 0.2fr 0.9fr 0.3fr;
     grid-template-rows: 1fr;
-    grid-gap: 10px;
-    margin: 10px 5px;
+    // grid-gap: 10px;
+    // margin: 10px 5px;
     grid-template-areas: "sidebar jobs shifts";
 }
   
 #sidebar { 
     grid-area: sidebar;
-    border: dashed black;
+    // border: dashed black;
+    background-color: lightgray;
     display: grid;
     justify-content: center;
     align-content: start;
     li {
-        margin: 5px;
+        margin: 10px;
         list-style-type: none;
     }
 }
   
 #jobs { 
     grid-area: jobs;
-    border: dashed black;
+    // border: dashed black;
     display: grid;
     justify-content: center;
     align-content: start;
