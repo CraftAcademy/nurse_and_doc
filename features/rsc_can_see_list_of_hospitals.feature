@@ -5,7 +5,7 @@ Feature: RSC Can See List of Hospitals
         I would like to be able to see a list of hospitals in my region.
 
 Background: 
-        Given the following hospital exists
+        Given the following hospitals exists
             | name        | 
             | Hospital 1  | 
             | Hospital 2  |
