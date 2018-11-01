@@ -13,8 +13,10 @@
 }
   
 #header {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    height: 15vh;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 1fr;
     @apply bg-grey-darkest px-16 py-6 ;
     h1 {
         @apply font-semibold text-4xl text-white tracking-tight w-full flex-grow ;
@@ -62,5 +64,5 @@
 }
 
 .zdh-button {
-    @apply bg-blue text-white ml-4 py-2 px-3 no-underline rounded ;
+    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded ;
 }
