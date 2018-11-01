@@ -5,30 +5,40 @@
 @tailwind utilities;
 
 .card {
-    @apply h-100 w-full flex items-center justify-center bg-teal-lightest font-sans ;
+    @apply w-full flex items-center justify-center bg-teal-lightest font-sans;
 }
 
 .innercard {
-    @apply bg-white rounded shadow p-6 m-4 w-full lg:max-w-lg ;
+    @apply bg-white rounded shadow p-6 m-4 w-full;
 }
 
+
 .cardtitle {
-    @apply mb-4 text-grey-darkest ;
+    @apply mb-4 text-grey-darkest;
 }
 
 .addfield {
-    @apply flex mb-4 ;
+    @apply flex mb-4;
 }
 
 #listitem {
-    @apply flex mt-4 items-center ;
+    @apply flex mt-4 items-center;
 }
 
 .addfieldplaceholder {
-    @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker ;
+    @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker;
 }
 
 .button {
-    @apply flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal ;
+    @apply flex-no-shrink p-2 border-2 rounded text-teal border-teal;
 }
 
+.button:hover {
+    @apply text-white bg-teal ;
+}
+
+@screen lg {
+    .innercard {
+        @apply max-w-lg;
+    }
+}

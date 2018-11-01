@@ -12,8 +12,8 @@ Background:
 
 Scenario: 
 Given I am on the hospital page
-Then I should see "Hospital 1" as an "item" 
-And I should not see "Hospital 3" as an "item" 
+Then I should see "Hospital 1" as a "card" item
+And I should not see "Hospital 3" as a "card" item
 
 
 
