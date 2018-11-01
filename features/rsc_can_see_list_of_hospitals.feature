@@ -1,3 +1,4 @@
+@javascript
 Feature: RSC Can See List of Hospitals
         As an RSC,
         In order to know what hospitals I have associations with,
@@ -6,14 +7,13 @@ Feature: RSC Can See List of Hospitals
 Background: 
         Given the following hospital exists
             | name        | 
-            | Karolinska  | 
-            | Sophiahemmet|
+            | Hospital 1  | 
+            | Hospital 2  |
 
 Scenario: 
-Given I am on the landing page
-When I click on the link "Hospitals"
-Then I should see "Karolinska"
-And I should not see "St.Mary"
+Given I am on the hospital page
+Then I should see "Hospital 1" as an "item" 
+And I should not see "Hospital 3" as an "item" 
 
 
 

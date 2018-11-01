@@ -1,4 +1,4 @@
-Given("I am on the landing page") do
-    visit root_path
+Given("I am on the hospital page") do
+  visit root_path
 end
   
