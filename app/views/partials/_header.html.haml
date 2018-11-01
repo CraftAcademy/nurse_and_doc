@@ -1,7 +1,7 @@
-#header.flex.items-center.justify-between.flex-wrap.bg-grey-darkest.px-16.py-6
-  %span.font-semibold.text-4xl.text-white.tracking-tight RSC Dashboard
+#header
+  %span RSC Dashboard
   .w-full.block.flex-grow.lg:flex.lg:items-center.lg:w-auto 
-  .ca-button.text-white.no-underline
+  .ca-button
     - if I18n.locale == I18n.default_locale
       = link_to "Svenska", locale: 'sv'
     - else

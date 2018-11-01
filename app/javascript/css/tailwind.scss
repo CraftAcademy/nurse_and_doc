@@ -12,6 +12,17 @@
     grid-template-areas: "sidebar jobs shifts";
 }
   
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @apply bg-grey-darkest px-16 py-6 ;
+    span {
+        @apply font-semibold text-4xl text-white tracking-tight ;
+    }
+}
+
 #sidebar { 
     grid-area: sidebar;
     background-color: lightgray;
