@@ -4,15 +4,15 @@
 
 @tailwind utilities;
 
-.logincard {
+.login-card {
     @apply w-full max-w-lg mx-auto px-4;
 }
 
-.registrationbox {
+.registration-box {
     @apply bg-grey-lightest shadow-md rounded px-8 pt-6 pb-8 mb-8;
 }
 
-.cardbackground {
+.card-background {
     @apply bg-grey-lightest shadow-md rounded px-8 pt-6 pb-8 mb-8;
 }
 
@@ -20,38 +20,38 @@
     @apply pb-2 pt-2;
 }
 
-.emaillabel {
+.email-label {
     @apply inline-flex leading-tight text-blue-dark text-sm font-bold;
 }
 
-.emailfield {
+.email-field {
     @apply block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
 }
 
-.emailfield:focus {
+.email-field:focus {
     @apply outline-none shadow-outline;
 }
 
-.passwordfield {
+.password-field {
     @apply block flex shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
 }
 
-.passwordfield:focus {
+.password-field:focus {
     @apply outline-none shadow-outline;
 }
 
-.signupbutton {
+.signup-button {
     @apply bg-blue text-white font-bold py-2 px-4 pt-2 mb-2 rounded;
 }
 
-.signupbutton:hover {
+.signup-button:hover {
     @apply bg-blue-dark;
 }
 
-.signupbutton:focus {
+.signup-button:focus {
     @apply outline-none shadow-outline;
 }
 
-.cardtext {
+.card-text {
     @apply block text-blue-dark text-sm text-center font-bold pb-2;
 }
