@@ -30,26 +30,23 @@
 #jobs { 
     grid-area: jobs;
     // border: dashed black;
-    display: grid;
-    justify-content: center;
-    align-content: start;
-}
-
-table {
-    border: 1px solid black;
-    width: 80%;
-    padding: 5px;
-
-    td {
-        border: 1px solid black;
+    align-content: space-between;
+    table {
+        width: 90%;
         padding: 5px;
-    }
     
-    tr {
-        display: flex;
-        justify-content: space-between;
+        td {
+            padding: 5px;
+        }
+        
+        tr {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
+
+
 
 #shifts { 
     grid-area: shifts;
