@@ -3,7 +3,7 @@
   .w-full.block.flex-grow.lg:flex.lg:items-center.lg:w-auto 
   .ca-button.text-white.no-underline
     - if I18n.locale == I18n.default_locale
-      = link_to "Svenska", { :locale=>'sv' }
+      = link_to "Svenska", locale: 'sv'
     - else
-      = link_to "English", { :locale=>'en' }
+      = link_to "English", locale: 'en'
   
