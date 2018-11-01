@@ -1,13 +1,13 @@
 .card
-  .innercard
-    .cardtitle
+  .inner-card
+    .card-title
       %h1 Hospitals 
-    #listitem.flex
+    #list-item.flex
     - @hospitals.each do |hospital|
       #hospname
-        %p.w-full.text-grey-darkest= hospital.name
+        %p= hospital.name
       #hosp-button
         %button.button Remove
-    .addfield
-      %input.addfieldplaceholder{placeholder: "Add Hospitals"}
+    .add-field
+      %input.add-field-placeholder{placeholder: "Add Hospitals"}
       %button.button Add
