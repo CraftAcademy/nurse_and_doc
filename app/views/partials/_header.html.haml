@@ -7,3 +7,8 @@
       = link_to "English", locale: 'en'
   .zdh-button
     = link_to "Create RSC account", new_user_path
+  .zdh-button
+    - if user_signed_in?
+      = link_to "Logout", destroy_user_session_path, method: :delete
+    - else
+      = link_to "Login/Register", new_user_session_path
