@@ -2,6 +2,10 @@ Given("I am on the dashboard page") do
     visit jobs_path
 end
 
+Then("I should be on the dashboard page") do
+    expect(page).to have_current_path(root_path)
+end  
+
 Then("I should see {string}") do |content|
     expect(page).to have_content content
 end
