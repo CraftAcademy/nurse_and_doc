@@ -4,9 +4,9 @@
       %h1 Jobs
     #list-item.flex
     - @jobs.each do |job|
-      #hosp-name
+      #form-name
         %p= job.name
-      #hosp-button
+      #form-button
         %button.button Remove
     .add-field
       %input.add-field-placeholder{placeholder: "Add new job"}

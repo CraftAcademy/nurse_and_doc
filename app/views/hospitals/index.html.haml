@@ -4,9 +4,9 @@
       %h1 Hospitals 
     #list-item.flex
     - @hospitals.each do |hospital|
-      #hospname
+      #form-name
         %p= hospital.name
-      #hosp-button
+      #form-button
         %button.button Remove
     .add-field
       %input.add-field-placeholder{placeholder: "Add Hospitals"}
