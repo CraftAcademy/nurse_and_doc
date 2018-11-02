@@ -14,3 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+document.addEventListener('turbolinks:load', () => {
+    App.mainContent = document.getElementById('main_content')
+    App.tempContent = document.getElementById('temp_content')
+})

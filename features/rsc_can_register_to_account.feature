@@ -1,24 +1,24 @@
 @javascript
 
 Feature: RSC creates a new rsc user
-    As an RSC, 
+    As an RSC,
     In order to have a multiple RSC users in a region,
     I would like to add more RSCs to manage assignments by using their email address
 
-    Background: 
-    Given the following registered RSC exist
-            | email           | password   | 
+    Background:
+        Given the following registered RSC exist
+            | email           | password   |
             | email@email.com | mypassword |
-    And the RSC user is logged in as "email@email.com"
-    And I am on the landing page
-    And I click on "Create RSC account"
-    Then I am on the create RSC page
+
+        And the RSC user is logged in as "email@email.com"
+        And I am on the landing page
+        And I click on "Create RSC account"
 
     Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I fill in "Email" with "newrsc@email.com"
         And I click on "Create account"
         Then I should see the message "RSC user newrsc@email.com created, currently logged in as email@email.com."
-    
+
     Scenario: RSC unsucessfully create another RSC user with invalid email or password
         Given I fill in "Email" with "new_rsc"
         And I click on "Create account"
