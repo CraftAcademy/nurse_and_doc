@@ -28,4 +28,14 @@ end
 
 Then("I am on the hospital page") do
     visit hospitals_path
-  end
+end
+
+Then("I should be on the hospital index") do
+    expect(page).to have_current_path(hospitals_path)
+end
+
+When("I click on the link {string} section") do |link, section|
+    within("#{section}") {
+        click_link link
+    }
+end
