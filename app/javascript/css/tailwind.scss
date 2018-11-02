@@ -4,69 +4,6 @@
 
 @tailwind utilities;
 
-.grid-container {
-    display: grid;
-    height: 90vh;
-    grid-template-columns: 0.2fr 0.9fr 0.3fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar jobs shifts";
-}
-  
-#header {
-    display: grid;
-    height: 15vh;
-    grid-template-columns: 0.8fr 0.2fr;
-    grid-template-rows: 1fr;
-    @apply bg-grey-darkest px-16 py-6 ;
-    h1 {
-        @apply font-semibold text-4xl text-white tracking-tight w-full flex-grow ;
-    }
-}
-
-#sidebar { 
-    grid-area: sidebar;
-    background-color: lightgray;
-    display: grid;
-    justify-content: center;
-    align-content: start;
-    li {
-        margin: 10px;
-        list-style-type: none;
-    }
-}
-  
-#jobs { 
-    grid-area: jobs;
-    h1{
-        text-align: center;
-        padding: 15px;
-        @apply font-semibold text-4xl text-grey-darkest tracking-tight ;
-    }
-    table {
-        width: 90%;
-        padding: 5px;
-    
-        td {
-            align-content:right;
-        }   
-          
-        tr {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 10px;
-            @apply ml-6 py-4 px-3 bg-grey-light rounded ;
-        }
-    }
-}
-
-#shifts { 
-    grid-area: shifts;
-}
-
-.zdh-button {
-    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded ;
-}
-
 .card {
     @apply w-full flex items-center justify-center bg-teal-lightest font-sans;
 }
@@ -106,4 +43,67 @@
 
 .button:hover {
     @apply text-white bg-teal ;
+}
+
+.grid-container {
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 0.2fr 0.9fr 0.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sidebar jobs shifts";
+}
+
+#header {
+    display: grid;
+    height: 15vh;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 1fr;
+    @apply bg-grey-darkest px-16 py-6 ;
+    h1 {
+        @apply font-semibold text-4xl text-white tracking-tight w-full flex-grow ;
+    }
+}
+
+#sidebar { 
+    grid-area: sidebar;
+    background-color: lightgray;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    li {
+        margin: 10px;
+        list-style-type: none;
+    }
+}
+
+#jobs { 
+    grid-area: jobs;
+    h1{
+        text-align: center;
+        padding: 15px;
+        @apply font-semibold text-4xl text-grey-darkest tracking-tight ;
+    }
+    table {
+        width: 90%;
+        padding: 5px;
+    
+        td {
+            align-content:right;
+        }   
+          
+        tr {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+            @apply ml-6 py-4 px-3 bg-grey-light rounded ;
+        }
+    }
+}
+
+#shifts { 
+    grid-area: shifts;
+}
+
+.zdh-button {
+    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded ;
 }
