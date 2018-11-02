@@ -4,7 +4,7 @@ Feature: RSC Dashboard
     I would like to have a simple and user friendly dashboard.
 
     Scenario: RSC can see the dashboard
-        Given I am on the dashboard page
+        Given I am on the landing page
         Then I should see "RSC Dashboard"
         And I should see "Jobs" within the "#sidebar" section
         And I should see "Hospitals" within the "#sidebar" section
@@ -12,7 +12,7 @@ Feature: RSC Dashboard
         And I should see "Job 1"
 
     Scenario: RSC can see the dashboard in swedish
-        Given I am on the dashboard page
+        Given I am on the landing page
         Then I should see "RSC Dashboard"
         And I click the "Svenska" link
         Then I should see "Jobb" within the "#sidebar" section

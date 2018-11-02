@@ -16,7 +16,7 @@ Given("I click on {string}") do |link|
     click_on link
 end
 
-Then("I should be on the landing page") do
+Then("I am on the landing page") do
    visit root_path
 end
 

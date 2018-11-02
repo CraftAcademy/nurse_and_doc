@@ -10,7 +10,7 @@ Feature: RSC creates a new rsc user
             | email           | password   | 
             | email@email.com | mypassword |
     And the RSC user is logged in as "email@email.com"
-    And I am on the dashboard page
+    And I am on the landing page
     And I click on "Create RSC account"
     Then I am on the create RSC page
 
