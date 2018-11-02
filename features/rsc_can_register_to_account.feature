@@ -15,7 +15,6 @@ Feature: RSC creates a new rsc user
     Then I am on the create RSC page
 
     Scenario: RSC can sucessfully add another RSC user to access the platform
-        Then stop
         Given I fill in "Email" with "newrsc@email.com"
         And I click on "Create account"
         Then I should see the message "RSC user newrsc@email.com created, currently logged in as email@email.com."
