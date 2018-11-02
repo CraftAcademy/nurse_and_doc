@@ -12,8 +12,7 @@ Feature: RSC Dashboard
             | Assistant Nurse   |
 
     Scenario: RSC can see the dashboard
-        Given I am on the dashboard page
-        Then I should see "RSC Dashboard"
+        Given I am on the staffing companies page
         And I click on "Jobs"
         Then I should be on the jobs index
         And I should see "Doctor" within the ".card" section
