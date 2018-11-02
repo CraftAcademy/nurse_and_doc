@@ -1,5 +1,5 @@
 Given("I am on the dashboard page") do
-    visit root_path
+    visit jobs_path
 end
 
 Then("I should see {string}") do |content|
@@ -24,4 +24,8 @@ end
     within("#{section}") {
       expect(page).not_to have_content content
     }
+end
+
+Then("I should see the message {string}") do |message|
+    expect(page).to have_content message
 end

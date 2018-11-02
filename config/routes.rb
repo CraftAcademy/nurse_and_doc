@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :new]
   devise_for :users
   
-  root controller: :jobs, action: :index 
+    resources :jobs, only: :index
     resources :hospitals, only: :index
   scope '(:locale)', locale: /en|sv/ do
   end
