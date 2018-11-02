@@ -4,6 +4,47 @@
 
 @tailwind utilities;
 
+.card {
+    @apply w-full flex items-center justify-center bg-teal-lightest font-sans;
+}
+
+.inner-card {
+    @apply bg-white rounded shadow p-6 m-4 w-full;
+}
+
+
+.card-title {
+    @apply mb-4 text-grey-darkest;
+}
+
+.add-field {
+    @apply flex mb-4;
+}
+
+#list-item {
+    @apply flex mb-4 items-center;
+}
+
+#hosp-name {
+    @apply text-left w-full text-grey-darkest;
+}
+
+#hosp-button {
+    @apply text-right;
+}
+
+.add-field-placeholder {
+    @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker;
+}
+
+.button {
+    @apply flex-no-shrink p-2 border-2 rounded text-teal border-teal;
+}
+
+.button:hover {
+    @apply text-white bg-teal ;
+}
+
 .grid-container {
     display: grid;
     height: 90vh;
@@ -11,7 +52,7 @@
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar jobs shifts";
 }
-  
+
 #header {
     display: grid;
     height: 15vh;
@@ -34,7 +75,7 @@
         list-style-type: none;
     }
 }
-  
+
 #jobs { 
     grid-area: jobs;
     h1{
@@ -64,5 +105,11 @@
 }
 
 .zdh-button {
-    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded ;
+    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded;
+}
+
+@screen lg {
+    .inner-card {
+        @apply max-w-lg;
+    }
 }
