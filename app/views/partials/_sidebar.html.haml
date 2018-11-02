@@ -1,6 +1,6 @@
 .grid-container
   #sidebar
-    %button.zdh-button= link_to "#{t :jobs}",  root_path, class: 'zdh-button' 
-    %button.zdh-button= link_to "#{t :hospitals}", hospitals_path, class: 'zdh-button' 
-    %button.zdh-button= link_to "#{t :staffcos}", staffcos_path, class: 'no-underline text-white'
-    %button.zdh-button= link_to "Create RSC account", new_user_path, class: 'no-underline text-white'
+    = link_to "#{t :jobs}",  root_path, class: 'header-button'
+    = link_to "#{t :hospitals}", hospitals_path, class: 'header-button'
+    = link_to "#{t :staffcos}", staffcos_path, class: 'header-button'
+    = link_to "Create RSC account", new_user_path, class: 'header-button'

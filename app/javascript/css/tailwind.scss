@@ -75,6 +75,11 @@
     align-content: start;
 }
 
+.header-button {
+    @apply zdh-button no-underline flex-no-shrink p-2 border-2 rounded text-teal border-teal;
+}
+
+
 #sidebar { 
     grid-area: sidebar;
     background-color: lightgray;
