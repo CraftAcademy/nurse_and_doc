@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Staffco, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe "db columns" do 
+    it { is_expected.to have_db_column :name }
+  end
+
+  describe FactoryBot do
+    it 'should be valid' do
+      expect(FactoryBot.create(:staffco)).to be_valid
+    end
+  end
+
 end
