@@ -15,6 +15,12 @@ Given("the following staffing companies exists") do |table|
     end
 end
 
+Given("the following jobs exist in the database") do |table|
+    table.hashes.each do |job|
+        create(:job, job)
+    end
+end
+
 Given("the following registered RSC exist") do |table|
     table.hashes.each do |user|
     FactoryBot.create(:user, user)
