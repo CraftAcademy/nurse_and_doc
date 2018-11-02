@@ -1,6 +1,6 @@
 .grid-container
   #sidebar
-    = link_to t(:jobs),  root_path, class: 'header-button'
-    = link_to t(:hospitals), hospitals_path, class: 'header-button'
-    = link_to t(:staffcos) , staffcos_path, class: 'header-button'
+    = link_to t(:jobs),  root_path, class: 'header-button', remote: true
+    = link_to t(:hospitals), hospitals_path, class: 'header-button', remote: true
+    = link_to t(:staffcos) , staffcos_path, class: 'header-button', remote: true
     = link_to "Create RSC account", new_user_path, class: 'header-button', remote: true

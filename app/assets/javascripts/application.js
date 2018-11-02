@@ -24,8 +24,15 @@ const closeModalListener = element => {
         closeButton.addEventListener('click', () => {
             modalElement.remove()
             App.mainContent.style.visibility = "";
+            App.mainContent.style.height = null;
         })
     }
+}
+
+const displayTemplate = html => {
+    App.mainContent.style.visibility = "hidden";
+    App.mainContent.style.height = '0px';
+    App.tempContent.innerHTML = html
 }
 
 

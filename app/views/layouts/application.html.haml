@@ -2,6 +2,8 @@
 %html
   %head
     %meta{content: 'text/html; charset=UTF-8', http: {equiv: "Content-Type"}}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+
     %title nurse_and_doc
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', data: {'turbolinks-track' => 'reload'}
@@ -15,8 +17,9 @@
     = render partial: 'partials/header'
     .grid-container
       = render partial: 'partials/sidebar'
-      #main_content
-        #jobs
+      #content
+        #temp_content
+        #main_content
           = yield
-      #temp_content
+      
     
