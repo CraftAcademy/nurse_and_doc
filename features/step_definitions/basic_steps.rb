@@ -11,15 +11,15 @@ Then("I am on the hospital page") do
 end
 
 Given("I am on the staffing companies page") do
-  visit staffcos_index_path
+  visit staffcos_path
 end
 
 Given("I fill in {string} with {string}") do |field, content|
-    fill_in field, with: content
+  fill_in field, with: content
 end
 
 Given("I click on {string}") do |link|
-    click_on link
+  click_on link
 end
 
 And("I click on {string} within the {string} section") do |link, section|
