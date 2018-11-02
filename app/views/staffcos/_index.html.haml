@@ -1,0 +1,13 @@
+.card
+  .inner-card
+    .card-title
+      %h1 Staffing Companies
+    #list-item.flex
+    - @staffcos.each do |staffcos|
+      #form-name
+        %p= staffcos.name
+      #form-button
+        %button.button Remove
+    .add-field
+      %input.add-field-placeholder{placeholder: "Add"}
+      %button.button Add
