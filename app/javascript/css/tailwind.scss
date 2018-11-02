@@ -12,7 +12,6 @@
     @apply bg-white rounded shadow p-6 m-4 w-full;
 }
 
-
 .card-title {
     @apply mb-4 text-grey-darkest;
 }
@@ -105,11 +104,5 @@
 }
 
 .zdh-button {
-    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded;
-}
-
-@screen lg {
-    .inner-card {
-        @apply max-w-lg;
-    }
+    @apply py-2 px-4 bg-blue text-white text-center my-4 mx-4 align-middle no-underline rounded ;
 }

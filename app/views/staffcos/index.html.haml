@@ -1,0 +1,13 @@
+.card
+  .inner-card
+    .card-title
+      %h1 Staffing Companies
+    #list-item.flex
+    - @staffcos.each do |staffcos|
+      #hosp-name
+        %p= staffcos.name
+      #hosp-button
+        %button.button Remove
+    .add-field
+      %input.add-field-placeholder{placeholder: "Add Staffing Companies"}
+      %button.button Add
