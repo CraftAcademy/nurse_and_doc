@@ -1,12 +1,14 @@
 #header
-  = link_to "RSC Dashboard", root_path, class: "no-underline text-white"
+  #header-left
+    = link_to "RSC Dashboard", root_path, class: "no-underline text-white"
   -# .zdh-button
   -#   - if I18n.locale == I18n.default_locale
   -#     = link_to "Svenska", locale: 'sv'
   -#   - else
   -#     = link_to "English", locale: 'en'
-  .zdh-button
-    - if user_signed_in?
-      = link_to "Logout", destroy_user_session_path, method: :delete
-    - else
-      = link_to "Login/Register", new_user_session_path, class: "no-underline text-white"
+  #heder-right
+    .zdh-button
+      - if user_signed_in?
+        = link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        = link_to "Login/Register", new_user_session_path, class: "no-underline text-white"
