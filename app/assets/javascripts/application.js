@@ -15,6 +15,19 @@
 //= require turbolinks
 //= require_tree .
 
+const closeModalListener = element => {
+    let elementToObserve = element
+    let closeButton = document.getElementById(elementToObserve)
+    let modalElement = document.getElementById('modal')
+
+    if (closeButton && modalElement) {
+        closeButton.addEventListener('click', () => {
+            modalElement.remove()
+            App.mainContent.style.visibility = "";
+        })
+    }
+}
+
 
 document.addEventListener('turbolinks:load', () => {
     App.mainContent = document.getElementById('main_content')

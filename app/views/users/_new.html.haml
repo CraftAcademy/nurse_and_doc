@@ -1,3 +1,4 @@
+
 - content_for :modal_content do 
   .login-card
     .card-background
@@ -10,5 +11,5 @@
           = form.text_field :email, class: "email-field", autofocus: true, autocomplete: "email"
         .field
           = form.submit "Create account", class: "signup-button"
-
-= render partial: 'partials/modal' 
+          = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+= render partial: 'partials/modal'
