@@ -8,7 +8,7 @@ Then("I should see {string} within the {string} section") do |content, section|
     }
 end
 
- Then("I should not see {string} within the {string} section") do |content, section|
+Then("I should not see {string} within the {string} section") do |content, section|
     within("#{section}") {
       expect(page).not_to have_content content
     }
