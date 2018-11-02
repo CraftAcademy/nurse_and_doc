@@ -11,7 +11,7 @@ Feature: RSC Can See List of Hospitals
             | Hospital 2  |
 
     Scenario: 
-        Given I am on the dashboard page
+        Given I am on the landing page
         And I click on "Hospitals" within the "#sidebar" section
         Then I should be on the hospital index
         Then I should see "Hospital 1" within the ".card" section

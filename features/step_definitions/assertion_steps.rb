@@ -1,3 +1,7 @@
+Then("I should be on the landing page") do
+    expect(page).to have_current_path(root_path)
+end  
+
 Then("I should see {string}") do |content|
     expect(page).to have_content content
 end
@@ -12,6 +16,10 @@ Then("I should not see {string} within the {string} section") do |content, secti
     within("#{section}") {
       expect(page).not_to have_content content
     }
+end
+
+Then("I should see the message {string}") do |message|
+    expect(page).to have_content message
 end
 
 Then("I should be on the Staffing companies index") do

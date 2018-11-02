@@ -1,7 +1,13 @@
 #header
-  %h1.py-4 RSC Dashboard
-  .zdh-button
-    - if I18n.locale == I18n.default_locale
-      = link_to "Svenska", locale: 'sv'
+  #header-left
+    = link_to "RSC Dashboard", root_path, class: "no-underline text-white text-4xl text-justify"
+  #header-right
+    -# - if I18n.locale == I18n.default_locale
+    -#   = link_to "Svenska", root_path(locale: 'sv'), class: 'zdh-button no-underline text-white'
+    -# - else
+    -#   = link_to "English", root_path(locale: 'en'), class: 'zdh-button no-underline text-white'
+
+    - if user_signed_in?
+      = link_to "Logout", destroy_user_session_path, method: :delete, class: 'zdh-button'
     - else
-      = link_to "English", locale: 'en'
+      = link_to "Login/Register", new_user_session_path, class: "zdh-button no-underline text-white"
