@@ -1,17 +1,13 @@
-#jobs
-  %h1= t :jobs
-  %table
-    %tr
-      %td Job 1
-      %td Posted
-      %td
-        %button Edit
-      %td
-        %button -
-    %tr
-      %td Job 2
-      %td Posted
-      %td
-        %button Edit
-      %td
-        %button -
+.card
+  .inner-card
+    .card-title
+      %h1 Jobs
+    #list-item.flex
+    - @jobs.each do |job|
+      #hosp-name
+        %p= job.name
+      #hosp-button
+        %button.button Remove
+    .add-field
+      %input.add-field-placeholder{placeholder: "Add new job"}
+      %button.button Add
