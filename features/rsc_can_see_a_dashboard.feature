@@ -1,3 +1,4 @@
+@javascript
 Feature: RSC Dashboard
     As a RSC,
     In order to create and modify relevant informations to be sent out to RSC,
