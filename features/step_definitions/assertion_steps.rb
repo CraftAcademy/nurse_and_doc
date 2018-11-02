@@ -25,3 +25,7 @@ end
       expect(page).not_to have_content content
     }
 end
+
+Then("I am on the hospital page") do
+    visit hospitals_path
+  end
