@@ -15,6 +15,7 @@ Feature: RSC Can See List of Staffing Companies
         Given I am on the dashboard page
         Then I should see "RSC Dashboard"
         And I click the "Staffing Companies" link
+        Then I should be on the Staffing companies index
         Then I should see "Staffing Companies" within the ".card-title" section
         And I should see "Company 1"
         And I should see "Company 2"

@@ -17,4 +17,4 @@ Feature: RSC Dashboard
         And I click the "Svenska" link
         Then I should see "Jobb" within the "#sidebar" section
         And I should see "Sjukhus" within the "#sidebar" section
-        And I should see "Staffing Companies" within the "#sidebar" section
+        And I should see "Bemanningsföretag" within the "#sidebar" section

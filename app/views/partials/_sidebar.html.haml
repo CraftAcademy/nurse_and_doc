@@ -2,5 +2,4 @@
   #sidebar
     %button.zdh-button= t :jobs
     %button.zdh-button= t :hospitals
-    %button.zdh-button
-      = link_to "Staffing Companies", staffcos_path
+    %button.zdh-button= link_to "#{t :staffcos}", staffcos_path, class: 'zdh-button'
