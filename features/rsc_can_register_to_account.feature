@@ -25,7 +25,8 @@ Feature: RSC creates a new rsc user
         Then I should see the message "Invalid Email"
 
     Scenario: RSC logs out and try to log in with an incorrect email
-        Given I click on "Logout"
+        Given I click on "Cancel"
+        And I click on "Logout"
         Then I should be on the landing page
         And I click on "Login"
         And I fill in "Email" with "wrong@email.com"
@@ -34,7 +35,8 @@ Feature: RSC creates a new rsc user
         Then I should see the message "Invalid Email or password"
 
     Scenario: RSC logs out and try to log in with an the incorrect password
-        Given I click on "Logout"
+        Given I click on "Cancel"
+        And I click on "Logout"
         Then I should be on the landing page
         And I click on "Login"
         And I fill in "Email" with "email@email.com"
