@@ -15,11 +15,11 @@ Given("I am on the staffing companies page") do
 end
 
 Given("I fill in {string} with {string}") do |field, content|
-    fill_in field, with: content
+  fill_in field, with: content
 end
 
 Given("I click on {string}") do |link|
-    click_on link
+  click_on link
 end
 
 And("I click on {string} within the {string} section") do |link, section|
