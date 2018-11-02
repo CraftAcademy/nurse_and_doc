@@ -19,7 +19,7 @@ Given("I fill in {string} with {string}") do |field, content|
 end
 
 Given("I click on {string}") do |link|
-  click_link link
+  click_on link
 end
 
 And("I click on {string} within the {string} section") do |link, section|
