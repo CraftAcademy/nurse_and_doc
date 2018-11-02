@@ -9,7 +9,6 @@ Feature: RSC Dashboard
         And I should see "Jobs" within the "#sidebar" section
         And I should see "Hospitals" within the "#sidebar" section
         And I should see "Staffing Companies" within the "#sidebar" section
-        And I should see "Job 1"
 
     Scenario: RSC can see the dashboard in swedish
         Given I am on the dashboard page
