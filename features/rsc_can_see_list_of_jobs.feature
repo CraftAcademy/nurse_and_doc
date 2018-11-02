@@ -1,5 +1,5 @@
 @javascript
-Feature: RSC Dashboard
+Feature: RSC Can See List of Jobs
     As an RSC,
     In order to know what live jobs I have,
     I would like to be able to see a list of jobs in my region.
@@ -11,7 +11,7 @@ Feature: RSC Dashboard
             | Nurse             |
             | Assistant Nurse   |
 
-    Scenario: RSC can see the dashboard
+    Scenario: RSC Can See List of Jobs on the dashboard
         Given I am on the staffing companies page
         And I click on "Jobs" within the "#sidebar" section
         Then I should be on the jobs index

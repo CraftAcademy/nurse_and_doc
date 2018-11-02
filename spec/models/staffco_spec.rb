@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe Staffco, type: :model do
   
   describe "db columns" do 

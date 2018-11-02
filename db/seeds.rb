@@ -1,4 +1,5 @@
 Hospital.destroy_all
+Job.destroy_all
 
 Hospital.create!(name: "Karolinska")
 Hospital.create!(name: "Södersjukhuset")
