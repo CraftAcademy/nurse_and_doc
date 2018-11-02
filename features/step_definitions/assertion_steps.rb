@@ -21,4 +21,3 @@ end
 Then("I should be on the hospital index") do
     expect(page).to have_current_path(hospitals_path)
 end
-
