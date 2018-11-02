@@ -1,5 +1,3 @@
-Then("I should see {string} within the {string} section") do |content, section|
-    within("##{section}") {
-      expect(page).to have_content content 
-    }  
+Given("I am on the hospital page") do
+  visit hospitals_path
 end
