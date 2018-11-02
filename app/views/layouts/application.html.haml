@@ -13,6 +13,9 @@
     = alert 
     = flash[:error] 
     = render partial: 'partials/header'
-    = render partial: 'partials/sidebar'
-    = yield
+    .grid-container
+      #sidebar
+        = render partial: 'partials/sidebar'
+      #jobs
+        = yield
    
