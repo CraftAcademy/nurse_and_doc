@@ -4,7 +4,6 @@ class HospitalsController < ApplicationController
   end
   
   def new
-    @hospitals = Hospital.new
   end
 
   def show
@@ -13,6 +12,7 @@ class HospitalsController < ApplicationController
 
   def create
     hospital = Hospital.create(hospital_params)
+    binding.pry
     if hospital.persisted?
       redirect_to hospitals_path
     else

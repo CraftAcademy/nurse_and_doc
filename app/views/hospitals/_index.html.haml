@@ -10,5 +10,6 @@
         %button.button Remove
     .add-field
       %input.add-field-placeholder{placeholder: "Add Hospitals"}
-      %button.button Add 
-     
+      = link_to t(:add),  new_hospital_path, class: 'header-button', remote: true
+      -# = card.submit value: "Add", class: "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"
+
