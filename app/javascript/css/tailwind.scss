@@ -46,8 +46,7 @@
 
 .grid-container {
     display: grid;
-    height: 90vh;
-    grid-template-columns: 0.2fr 0.9fr 0.3fr;
+    grid-template-columns: 0.2fr 0.7fr 0.3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar content shifts";
 }
@@ -183,7 +182,7 @@
  #main {
     display: grid;
     grid-template-columns: 6rem auto;
-    /* Or grid-template-columns: config('width.24') auto; */
+    // grid-template-columns: config('width.24') auto;
   }
   
   @media (min-width: 1200px) { 
