@@ -1,0 +1,13 @@
+.card
+  .inner-card
+    .card-title
+      %h1 Jobs
+    #list-item.flex
+    - @jobs.each do |job|
+      #form-name
+        %p= job.name
+      #form-button
+        %button.button Remove
+    .add-field
+      %input.add-field-placeholder{placeholder: "Add new job"}
+      %button.button Add
