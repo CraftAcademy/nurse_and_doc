@@ -180,3 +180,59 @@
 .card-text {
     @apply block text-blue-dark text-sm text-center font-bold pb-2;
 }
+
+
+/*
+ * We'll use CSS grids for the base template
+ * More info on https://cssgrid.io/ by @wesbos
+ */
+ #main {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    /* Or grid-template-columns: config('width.24') auto; */
+  }
+  
+  @media (min-width: 1200px) { 
+  /* Or @media (min-width: config('screens.xl')) { */
+    
+    #main { grid-template-columns: 12rem auto; }
+    /* Or #main { grid-template-columns: config('width.48') auto; } */
+  }
+  
+  a {
+    text-decoration: none;
+    /* Or @apply .no-underline; */
+  }
+  
+  /* Just a new padding size */
+  .pt-16 {
+    padding-top: 4rem;
+  }
+  
+  /*
+   * Just some customized new utilities needed for the submenus
+   * Add this before
+   */
+  .top-full { top: 100%; }
+  .left-full { left: 100%; }
+  
+  /*
+   * This hacks is just needed in Codepen because the previous rules are prioritary to xl:pin-none.
+   * In your own config this should not be needed.
+   */
+  
+  @media (min-width: 1200px) {
+    .xl\:pin-none { left: auto; }
+  }
+  
+  /* 
+   * Active "group-hover" for the "display" module in your
+   * tailwind.js config file like this:
+   * 
+   * display: ['responsive', 'group-hover']
+   *
+   * More info on https://tailwindcss.com/docs/state-variants/#group-hover
+   */
+  .group:hover .group-hover\:block {
+    display: block;
+  }
