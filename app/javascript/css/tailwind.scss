@@ -119,7 +119,7 @@
 }
 
 .email-label {
-    @apply inline-flex leading-tight text-blue-dark text-sm font-bold;
+    @apply inline-flex leading-tight text-grey-darker font-sans font-thin;
 }
 
 .email-field {
@@ -139,19 +139,23 @@
 }
 
 .signup-button {
-    @apply bg-blue text-white font-bold py-2 px-4 pt-2 mb-2 rounded;
+    @apply bg-grey-dark text-white font-bold py-2 px-4 pt-2 mb-2 rounded;
 }
 
 .signup-button:hover {
-    @apply bg-blue-dark;
+    @apply bg-grey-darker;
 }
 
 .signup-button:focus {
     @apply outline-none shadow-outline;
 }
 
+.shared_devise_link {
+    @apply text-grey-darker font-sans font-thin;
+}
+
 .card-text {
-    @apply block text-blue-dark text-sm text-center font-bold pb-2;
+    @apply block text-grey-darker font-sans font-thin text-sm text-center pb-2;
 }
 
 a {
