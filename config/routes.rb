@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     root controller: :jobs, action: :index 
     resources :users, only: [:create, :new]
     resources :staffcos, only: :index
-    resources :hospitals, only: [:create, :show, :new]
+    resources :hospitals, only: [:index, :create, :show, :new]
   end
 end
