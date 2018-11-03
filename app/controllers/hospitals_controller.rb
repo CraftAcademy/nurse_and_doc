@@ -19,5 +19,5 @@ class HospitalsController < ApplicationController
     @hospital.save
     redirect_to @hospital
   end 
-
+end
 end

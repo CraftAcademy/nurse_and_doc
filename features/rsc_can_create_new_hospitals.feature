@@ -11,19 +11,19 @@ Feature: RSC creates a new hospital
             | Hospital 1  | 
             | Hospital 2  |
 
-Scenario: RSC can successfully add new hospitals
-    Given I am on the landing page
-    And I click on "Hospitals"
-    Then I see "Karolinska"
-    And I fill in "Add Hospitals" with "Hospital 3"
-    And I click on "Add"
-    Then I should see "New Hospital"
+    Scenario: RSC can successfully add new hospitals
+        Given I am on the landing page
+        And I click on "Hospitals"
+        Then I see "Hospital 1"
+        And I fill in "Add Hospitals" with "Hospital 3"
+        And I click on "Add"
+        Then I should see "Hospital 3"
 
-Scenario: RSC cannot  add new hospitals
-    Given I am on the landing page
-    And I click on "Hospitals"
-    Then I see "Karolinska"
-    And I fill in "Add Hospitals" with "Hospital 2"
-    And I click on "Add"
-    Then I should see "Hospital already exists. Your hospital could not be saved"
+    Scenario: RSC cannot add hospitals if it already exists
+        Given I am on the landing page
+        And I click on "Hospitals"
+        Then I see "Hospital 1"
+        And I fill in "Add Hospitals" with "Hospital 2"
+        And I click on "Add"
+        Then I should see "Hospital already exists. Your hospital could not be saved"
 
