@@ -16,7 +16,7 @@ class HospitalsController < ApplicationController
     if hospital.persisted?
       redirect_to hospitals_path
     else
-      redirect_to root_path, notice: "Hospital already exists. Your hospital could not be saved."
+      redirect_to hospitals_path, notice: "Hospital already exists. Your hospital could not be saved."
     end
   end
 
