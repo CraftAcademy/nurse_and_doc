@@ -81,14 +81,8 @@
 
 #sidebar { 
     grid-area: sidebar;
-    background-color: lightgray;
     display: grid;
-    justify-content: center;
-    align-content: start;
-    li {
-        margin: 10px;
-        list-style-type: none;
-    }
+    @apply font-sans antialiased h-screen;
 }
 
 #jobs { 
