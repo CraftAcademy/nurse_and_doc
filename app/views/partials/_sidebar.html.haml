@@ -6,25 +6,26 @@
           .group.relative.sidebar-item.with-children
             = link_to root_path, remote: true do
               .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
-                %svg.h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
-                  = image_tag 'doctor_briefcase.png'
+                .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
+                  = image_tag 'jobs_icon.png'
                 .text-white.text-xs= t(:jobs)
           .group.relative.sidebar-item.with-children
             = link_to hospitals_path, remote: true do
               .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
-                %svg.h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
-                  %path.heroicon-ui{:d => "M15 19a3 3 0 0 1-6 0H4a1 1 0 0 1 0-2h1v-6a7 7 0 0 1 4.02-6.34 3 3 0 0 1 5.96 0A7 7 0 0 1 19 11v6h1a1 1 0 0 1 0 2h-5zm-4 0a1 1 0 0 0 2 0h-2zm0-12.9A5 5 0 0 0 7 11v6h10v-6a5 5 0 0 0-4-4.9V5a1 1 0 0 0-2 0v1.1z"}
+                .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
+                  = image_tag 'hospital_icon.png'
                 .text-white.text-xs= t(:hospitals)
           .group.relative.sidebar-item.with-children
             = link_to staffcos_path, remote: true do
               .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
-                %svg.h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
-                  %path.heroicon-ui{:d => "M2 15V5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v15a1 1 0 0 1-1.7.7L16.58 17H4a2 2 0 0 1-2-2zM20 5H4v10h13a1 1 0 0 1 .7.3l2.3 2.29V5z"}
+                .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
+                  = image_tag 'sc_icon.png'
                 .text-white.text-xs= t(:staffcos)
           .group.relative.sidebar-item.with-children
             = link_to new_user_path, remote: true do
               .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
-                %svg.h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
-                  %path.heroicon-ui{:d => "M2 15V5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v15a1 1 0 0 1-1.7.7L16.58 17H4a2 2 0 0 1-2-2zM20 5H4v10h13a1 1 0 0 1 .7.3l2.3 2.29V5z"}
+                .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
+                  = image_tag 'rsc_icon.png'
                 .text-white.text-xs= t(:creatersc)
 
+-# note: icon color #788084
