@@ -1,5 +1,6 @@
 Hospital.destroy_all
 Job.destroy_all
+Staffco.destroy_all
 
 Hospital.create!(name: "Karolinska")
 Hospital.create!(name: "Södersjukhuset")
@@ -11,4 +12,7 @@ Job.create!(name: "Doctor")
 Job.create!(name: "Nurse")
 Job.create!(name: "Assistant Nurse")
 
-
+Staffco.create!(name: "Doctors r us")
+Staffco.create!(name: "Nurses 4 U")
+Staffco.create!(name: "Psychologists agency")
+Staffco.create!(name: "Eyedoctors United")
