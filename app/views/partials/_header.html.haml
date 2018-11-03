@@ -10,4 +10,4 @@
     - if user_signed_in?
       = link_to "Logout", destroy_user_session_path, method: :delete, class: 'zdh-button'
     - else
-      = link_to "Login/Register", new_user_session_path, class: "zdh-button no-underline text-white"
+      = link_to "Login/Register", new_user_session_path, class: "zdh-button no-underline text-white", remote: true
