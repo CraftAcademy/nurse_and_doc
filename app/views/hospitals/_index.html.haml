@@ -5,11 +5,11 @@
         %h2 Hospitals
       = form_with scope: :user, url: new_hospital_path, local: true do |form|
         .field
-          = form.label :Hospitals, class: "name"
+          = form.label :Hospital, class: "name"
         .field
-          = form.text_field :email, class: "email-field", autofocus: true, autocomplete: "email"
+          = form.text_field :name, class: "text-field", autofocus: true, autocomplete: "name"
         .field
-          = form.submit "Add", class: "signup-button"
-          = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+          = form.submit "Add", url: hospital_path, class: "create-button"
+          = button_tag 'Cancel', id: 'cancel_modal', class: 'create-button'
 = render partial: 'partials/modal'
 
