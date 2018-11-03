@@ -1,15 +1,15 @@
-.card
-  .inner-card
-    .card-title
-      %h1 Hospitals 
-    #list-item.flex
-    - @hospitals.each do |hospitals|
-      #form-name
-        %p= hospital.name
-      #form-button
-        %button.button Remove
-    .add-field
-      %input.add-field-placeholder{placeholder: "Add Hospitals"}
-      = link_to t(:add), @hospitals, method: :create, name: hospital.name, method: :post, class: 'header-button', remote: true
-      -# = card.submit value: "Add", class: "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"
+- content_for :modal_content do 
+  .login-card
+    .card-background
+      .card-text
+        %h2 Hospitals
+      = form_with scope: :user, url: new_hospital_path, local: true do |form|
+        .field
+          = form.label :Hospitals, class: "name"
+        .field
+          = form.text_field :email, class: "email-field", autofocus: true, autocomplete: "email"
+        .field
+          = form.submit "Add", class: "signup-button"
+          = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+= render partial: 'partials/modal'
 

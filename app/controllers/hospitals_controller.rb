@@ -13,7 +13,7 @@ class HospitalsController < ApplicationController
   def create
     hospital = Hospital.create(hospital_params)
     binding.pry
-    if hospital.persisted?
+    if @hospital.save
       redirect_to hospitals_path
     else
       redirect_to hospitals_path, notice: "Hospital already exists. Your hospital could not be saved."
