@@ -11,7 +11,7 @@ class SessionsController < Devise::SessionsController
         flash[:notice] = 'Signed in successfully.'
         redirect_to root_path
       else
-        render json: { message: 'Could not log you in' }, status: :unauthorized
+        render json: { message: 'Invalid email or password' }, status: :unauthorized
       end
     end
   end

@@ -2,7 +2,8 @@
     .card-background
         .card-text
             %h2 Log in
-        = form_with(model: resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = form_with(model: resource, as: resource_name, url: session_path(resource_name), id: :user_login) do |f|
+            #error_messages
             .field
                 = f.label :email, class: "email-label"
                 %br/

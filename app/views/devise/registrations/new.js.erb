@@ -1,3 +1,11 @@
 
 var templateContent = '<%= escape_javascript(render partial: 'new') %>'
 displayModal(templateContent)
+
+var form = document.getElementById('user_sign_up')
+
+form.addEventListener('ajax:error', (event) => {
+    let errorMessageDisplayElement = document.getElementById('error_messages')
+    let message = event.detail[0].message
+    errorMessageDisplayElement.innerHTML = message
+})

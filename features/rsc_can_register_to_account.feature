@@ -32,7 +32,7 @@ Feature: RSC creates a new rsc user
         And I fill in "Email" with "wrong@email.com"
         And I fill in "Password" with "password"
         And I click on "Log in"
-        Then I should see the message "Invalid Email or password"
+        Then I should see the message "Invalid email or password"
 
     Scenario: RSC logs out and try to log in with an the incorrect password
         Given I click on "Cancel"
@@ -42,7 +42,7 @@ Feature: RSC creates a new rsc user
         And I fill in "Email" with "email@email.com"
         And I fill in "Password" with "pass"
         And I click on "Log in"
-        Then I should see the message "Invalid Email or password"
+        Then I should see the message "Invalid email or password"
 
 
 
