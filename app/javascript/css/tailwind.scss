@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .card {
-    @apply w-full flex items-center justify-center bg-teal-lightest font-sans;
+    @apply w-full items-center bg-grey-darker font-sans font-thin;
 }
 
 .inner-card {
@@ -13,7 +13,7 @@
 }
 
 .card-title {
-    @apply mb-4 text-grey-darkest;
+    @apply mb-4 text-grey-darkest font-sans font-thin;
 }
 
 .add-field {
@@ -24,24 +24,39 @@
     @apply flex mb-4 items-center;
 }
 
+#form-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "form-name form-button";
+}
+
 #form-name {
-    @apply text-left w-full text-grey-darkest;
+    grid-area: form-name;
+    display: grid;
+    @apply align-text-bottom text-left w-full text-grey-darkest font-sans font-thin mt-5;
 }
 
 #form-button {
-    @apply text-right;
+    grid-area: form-button;
+    display: grid;
+    @apply text-right font-thin;
+}
+
+.add-field {
+    @apply mt-4;
 }
 
 .add-field-placeholder {
-    @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker;
+    @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker font-sans font-thin;
 }
 
 .button {
-    @apply flex-no-shrink p-2 border-2 rounded text-teal border-teal;
+    @apply flex-no-shrink p-2 my-2 border-2 rounded text-grey-darker border-grey-darker font-sans font-thin;
 }
 
 .button:hover {
-    @apply text-white bg-teal ;
+    @apply text-white bg-grey-darkest;
 }
 
 .grid-container {
@@ -55,6 +70,30 @@
     grid-area: sidebar;
     display: grid;
     @apply font-sans antialiased h-screen;
+}
+
+.sidebar-background {
+    @apply bg-grey-darkest relative h-full min-h-screen;
+}
+
+// .sidebar-button {
+//     @apply block text-center shadow-light py-6 border-l-4 border-transparent;
+// }
+
+// .sidebar-button:xl {
+//     @apply flex items-center text-left shadow-none py-2 px-4 ;
+// }
+
+// .sidebar-button:hover {
+//     @apply bg-black;
+// }
+
+.nav {
+    @apply flex justify-between items-center py-4;
+}
+
+.header-text {
+    @apply font-sans text-black text-sm font-thin underline px-4;
 }
 
 @screen lg {

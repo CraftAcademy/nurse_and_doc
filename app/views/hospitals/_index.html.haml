@@ -4,10 +4,10 @@
       %h1 Hospitals 
     #list-item.flex
     - @hospitals.each do |hospital|
-      #form-name
-        %p= hospital.name
-      #form-button
-        %button.button Remove
+      #form-grid
+        #form-name= hospital.name
+        #form-button
+          %button.button Remove
     .add-field
       %input.add-field-placeholder{placeholder: "Add Hospitals"}
       %button.button Add
