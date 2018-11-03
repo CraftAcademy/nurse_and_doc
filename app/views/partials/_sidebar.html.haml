@@ -24,7 +24,7 @@
                 %path.heroicon-ui{:d => "M2 15V5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v15a1 1 0 0 1-1.7.7L16.58 17H4a2 2 0 0 1-2-2zM20 5H4v10h13a1 1 0 0 1 .7.3l2.3 2.29V5z"}
               .text-white.text-xs Create RSC Account
 
-    -# = link_to "#{t :jobs}",  root_path, class: 'header-button'
-    -# = link_to "#{t :hospitals}", hospitals_path, class: 'header-button'
-    -# = link_to "#{t :staffcos}", staffcos_path, class: 'header-button'
-    -# = link_to "Create RSC account", new_user_path, class: 'header-button'
+    -# = link_to t(:jobs),  root_path, class: 'header-button', remote: true
+    -# = link_to t(:hospitals), hospitals_path, class: 'header-button', remote: true
+    -# = link_to t(:staffcos) , staffcos_path, class: 'header-button', remote: true
+    -# = link_to "Create RSC account", new_user_path, class: 'header-button', remote: true

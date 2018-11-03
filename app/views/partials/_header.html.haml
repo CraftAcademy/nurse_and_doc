@@ -9,7 +9,7 @@
           - if user_signed_in?
             = link_to "Logout", destroy_user_session_path, method: :delete, class: 'text-black md:text-white p-2 md:p-4 whitespace-no-wrap'
           - else
-            = link_to "Login/Register", new_user_session_path, class: "text-black md:text-white p-2 md:p-4 whitespace-no-wrap"
+            = link_to "Login/Register", new_user_session_path, class: "text-black md:text-white p-2 md:p-4 whitespace-no-wrap", remote: true
     .text-center.text-white.pb-4
       %h1.font-sans.font-thin Fast, clear and consistent medical staffing.
       %h2.font-thin.text-sm.tracking-wide.mt-2.mb-4 Tool for RSCs to efficiently transmit staffing requirements to medical staffing companies.

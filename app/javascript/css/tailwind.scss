@@ -49,7 +49,7 @@
     height: 90vh;
     grid-template-columns: 0.2fr 0.9fr 0.3fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "sidebar jobs shifts";
+    grid-template-areas: "sidebar content shifts";
 }
 
 #header {

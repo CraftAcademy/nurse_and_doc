@@ -14,3 +14,50 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+const sharedDeviseLinkHandler = (event) => {
+    if (event.target.classList.contains('.shared_devise_link')){
+        var modalElement = document.getElementById('modal')
+        modalElement.remove()
+    }
+} 
+
+const closeModal = (modalElement) => {
+    modalElement.remove()
+    App.mainContent.style.visibility = "";
+    App.mainContent.style.height = null;
+}
+
+const closeModalListener = element => {
+    let elementToObserve = element
+    let closeButton = document.getElementById(elementToObserve)
+    let modalElement = document.getElementById('modal')
+
+    if (closeButton && modalElement) {
+        closeButton.addEventListener('click', () => {
+            closeModal(modalElement)
+        })
+    }
+}
+
+const hideMainContent = () => {
+    App.mainContent.style.visibility = "hidden";
+    App.mainContent.style.height = '0px';
+}
+
+const displayTemplate = html => {
+    hideMainContent();
+    App.tempContent.innerHTML = html
+}
+
+const displayModal = html => {
+    hideMainContent();
+    App.tempContent.innerHTML = html
+    closeModalListener('cancel_modal')
+}
+
+
+document.addEventListener('turbolinks:load', () => {
+    App.mainContent = document.getElementById('main_content')
+    App.tempContent = document.getElementById('temp_content')
+})
