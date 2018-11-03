@@ -25,5 +25,5 @@ Feature: RSC creates a new hospital
         Then I see "Hospital 1"
         And I fill in "Add Hospitals" with "Hospital 2"
         And I click on "Add"
-        Then I should see "Hospital already exists. Your hospital could not be saved"
+        Then I should see "Hospital already exists. Your hospital could not be saved."
 
