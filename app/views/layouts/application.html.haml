@@ -11,15 +11,16 @@
     = stylesheet_pack_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = notice 
-    = alert 
-    = flash[:error] 
+
     = render partial: 'partials/header'
     .grid-container
       = render partial: 'partials/sidebar'
       #content
         #temp_content
         #main_content
+          = notice 
+          = alert 
+          = flash[:error] 
           = yield
       
     
