@@ -1,15 +1,19 @@
-- content_for :modal_content do 
-  .login-card
-    .card-background
-      .card-text
-        %h2 Hospitals
-      = form_with scope: :user, url: new_hospital_path, local: true do |form|
-        .field
-          = form.label :Hospital, class: "name"
-        .field
-          = form.text_field :name, class: "text-field", autofocus: true, autocomplete: "name"
-        .field
-          = form.submit "Add", url: hospital_path, class: "create-button"
-          = button_tag 'Cancel', id: 'cancel_modal', class: 'create-button'
-= render partial: 'partials/modal'
+.card
+  .inner-card
+    .card-title
+      %h1 Hospitals
+    #list-item.flex
+    - @hospitals.each do |hospital|
+      #form-name
+        %p= hospital.name
+      #form-button
+        %button.button Remove
+    .add-field
+      = form_with url: hospitals_path, scope: :hospital  do |f|
+        = f.label :name
+        = f.text_field :name, class: "add-field-placeholder"
+        %br
+        %button.button
+          = f.submit value: "Add"
+      
 
