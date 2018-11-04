@@ -4,7 +4,7 @@
         .card-title
             %h1 Hospitals
         #list-item.flex
-        = form_with scope: :staffco, url: staffcos_path, local: true do |form|
+        = form_with scope: :staffco, url: staffcos_path, local: true, id: :create_sc,do |form|
             = form.label :name
             = form.text_field :name, class: "add-field-placeholder"
             %br
@@ -13,3 +13,4 @@
             %br
             %button.button
             = form.submit value: "Add Company"
+= render partial: 'partials/modal'

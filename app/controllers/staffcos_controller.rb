@@ -15,6 +15,9 @@ class StaffcosController < ApplicationController
       redirect_to staffcos_path, notice: 'The staffing company was successfully created'
     else
       render :new
+      #waiting for rsc can create jobs pr to include accessibility errors
+      # errors = user.errors.full_messages
+      # render json: { message: errors }, status: 422
     end
   end
 
