@@ -110,15 +110,15 @@
     @apply pb-2 pt-2;
 }
 
-.email-label {
+.form-label {
     @apply inline-flex leading-tight text-grey-darker font-sans font-thin;
 }
 
-.email-field {
+.form-field {
     @apply block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
 }
 
-.email-field:focus {
+.form-field:focus {
     @apply outline-none shadow-outline;
 }
 

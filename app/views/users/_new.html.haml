@@ -6,9 +6,9 @@
         %h2 Add new RSC user
       = form_with scope: :user, url: users_path, local: true do |form|
         .field
-          = form.label :email, class: "email-label"
+          = form.label :email, class: "form-label"
         .field
-          = form.text_field :email, class: "email-field", autofocus: true, autocomplete: "email"
+          = form.text_field :email, class: "form-field", autofocus: true, autocomplete: "email"
         .field
           = form.submit "Create account", class: "signup-button"
           = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'

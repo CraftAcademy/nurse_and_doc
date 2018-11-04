@@ -9,18 +9,18 @@
         #error_messages 
           = devise_error_messages!
         .field
-          = f.label :email, class: "email-label"
-          = f.email_field :email, class: "email-field", autofocus: true, autocomplete: "email"
+          = f.label :email, class: "form-label"
+          = f.email_field :email, class: "form-field", autofocus: true, autocomplete: "email"
         .field
-          = f.label :password, class: "email-label"
+          = f.label :password, class: "form-label"
           - if @minimum_password_length
             %em
               (#{@minimum_password_length} characters minimum)
             %br/
             = f.password_field :password, autocomplete: "new-password", class: "password-field"
         .field
-          = f.label :password_confirmation, class: "email-label"
-          = f.password_field :password_confirmation, autocomplete: "new-password", class: "email-field"
+          = f.label :password_confirmation, class: "form-label"
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-field"
         .actions
           = f.submit "Sign up", class: "signup-button", remote: true
           = content_for :extras
