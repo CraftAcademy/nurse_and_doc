@@ -6,10 +6,14 @@ class StaffcosController < ApplicationController
   def create
     @staffcos = Staffco.new(staffco_params)
     if @staffcos.save
-    redirect_to staffcos_path, notice: "Company was successfully created."
+      redirect_to staffcos_path
     else
-      render 'new'
+      render'new'
     end
+  end
+
+  def show
+    @staffcos = Staffco.find(params[:id])
   end
 
 private
