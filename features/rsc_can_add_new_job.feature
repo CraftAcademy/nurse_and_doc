@@ -12,4 +12,5 @@ Feature: Rsc can add new job
         Then I should see "Create New Job"
         And I fill in "Name" with "Willy Wonka"
         And I click on "Submit"
-        Then I should see "Willy Wonka"
+        Then I should see "The job was successfully created"
+        And I should see "Willy Wonka"
