@@ -6,15 +6,8 @@
     - @staffcos.each do |staffcos|
       #form-name
         %p= staffcos.name
+      #form-name
+        %p= staffcos.email
       #form-button
         %button.button Remove
-    .add-field
-      = form_with url: staffcos_path, scope: :staffco  do |f|
-        = f.label :name
-        = f.text_field :name, class: "add-field-placeholder"
-        %br
-        = f.label :email
-        = f.text_area :email, class: "add-field-placeholder"
-        %br
-        %button.button
-          = f.submit value: "Add Company"
+    = link_to "Add new company", new_staffco_path, class: "button", remote: true
