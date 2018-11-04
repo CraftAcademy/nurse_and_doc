@@ -1,14 +1,20 @@
+# frozen_string_literal: true
+
 class StaffcosController < ApplicationController
   def index
     @staffcos = Staffco.all
   end
 
+  def new
+    @staffcos = Staffco.new
+  end
+
   def create
-    @staffcos = Staffco.new(staffco_params)
-    if @staffcos.save
-      redirect_to staffcos_path
+    staffco = Staffco.create(staffco_params)
+    if staffco.persisted?
+      redirect_to staffcos_path, notice: 'The staffing company was successfully created'
     else
-      render'new'
+      render :new
     end
   end
 

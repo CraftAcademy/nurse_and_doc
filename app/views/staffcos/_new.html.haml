@@ -1,16 +1,15 @@
 - content_for :modal_content do
     .card
     .inner-card
-      .card-title
-        %h1 Hospitals
-      #list-item.flex
-      = form_with scope: :staffco, url: staffcos_path, local: true do |form|
-        .add-field
-            = f.label :name
-            = f.text_field :name, class: "add-field-placeholder"
+        .card-title
+            %h1 Hospitals
+        #list-item.flex
+        = form_with scope: :staffco, url: staffcos_path, local: true do |form|
+            = form.label :name
+            = form.text_field :name, class: "add-field-placeholder"
             %br
-            = f.label :email
-            = f.text_area :email, class: "add-field-placeholder"
+            = form.label :email
+            = form.text_area :email, class: "add-field-placeholder"
             %br
             %button.button
-            = f.submit value: "Add Company"
+            = form.submit value: "Add Company"
