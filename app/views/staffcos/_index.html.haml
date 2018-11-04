@@ -3,11 +3,11 @@
     .card-title
       %h1 Staffing Companies
     #list-item.flex
-    - @staffcos.each do |staffcos|
+    - @staffco.each do |staffco|
       #form-name
-        %p= staffcos.name
+        %p= staffco.name
       #form-name
-        %p= staffcos.email
+        %p= staffco.email
       #form-button
         %button.button Remove
     = link_to "Add new company", new_staffco_path, class: "button", remote: true

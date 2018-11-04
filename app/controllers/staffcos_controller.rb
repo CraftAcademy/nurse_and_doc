@@ -2,11 +2,11 @@
 
 class StaffcosController < ApplicationController
   def index
-    @staffcos = Staffco.all
+    @staffco = Staffco.all
   end
 
   def new
-    @staffcos = Staffco.new
+    @staffco = Staffco.new
   end
 
   def create
@@ -23,7 +23,7 @@ class StaffcosController < ApplicationController
 end
 
   def show
-    @staffcos = Staffco.find(params[:id])
+    @staffco = Staffco.find(params[:id])
   end
 
 private
