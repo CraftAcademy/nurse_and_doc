@@ -1,3 +1,12 @@
 
-var templateContent = '<%= escape_javascript(render partial: 'new') %>'
-displayTemplate(templateContent)
+var modalContent = '<%= escape_javascript(render partial: 'new') %>'
+App.mainContent.style.visibility = "hidden";
+App.tempContent.innerHTML = modalContent
+
+var form = document.getElementById('create_job')
+
+form.addEventListener('ajax:error', (event) => {
+    let errorMessageDisplayElement = document.getElementById('error_messages')
+    let message = event.detail[0].message
+    errorMessageDisplayElement.innerHTML = message
+})

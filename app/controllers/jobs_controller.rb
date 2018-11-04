@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class JobsController < ApplicationController
   def index
     @jobs = Job.all
@@ -8,9 +10,9 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new(job_params)
-    if @job.save
-      redirect_to root_path, notice: "Company was successfully created."
+    job = Job.create(job_params)
+    if @job.persisted?
+      render :index
     else
       render :new
     end
@@ -19,5 +21,4 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(:name)
   end
-
 end
