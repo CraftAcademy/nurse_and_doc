@@ -9,5 +9,9 @@
       #form-button
         %button.button Remove
     .add-field
-      %input.add-field-placeholder{placeholder: "Add"}
-      %button.button Add
+      = form_with url: staffcos_path, scope: :staffco  do |f|
+        = f.label :name
+        = f.text_field :name
+        = f.label :email
+        = f.text_area :email
+        = f.submit value: "Add Company"

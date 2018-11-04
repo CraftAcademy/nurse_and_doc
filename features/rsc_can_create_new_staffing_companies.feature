@@ -17,9 +17,9 @@ Feature: RSC creates a staffing companies
         And I click on "Staffing Companies" within the "#sidebar" section
         And I should see "Company 1"
         And I should see "Company 2"
-        And I fill in "Add Company name" with "Company 3"
-        And I fill in "Add Email" with "company3@rsc.com"
-        And I click on "Add"
+        And I fill in "Name" with "Company 3"
+        And I fill in "Email" with "company3@rsc.com"
+        And I click on "Add Company"
         Then I should see "Company 3"
 
     Scenario: RSC cannot add companies if it already exists
