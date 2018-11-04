@@ -11,10 +11,11 @@ class JobsController < ApplicationController
 
   def create
     job = Job.create(job_params)
-    if @job.persisted?
-      render :index
+    if job.persisted?
+      redirect_to root_path, notice: 'The job was successfully created'
     else
-      render :new
+      errors = user.errors.full_messages
+      render json: { message: errors }, status: 422
     end
   end
 

@@ -2,6 +2,7 @@
 var modalContent = '<%= escape_javascript(render partial: 'new') %>'
 App.mainContent.style.visibility = "hidden";
 App.tempContent.innerHTML = modalContent
+closeModalListener('cancel_modal')
 
 var form = document.getElementById('create_job')
 
@@ -9,4 +10,12 @@ form.addEventListener('ajax:error', (event) => {
     let errorMessageDisplayElement = document.getElementById('error_messages')
     let message = event.detail[0].message
     errorMessageDisplayElement.innerHTML = message
+})
+
+form.addEventListener('ajax:success', (event) => {
+    let errorMessageDisplayElement = document.getElementById('messages')
+    let message = event.detail[0].message
+    let model = document.getElementById('modal')
+    errorMessageDisplayElement.innerHTML = message
+    closeModal(modal)
 })

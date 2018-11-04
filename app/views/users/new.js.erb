@@ -13,7 +13,6 @@ form.addEventListener('ajax:error', (event) => {
 })
 
 form.addEventListener('ajax:success', (event) => {
-debugger;
     let errorMessageDisplayElement = document.getElementById('messages')
     let message = event.detail[0].message
     let model = document.getElementById('modal')
