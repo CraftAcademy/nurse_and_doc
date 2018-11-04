@@ -10,7 +10,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     if @job.save
-      redirect_to root_path
+      redirect_to root_path, notice: "Company was successfully created."
     else
       render :new
     end
