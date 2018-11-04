@@ -7,7 +7,8 @@ RSpec.describe Staffco, type: :model do
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :name }
-    it { is_expected.to validate_presence_of :email }
+    it { should validate_uniqueness_of(:email) }
+    it { is_expected.to allow_value("email@email.com").for(:email) }
   end
   
   describe FactoryBot do
