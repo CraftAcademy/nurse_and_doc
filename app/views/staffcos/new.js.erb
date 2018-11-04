@@ -4,7 +4,7 @@ App.mainContent.style.visibility = "hidden";
 App.tempContent.innerHTML = modalContent
 closeModalListener('cancel_modal')
 
-<%# var form = document.getElementById('create_sc')
+var form = document.getElementById('create_sc')
 
 form.addEventListener('ajax:error', (event) => {
     let errorMessageDisplayElement = document.getElementById('error_messages')
@@ -18,4 +18,4 @@ form.addEventListener('ajax:success', (event) => {
     let model = document.getElementById('modal')
     errorMessageDisplayElement.innerHTML = message
     closeModal(modal)
-}) %>
+})
