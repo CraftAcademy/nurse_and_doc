@@ -12,8 +12,12 @@ class HospitalsController < ApplicationController
     end
   end
 
+  def show
+    @hospitals = Hospital.find(params[:id])
+  end
+
   private
-  
+
   def hospital_params
     params.require(:hospital).permit(:name)
   end
