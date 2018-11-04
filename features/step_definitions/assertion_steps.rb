@@ -33,3 +33,7 @@ end
 Then("I should be on the jobs index") do
     expect(page).to have_current_path(root_path)
 end
+
+Then("I should not see {string}") do |message|
+    expect(page).not_to have_content(message)
+end

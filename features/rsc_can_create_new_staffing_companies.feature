@@ -7,9 +7,9 @@ Feature: RSC creates a staffing companies
 
     Background: 
         Given the following staffing companies exists
-            | name        | 
-            | Company 1   | 
-            | Company 2   |
+            | name        | email           |
+            | Company 1   | company1@me.com |
+            | Company 2   | company2@me.com |
 
     Scenario: RSC can successfully add new companies
         Given I am on the landing page
@@ -21,10 +21,10 @@ Feature: RSC creates a staffing companies
         And I click on "Add Company"
         Then I should see "Company 3"
 
-    # Scenario: RSC cannot add companies if it already exists
-    #     Given I am on the landing page
-    #     And I click on "Staffing Companies" within the "#sidebar" section
-    #     And I fill in "Name" with "Company 2"
-    #     And I fill in "Email" with "company3@rsc.com"
-    #     And I click on "Add Company"
-    #     Then I should see "Staffing company already exists. Your company could not be saved."
+    Scenario: RSC cannot add companies if it already exists
+        Given I am on the landing page
+        And I click on "Staffing Companies" within the "#sidebar" section
+        And I fill in "Name" with "Company 4"
+        And I fill in "Email" with "company2@me.com"
+        And I click on "Add Company"
+        Then I should not see "Company 4"

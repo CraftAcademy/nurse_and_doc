@@ -10,6 +10,8 @@ class StaffcosController < ApplicationController
   end
 
   def create
+    unless Staffco.exists?(staffco_params)
+
     staffco = Staffco.create(staffco_params)
     if staffco.persisted?
       redirect_to staffcos_path, notice: 'The staffing company was successfully created'
@@ -20,6 +22,7 @@ class StaffcosController < ApplicationController
       # render json: { message: errors }, status: 422
     end
   end
+end
 
   def show
     @staffcos = Staffco.find(params[:id])
