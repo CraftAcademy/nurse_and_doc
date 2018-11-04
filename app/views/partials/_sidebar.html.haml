@@ -3,28 +3,27 @@
         .xl:py-2
             .group.relative.sidebar-item.with-children
                 = link_to root_path, remote: true do
-                    .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
+                    .rsc-form-styling.block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
                         .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
                             = image_tag 'jobs_icon.png'
-                        .text-white.text-xs= t(:jobs)
+                        .text-styling= t(:jobs)
             .group.relative.sidebar-item.with-children
                 = link_to hospitals_path, remote: true do
                     .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
                         .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
                             = image_tag 'hospital_icon.png'
-                        .text-white.text-xs= t(:hospitals)
+                        .text-styling= t(:hospitals)
             .group.relative.sidebar-item.with-children
                 = link_to staffcos_path, remote: true do
                     .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
                         .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
                             = image_tag 'sc_icon.png'
-                        .text-white.text-xs= t(:staffcos)
+                        .text-styling= t(:staffcos)
             .group.relative.sidebar-item.with-children
                 = link_to new_user_path, remote: true do
                     .block.xl:flex.xl:items-center.text-center.xl:text-left.shadow-light.xl:shadow-none.py-6.xl:py-2.xl:px-4.border-l-4.border-transparent.hover:bg-black
                         .h-6.w-6.text-grey-darker.fill-current.xl:mr-2{:height => "24", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
                             = image_tag 'rsc_icon.png'
-                        .text-white.text-xs= t(:creatersc)
+                        .text-styling= t(:creatersc)
 
--# note: icon color #788084
--# note: trying to extract css classes but keeps breaking webpacker
+
