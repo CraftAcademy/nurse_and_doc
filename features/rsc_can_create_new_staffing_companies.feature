@@ -16,6 +16,7 @@ Feature: RSC creates a staffing companies
         Then I should see "RSC Dashboard"
         And I click on "Staffing Companies" within the "#sidebar" section
         And I should see "Company 1"
+        Then I click on "Add new company"
         And I fill in "Name" with "Company 3"
         And I fill in "Email" with "company3@rsc.com"
         And I click on "Add Company"
@@ -24,6 +25,7 @@ Feature: RSC creates a staffing companies
     Scenario: RSC cannot add companies if it already exists
         Given I am on the landing page
         And I click on "Staffing Companies" within the "#sidebar" section
+        Then I click on "Add new company"
         And I fill in "Name" with "Company 4"
         And I fill in "Email" with "company2@me.com"
         And I click on "Add Company"
