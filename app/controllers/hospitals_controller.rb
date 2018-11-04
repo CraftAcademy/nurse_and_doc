@@ -4,20 +4,22 @@ class HospitalsController < ApplicationController
   end
 
   def new
+    @hospital = Hospital.new
   end
   
   def create
-    @hospital = Hospital.new(hospital_params)
-    if @hospital.save
-      redirect_to hospitals_path
+    @hospital = Hospital.create(hospital_params)
+    if hospital.persisted?
+      redirect_to hospitals_path, notice: 'Hospital added'
     else
-      render'new'
+      errors = user.errors.full_messages
+      render json: { message: "Hospital already exists" }, status: 422
     end
   end
 
-  def show
-    @hospitals = Hospital.find(params[:id])
-  end
+  # def show
+  #   @hospitals = Hospital.find(params[:id])
+  # end
 
   private
 
