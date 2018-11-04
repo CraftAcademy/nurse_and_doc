@@ -11,7 +11,8 @@ class HospitalsController < ApplicationController
     if @hospital.save
       redirect_to hospitals_path
     else
-      render'new'
+      errors = user.errors.full_messages
+      render json: { message: errors }, status: 422
     end
   end
 
