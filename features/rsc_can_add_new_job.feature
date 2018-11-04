@@ -7,8 +7,8 @@ Feature: Rsc can add new job
         Given I am on the landing page
 
     Scenario: RSC creates a new job
-        And I click on "Add"
-        Then I should see "New Job"
+        And I click on "New"
+        Then I should see "Create New Job"
         And I fill in "Name" with "Doctor"
         And I click on "Save"
         Then I should see "Doctor"
