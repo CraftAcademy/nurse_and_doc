@@ -1,3 +1,4 @@
+@javascript
 Feature: Rsc can add new job
     As a RSC,
     In order to create jobs,
@@ -9,6 +10,6 @@ Feature: Rsc can add new job
     Scenario: RSC creates a new job
         And I click on "New"
         Then I should see "Create New Job"
-        And I fill in "Name" with "Doctor"
-        And I click on "Save"
-        Then I should see "Doctor"
+        And I fill in "Name" with "Willy Wonka"
+        And I click on "Submit"
+        Then I should see "Willy Wonka"
