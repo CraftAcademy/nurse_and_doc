@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     }
     root controller: :jobs, action: :index 
     resources :users, only: [:create, :new]
-    resources :staffcos, only: :index
+    resources :staffcos, only: [:create, :index, :new]
     resources :hospitals, only: :index
   end
 end
