@@ -10,7 +10,7 @@ Feature: Rsc can add new job
     Scenario: RSC creates a new job
         And I click on "New"
         Then I should see "Create New Job"
-        And I fill in "Name" with "Willy Wonka"
+        And I fill in "Name" with "Heart Surgeon"
         And I click on "Submit"
         Then I should see "The job was successfully created"
-        And I should see "Willy Wonka"
+        And I should see "Heart Surgeon"
