@@ -1,0 +1,17 @@
+- content_for :modal_content do
+  .card
+    .inner-card
+      .card-title
+        %h1 Hospitals
+      #list-item.flex
+      = form_with scope: :hospital, url: hospitals_path, local: true do |form|
+        #form-name
+          %p= hospital.name
+      #form-button
+        =link_to "Remove", "#", class: "button"
+      .add-field
+        %input.add-field-placeholder{placeholder: "Add Hospitals"}
+        #form-button
+        =link_to "Add", "#", class: "button"
+        = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+        

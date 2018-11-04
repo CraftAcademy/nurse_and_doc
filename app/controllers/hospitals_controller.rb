@@ -2,10 +2,13 @@ class HospitalsController < ApplicationController
   def index
     @hospitals = Hospital.all
   end
+
+  def new
+  end
   
   def create
-    hospital = Hospital.new(hospital_params)
-    if @hospitals.save
+    @hospital = Hospital.new(hospital_params)
+    if @hospital.save
       redirect_to hospitals_path
     else
       render'new'
