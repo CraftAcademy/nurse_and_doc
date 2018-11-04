@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class StaffcosController < ApplicationController
+
   def index
     @staffco = Staffco.all
   end
@@ -18,17 +19,17 @@ class StaffcosController < ApplicationController
       #waiting for rsc can create jobs pr to include accessibility errors
       # errors = user.errors.full_messages
       # render json: { message: errors }, status: 422
+      end
     end
   end
-end
 
   def show
     @staffco = Staffco.find(params[:id])
   end
 
-private
-
+  private
   def staffco_params
     params.require(:staffco).permit(:name, :email)
   end
+
 end

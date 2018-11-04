@@ -3,14 +3,14 @@
     .inner-card
         .card-title
             %h1 Staffing Companies
-        #list-item.flex
         = form_with scope: :staffco, url: staffcos_path, local: true, id: :create_sc do |form|
+            #error_messages
             = form.label :name
             = form.text_field :name, class: "add-field-placeholder"
             %br
             = form.label :email
             = form.text_area :email, class: "add-field-placeholder"
             %br
-            %button.button
-                = form.submit value: "Add Company"
+            = form.submit value: "Add Company", class: "button"
+            -# = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
 = render partial: 'partials/modal'
