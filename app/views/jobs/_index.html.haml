@@ -10,4 +10,4 @@
         %button.button Remove
     .add-field
       %input.add-field-placeholder{placeholder: "Add new job"}
-      %button.button Add
+      = link_to "New", new_job_path, class: "button"
