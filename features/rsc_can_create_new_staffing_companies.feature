@@ -20,7 +20,7 @@ Feature: RSC creates a staffing companies
         And I fill in "Name" with "Company 3"
         And I fill in "Email" with "company3@rsc.com"
         And I click on "Add Company"
-        Then I should see "Company 3"
+        Then I should see "The staffing company was successfully created"
 
     Scenario: RSC cannot add companies if it already exists
         Given I am on the landing page
