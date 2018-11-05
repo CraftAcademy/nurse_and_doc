@@ -19,3 +19,7 @@ Feature: Rsc can add new job
         And I fill in "Name" with " "
         And I click on "Submit"
         Then I should see "Name can't be blank"
+
+    Scenario: RSC wants to add new job but decides not to
+        And I click on "Cancel"
+        Then I should be on the landing page
