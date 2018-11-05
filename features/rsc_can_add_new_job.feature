@@ -4,12 +4,12 @@ Feature: Rsc can add new job
     In order to create jobs,
     I would like to click on the “+” button and fill in the jobs information.
 
-    Background: Signed in as RSC on dashboard
+    Background: Landing page, clicking new and being on form page
         Given I am on the landing page
         And I click on "Add New Job"
-        Then I should see "Create New Job"
 
     Scenario: RSC creates a new job
+        Then I should see "Create New Job"
         And I fill in job form
         And I click on "Submit"
         Then I should see "The job was successfully created"
