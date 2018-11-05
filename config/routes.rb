@@ -5,7 +5,8 @@ Rails.application.routes.draw do
       registrations: :registrations,
       sessions: :sessions
     }
-    root controller: :jobs, action: :index 
+    root controller: :jobs, action: :index
+    resources :jobs, only: [:new, :create]
     resources :users, only: [:create, :new]
     resources :staffcos, only: :index
     resources :hospitals, only: [:index, :create, :new]

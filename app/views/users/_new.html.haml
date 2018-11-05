@@ -1,10 +1,11 @@
 
-- content_for :modal_content do 
+- content_for :modal_content do
   .login-card
     .card-background
       .card-text
         %h2 Add new RSC user
-      = form_with scope: :user, url: users_path, local: true do |form|
+      = form_with scope: :user, url: users_path, id: :create_user do |form|
+        #error_messages
         .field
           = form.label :email, class: "email-label"
         .field
