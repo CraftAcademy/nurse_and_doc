@@ -1,29 +1,25 @@
 - content_for :extras do
-  = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+  = button_tag 'Cancel', id: 'cancel_modal', class: 'button'
 - content_for :modal_content do
-  .login-card
-    .card-background
-      .card-text
-        %h2.text-grey-darkest Sign up
-      = form_with(model: resource, as: resource_name, url: registration_path(resource_name), id: :user_sign_up) do |f|
-        #error_messages 
-          = devise_error_messages!
-        .field
-          = f.label :email, class: "form-label"
-          = f.email_field :email, class: "form-field", autofocus: true, autocomplete: "email"
-        .field
-          = f.label :password, class: "form-label"
-          - if @minimum_password_length
-            %em
-              (#{@minimum_password_length} characters minimum)
-            %br/
-            = f.password_field :password, autocomplete: "new-password", class: "password-field"
-        .field
-          = f.label :password_confirmation, class: "form-label"
-          = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-field"
-        .actions
-          = f.submit "Sign up", class: "signup-button", remote: true
-          = content_for :extras
-          = render "devise/shared/links"
+  .form-header Sign up
+  = form_with(model: resource, as: resource_name, url: registration_path(resource_name), id: :user_sign_up) do |f|
+    #error_messages 
+      = devise_error_messages!
+    .field
+      = f.label :email, class: "form-label"
+      = f.email_field :email, class: "form-input-field", autofocus: true, autocomplete: "email"
+    .field
+      = f.label :password, class: "form-label"
+      - if @minimum_password_length
+        %em.form-label
+          (#{@minimum_password_length} characters minimum)
+        = f.password_field :password, autocomplete: "new-password", class: "form-input-field"
+    .field
+      = f.label :password_confirmation, class: "form-label"
+      = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input-field"
+    .actions
+      = f.submit "Sign up", class: "button", remote: true
+      = content_for :extras
+      = render "devise/shared/links"
 
 = render partial: 'partials/modal'
