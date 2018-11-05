@@ -4,13 +4,13 @@
 
 @tailwind utilities;
 
-.card {
-    @apply w-full items-center bg-grey-darker ;
+.list-card {
+    @apply w-full items-center bg-grey-darker bg-white p-6;
 }
 
-.inner-card {
-    @apply bg-white p-6 m-4 w-full;
-}
+// .inner-card {
+//     @apply bg-white p-6 m-4 w-full;
+// }
 
 .card-title {
     @apply mb-4 text-grey-darkest font-sans font-thin;
@@ -24,22 +24,22 @@
     @apply flex mb-4 items-center;
 }
 
-#form-grid {
+#list-grid {
     display: grid;
     grid-template-columns: 0.8fr 0.2fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "form-name form-button-area";
+    grid-template-areas: "list-name list-button-area";
     @apply py-2;
 }
 
-#form-name {
-    grid-area: form-name;
+#list-name {
+    grid-area: list-name;
     display: grid;
     @apply align-text-bottom text-left w-full text-grey-darkest font-sans font-thin mt-5;
 }
 
-#form-button-area {
-    grid-area: form-button-area;
+#list-button-area {
+    grid-area: list-button-area;
     display: grid;
     @apply pb-3;
     // @apply text-right font-thin;
@@ -216,7 +216,7 @@ a {
     @apply block uppercase tracking-wide text-grey-darker text-xs mb-2 ; 
 }
 
-.to-form-input-field {
+.form-input-field {
     @apply appearance-none block w-full bg-grey-lighter text-grey-darker py-3 px-4 mb-3 leading-tight ;
 
     &:focus {

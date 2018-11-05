@@ -1,13 +1,12 @@
-.card
-  .inner-card
-    .to-form-header Jobs
-    #list-item.flex
-    - @jobs.each do |job|
-      #form-grid  
-        #form-name= job.name
-        #form-button-area
-          %button.to-button Remove
-    #form-grid
-      %input.to-form-input-field{placeholder: "Add new job"}
-      #form-button-area
-        %button.to-button Add
+.list-card
+  .to-form-header Jobs
+  #list-item.flex
+  - @jobs.each do |job|
+    #list-grid  
+      #list-name= job.name
+      #list-button-area
+        %button.to-button Remove
+  #list-grid
+    %input.form-input-field{placeholder: "Add new job"}
+    #list-button-area
+      %button.to-button Add
