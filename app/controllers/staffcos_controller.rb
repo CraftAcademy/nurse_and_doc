@@ -29,7 +29,7 @@ class StaffcosController < ApplicationController
 
   private
   def staffco_params
-    params.require(:staffco).permit(:name, :email)
+    params.require(:staffco).permit(:name, :email, :personal_name, :phone)
   end
 
 end
