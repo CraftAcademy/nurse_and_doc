@@ -8,6 +8,4 @@
         %p= job.name
       #form-button
         %button.button Remove
-    .add-field
-      %input.add-field-placeholder{placeholder: "Add new job"}
-      = link_to "New", new_job_path, class: "button", remote: true
+    = link_to "Add New Job", new_job_path, class: "button", remote: true

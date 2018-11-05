@@ -6,11 +6,11 @@ Feature: Rsc can add new job
 
     Background: Signed in as RSC on dashboard
         Given I am on the landing page
-        And I click on "New"
+        And I click on "Add New Job"
         Then I should see "Create New Job"
 
     Scenario: RSC creates a new job
-        And I fill in "Name" with "Heart Surgeon"
+        And I fill in job form
         And I click on "Submit"
         Then I should see "The job was successfully created"
         And I should see "Heart Surgeon"
