@@ -6,11 +6,11 @@
       #list-name= hospital.name
       #list-button-area
         %button.button Remove
-  #list-grid 
-  = form_with url: hospitals_path, scope: :hospital  do |form|
-    %input.form-input-field{placeholder: "Add Hospitals"}
+  = form_with url: hospitals_path, scope: :hospital  do |f|
+    #list-grid
+      #list-name
+      = f.text_field :name, id: "Name", class: "form-input-field"
       #list-button-area
-        %button
-          = form.submit value: "Add Hospital", class: "button text-center"
+      = f.submit value: "Add Hospital", class: "button"
   
 
