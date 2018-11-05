@@ -53,13 +53,13 @@
     @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker font-sans font-thin;
 }
 
-.button {
-    @apply flex-no-shrink p-2 my-2 border-2 rounded text-grey-darker border-grey-darker font-sans font-thin;
-}
+// .button {
+//     @apply flex-no-shrink p-2 my-2 border-2 rounded text-grey-darker border-grey-darker font-sans font-thin;
+// }
 
-.button:hover {
-    @apply text-white bg-grey-darkest;
-}
+// .button:hover {
+//     @apply text-white bg-grey-darkest;
+// }
 
 .grid-container {
     display: grid;
@@ -224,7 +224,7 @@ a {
     }
 }
 
-.to-button {
+.button {
     @apply bg-grey-dark text-white ml-4 py-2 px-3 no-underline ;
 
     &:hover {
