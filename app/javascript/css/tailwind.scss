@@ -8,10 +8,6 @@
     @apply w-full items-center bg-grey-darker bg-white p-6;
 }
 
-// .inner-card {
-//     @apply bg-white p-6 m-4 w-full;
-// }
-
 .card-title {
     @apply mb-4 text-grey-darkest font-sans font-thin;
 }
@@ -42,7 +38,6 @@
     grid-area: list-button-area;
     display: grid;
     @apply pb-3;
-    // @apply text-right font-thin;
 }
 
 .add-field {
@@ -52,14 +47,6 @@
 .add-field-placeholder {
     @apply shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker font-sans font-thin;
 }
-
-// .button {
-//     @apply flex-no-shrink p-2 my-2 border-2 rounded text-grey-darker border-grey-darker font-sans font-thin;
-// }
-
-// .button:hover {
-//     @apply text-white bg-grey-darkest;
-// }
 
 .grid-container {
     display: grid;
@@ -133,10 +120,6 @@
     @apply pb-2 pt-2;
 }
 
-// .form-label {
-//     @apply inline-flex leading-tight text-grey-darker font-sans font-thin;
-// }
-
 .form-field {
     @apply block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
 }
@@ -189,8 +172,6 @@ a {
     @apply text-white text-xs;
 }
 
-
-// Thomas styling of forms
 
 .form {
     @apply w-full max-w-md ;
