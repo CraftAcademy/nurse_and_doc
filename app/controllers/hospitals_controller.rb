@@ -8,11 +8,11 @@ class HospitalsController < ApplicationController
   end
   
   def create
-    @hospital = Hospital.create(hospital_params)
+    hospital = Hospital.create(hospital_params)
     if hospital.persisted?
       redirect_to hospitals_path, notice: 'Hospital added'
     else
-      errors = user.errors.full_messages
+      errors = hospital.errors.full_messages
       render json: { message: errors }, status: 422
     end
   end

@@ -17,6 +17,7 @@ Feature: RSC creates a new hospital
         Then I should see "Hospital"
         And I fill in "Name" with "Hospital 3"
         And I click on "Add Hospital"
+        And I should see "Hospital added"
         Then I should see "Hospital 3"
 
     Scenario: RSC cannot add hospitals if it already exists
