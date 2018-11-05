@@ -14,15 +14,14 @@ class HospitalsController < ApplicationController
     if hospital.persisted?
       redirect_to hospitals_path, notice: 'Hospital added'
     else
-      errors = hospital.errors.full_messages
-      render json: { message: errors }, status: 422
+      redirect_to hospitals_path, notice: 'Hospital already exists. Your hospital could not be saved'
       end
     end
   end
 
-  # def show
-  #   @hospitals = Hospital.find(params[:id])
-  # end
+  def show
+    @hospitals = Hospital.find(params[:id])
+  end
 
   private
 
