@@ -13,7 +13,7 @@ class HospitalsController < ApplicationController
       redirect_to hospitals_path, notice: 'Hospital added'
     else
       errors = user.errors.full_messages
-      render json: { message: "Hospital already exists" }, status: 422
+      render json: { message: errors }, status: 422
     end
   end
 

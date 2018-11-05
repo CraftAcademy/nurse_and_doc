@@ -9,4 +9,11 @@
       #form-button
         %button.button Remove
     .add-field
-      = link_to "Add", new_hospital_path, class: "button", remote: true
+      = form_with url: hospitals_path, scope: :hospital  do |f|
+        = f.label :name
+        = f.text_field :name, class: "add-field-placeholder"
+        %br
+        %button.button
+          = f.submit value: "Add Hospital"
+      
+

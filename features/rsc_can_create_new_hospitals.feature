@@ -15,15 +15,15 @@ Feature: RSC creates a new hospital
         Given I am on the landing page
         And I click on "Hospitals"
         Then I should see "Hospital"
-        And I fill in "Hospital 3"
-        And I click on "Add"
+        And I fill in "Name" with "Hospital 3"
+        And I click on "Add Hospital"
         Then I should see "Hospital 3"
 
     Scenario: RSC cannot add hospitals if it already exists
         Given I am on the landing page
         And I click on "Hospitals"
         Then I see "Hospital"
-        And I fill in "Hospital 2"
-        And I click on "Add"
-        Then I should see "Hospital already exists."
+        And I fill in "Name" with "Hospital 2"
+        And I click on "Add Hospital"
+        Then I should see "Hospital already exists. Your hospital could not be saved."
 
