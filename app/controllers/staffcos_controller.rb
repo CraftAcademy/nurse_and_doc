@@ -6,10 +6,6 @@ class StaffcosController < ApplicationController
     @staffcos = Staffco.all
   end
 
-  def new
-    @staffco = Staffco.new
-  end
-
   def create
     unless Staffco.exists?(email: params[:email])
 
@@ -21,10 +17,6 @@ class StaffcosController < ApplicationController
       render json: { message: errors }, status: 422
       end
     end
-  end
-
-  def show
-    @staffco = Staffco.find(params[:id])
   end
 
   private

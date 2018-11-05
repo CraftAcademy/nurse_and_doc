@@ -17,11 +17,7 @@ Feature: RSC creates a staffing companies
         And I click on "Staffing Companies" within the "#sidebar" section
         And I should see "Company 1"
         Then I click on "Add new company"
-        And I fill in "Name" with "Company 3"
-        And I fill in "Personal name" with "Angelica"
-        And I fill in "Phone" with "01234567"
-        And I fill in "Webhook" with "https://api.webhook.com/v2/company3.json?"
-        And I fill in "Email" with "email@email.com"
+        And I fill in company form with "valid" information
         And I click on "Add Company"
         Then I should see "The staffing company was successfully created"
 
@@ -29,10 +25,10 @@ Feature: RSC creates a staffing companies
         Given I am on the landing page
         And I click on "Staffing Companies" within the "#sidebar" section
         Then I click on "Add new company"
-        And I fill in "Name" with "Company 4"
-        And I fill in "Personal name" with "Nathan"
-        And I fill in "Phone" with "01234567"
-        And I fill in "Webhook" with "https://api.webhook.com/v2/company3.json?"
-        And I fill in "Email" with "company2@me.com"
+        And I fill in company form with "existing email"
+        # And I fill in "Personal name" with "Nathan"
+        # And I fill in "Phone" with "01234567"
+        # And I fill in "Webhook" with "https://api.webhook.com/v2/company3.json?"
+        # And I fill in "Email" with "company2@me.com"
         And I click on "Add Company"
         Then I should see "Email has already been taken"
