@@ -8,29 +8,9 @@
         %button.button Remove
   #list-grid 
   = form_with url: hospitals_path, scope: :hospital  do |form|
-    = form.label :name
-    = form.text_field :name, class: "form-input-field"
     %input.form-input-field{placeholder: "Add Hospitals"}
-    #list-button-area
-      %button.button 
-        = form.submit value: "Add Hospital"
+      #list-button-area
+        %button
+          = form.submit value: "Add Hospital", class: "button text-center"
   
-  -#   = form_with url: hospitals_path, scope: :hospital  do |f|
-  -#     = f.label :name
-  -#     = f.text_field :name, class: "add-field-placeholder"
-  -# -#     %br
-  -#     %button.button
-  -#       = f.submit value: "Add Hospital"
-      
 
-  -# .form-header Hospitals 
-  -# #list-item.flex
-  -# - @hospitals.each do |hospital|
-  -#   #list-grid
-  -#     #list-name= hospital.name
-  -#     #list-button-area
-  -#       %button.button Remove
-  -# #list-grid
-  -#   %input.form-input-field{placeholder: "Add Hospitals"}
-  -#   #list-button-area
-  -#     %button.button Add

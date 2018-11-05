@@ -14,7 +14,7 @@ Feature: RSC creates a new hospital
         Given I am on the landing page
         And I click on "Hospitals"
         Then I should see "Hospital"
-        And I fill in "Name" with "Hospital 3"
+        And I fill in "Add Hospitals" with "Hospital 3"
         And I click on "Add Hospital"
         And I should see "Hospital added"
         Then I should see "Hospital 3"
@@ -23,7 +23,7 @@ Feature: RSC creates a new hospital
         Given I am on the landing page
         And I click on "Hospitals"
         Then I see "Hospital"
-        And I fill in "Name" with "Hospital 2"
+        And I fill in "Add Hospitals" with "Hospital 2"
         And I click on "Add Hospital"
         Then I should see "Hospital already exists. Your hospital could not be saved"
 
