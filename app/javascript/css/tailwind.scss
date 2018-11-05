@@ -186,3 +186,46 @@ a {
 .text-styling {
     @apply text-white text-xs;
 }
+
+
+// Thomas styling of forms
+
+.to-form {
+    @apply w-full max-w-md ;
+}
+
+.to-form-header {
+    @apply text-xl leading-loose pb-2 ;
+}
+
+.to-field-wrapper {
+    @apply flex flex-wrap -mx-3 mb-6 ;
+}
+
+.to-field-full-width {
+    @apply w-full px-3 mb-6 ;
+
+    @screen md {
+        @apply mb-0 ;
+    }
+}
+
+.to-form-label {
+    @apply block uppercase tracking-wide text-grey-darker text-xs mb-2 ; 
+}
+
+.to-form-input-field {
+    @apply appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight ;
+
+    &:focus {
+        @apply outline-none ;
+    }
+}
+
+.to-button {
+    @apply bg-grey-dark text-white ml-4 py-2 px-3 no-underline ;
+
+    &:hover {
+        @apply bg-grey-darker;
+    }
+}
