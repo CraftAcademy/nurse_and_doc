@@ -1,6 +1,29 @@
-.grid-container
-  #sidebar
-    = link_to t(:jobs),  root_path, class: 'header-button', remote: true
-    = link_to t(:hospitals), hospitals_path, class: 'header-button', remote: true
-    = link_to t(:staffcos) , staffcos_path, class: 'header-button', remote: true
-    = link_to "Create RSC account", new_user_path, class: 'header-button', remote: true
+#sidebar
+    .sidebar-background
+        .xl:py-2
+            .group.relative.sidebar-item.with-children
+                = link_to root_path, remote: true do
+                    .clickable-block
+                        .clickable-block-inner{height: "24", viewbox: "0 0 24 24", width: "24", xmlns: "http://www.w3.org/2000/svg"}
+                            = image_tag 'jobs_icon.png'
+                        .text-styling= t(:jobs)
+            .group.relative.sidebar-item.with-children
+                = link_to hospitals_path, remote: true do
+                    .clickable-block
+                        .clickable-block-inner{height: "24", viewbox: "0 0 24 24", width: "24", xmlns: "http://www.w3.org/2000/svg"}
+                            = image_tag 'hospital_icon.png'
+                        .text-styling= t(:hospitals)
+            .group.relative.sidebar-item.with-children
+                = link_to staffcos_path, remote: true do
+                    .clickable-block
+                        .clickable-block-inner{height: "24", viewbox: "0 0 24 24", width: "24", xmlns: "http://www.w3.org/2000/svg"}
+                            = image_tag 'sc_icon.png'
+                        .text-styling= t(:staffcos)
+            .group.relative.sidebar-item.with-children
+                = link_to new_user_path, remote: true do
+                    .clickable-block
+                        .clickable-block-inner{height: "24", viewbox: "0 0 24 24", width: "24", xmlns: "http://www.w3.org/2000/svg"}
+                            = image_tag 'rsc_icon.png'
+                        .text-styling= t(:creatersc)
+
+

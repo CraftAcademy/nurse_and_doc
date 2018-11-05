@@ -1,13 +1,15 @@
-#header
-  #header-left
-    = link_to "RSC Dashboard", root_path, class: "no-underline text-white text-4xl text-justify"
-  #header-right
-    -# - if I18n.locale == I18n.default_locale
-    -#   = link_to "Svenska", root_path(locale: 'sv'), class: 'zdh-button no-underline text-white'
-    -# - else
-    -#   = link_to "English", root_path(locale: 'en'), class: 'zdh-button no-underline text-white'
-
-    - if user_signed_in?
-      = link_to "Logout", destroy_user_session_path, method: :delete, class: 'zdh-button'
-    - else
-      = link_to "Login/Register", new_user_session_path, class: "zdh-button no-underline text-white", remote: true
+.header-field
+  .mx-auto.bg-cover.bg-top{:style => "background-image: url(#{image_path "doctor_header.jpg"})"}
+    .nav
+      %p.header-text.md:text-white.md:text-4xl StaffingPortal
+      .text-center.text-white.mt-4
+        %h1.font-sans.font-thin Fast, clear and consistent medical staffing requests.
+        %h2.font-thin.text-sm.tracking-wide.mt-2.mb-4 Tool for RSCs to efficiently transmit staffing requirements to medical staffing companies.
+      %ul.list-reset.flex
+        %li
+          = link_to "Home", root_path, class: "text-black md:text-white p-2 md:p-4"
+        %li
+          - if user_signed_in?
+            = link_to "Logout", destroy_user_session_path, method: :delete, class: 'text-black md:text-white p-2 md:p-4 whitespace-no-wrap'
+          - else
+            = link_to "Login/Register", new_user_session_path, class: "text-black md:text-white p-2 md:p-4 whitespace-no-wrap", remote: true

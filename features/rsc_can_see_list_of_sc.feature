@@ -13,8 +13,8 @@ Feature: RSC Can See List of Staffing Companies
 
     Scenario: RSC can see list of staffing companies on the dashboard page
         Given I am on the landing page
-        Then I should see "RSC Dashboard"
+        Then I should see "StaffingPortal"
         And I click on "Staffing Companies" within the "#sidebar" section
-        Then I should see "Staffing Companies" within the ".card-title" section
+        Then I should see "Staffing Companies" within the ".form-header" section
         And I should see "Company 1"
         And I should see "Company 2"
