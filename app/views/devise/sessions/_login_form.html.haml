@@ -1,20 +1,18 @@
-.card-background
-    .card-text
-        %h2.text-grey-darkest Log in
-    = form_with(model: resource, as: resource_name, url: session_path(resource_name), id: :user_login) do |f|
-        #error_messages
+.form-header Log in
+= form_with(model: resource, as: resource_name, url: session_path(resource_name), id: :user_login) do |f|
+    #error_messages
+    .field
+        = f.label :email, class: "form-label"
+        %br/
+        = f.email_field  :email, class: "form-input-field", autofocus: true, autocomplete: "email"
+    .field
+        = f.label :password, class: "form-label"
+        %br/
+        = f.password_field :password, autocomplete: "current-password", class: "form-input-field"
+    - if devise_mapping.rememberable?
         .field
-            = f.label :email, class: "form-label"
-            %br/
-            = f.email_field  :email, class: "form-field", autofocus: true, autocomplete: "email"
-        .field
-            = f.label :password, class: "form-label"
-            %br/
-            = f.password_field :password, autocomplete: "current-password", class: "password-field"
-        - if devise_mapping.rememberable?
-            .field
-                = f.check_box :remember_me
-                = f.label :remember_me, class: "form-label"
-        = f.submit "Log in", class: "signup-button", remote: true
-        = content_for :extras
-        = render "devise/shared/links"
+            = f.check_box :remember_me
+            = f.label :remember_me, class: "form-label pt-2"
+    = f.submit "Log in", class: "button", remote: true
+    = content_for :extras
+    = render "devise/shared/links"
