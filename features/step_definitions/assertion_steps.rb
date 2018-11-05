@@ -36,7 +36,8 @@ end
 
 Then("I see {string}") do |content|
     expect(page).to have_content content
-  end
+end
+
 Then("I fill in job form") do
     fill_in 'Name', with: 'Heart Surgeon'
     fill_in 'Profession', with: 'doctor'
