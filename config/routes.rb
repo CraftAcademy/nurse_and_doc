@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :jobs, only: [:new, :create]
     resources :users, only: [:create, :new]
     resources :staffcos, only: :index
-    resources :hospitals, only: [:index, :create, :new]
+    resources :hospitals, only: [:index, :create]
   end
 end

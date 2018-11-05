@@ -8,7 +8,6 @@ Feature: RSC creates a new hospital
     Background: 
         Given the following hospitals exists
             | name        | 
-            | Hospital 1  | 
             | Hospital 2  |
 
     Scenario: RSC can successfully add new hospitals
