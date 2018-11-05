@@ -3,7 +3,7 @@
         .card-background
             .card-text
                 %h1.text-center.mt-6 Create New Hospital
-            = form_with scope: :job, url: hospitals_path, loacal: true, id: :create_hospital, class: "px-4 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-6" do |form|                 #error_messages
+            = form_with scope: :hospital, url: hospitals_path, local: true, id: :create_hospital, class: "px-4 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-6" do |form|                 #error_messages
                 = form.label :name, class: "block text-grey-darker text-sm font-bold mb-2"
                 = form.text_field :name, placeholder: "Name", class: "shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
                 = form.submit value: "Submit", class: "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"
