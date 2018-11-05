@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_05_075111) do
+ActiveRecord::Schema.define(version: 2018_11_05_081544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_11_05_075111) do
     t.string "email"
     t.string "personal_name"
     t.string "phone"
+    t.string "webhook"
   end
 
   create_table "users", force: :cascade do |t|

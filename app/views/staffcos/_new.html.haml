@@ -17,6 +17,9 @@
             = form.label :email
             = form.text_area :email, class: "add-field-placeholder"
             %br
+            = form.label :webhook
+            = form.text_area :webhook, class: "add-field-placeholder"
+            %br
             = form.submit value: "Add Company", class: "button"
             = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
 = render partial: 'partials/modal'
