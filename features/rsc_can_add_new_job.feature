@@ -6,11 +6,16 @@ Feature: Rsc can add new job
 
     Background: Signed in as RSC on dashboard
         Given I am on the landing page
-
-    Scenario: RSC creates a new job
         And I click on "New"
         Then I should see "Create New Job"
+
+    Scenario: RSC creates a new job
         And I fill in "Name" with "Heart Surgeon"
         And I click on "Submit"
         Then I should see "The job was successfully created"
         And I should see "Heart Surgeon"
+
+    Scenario: RSC fills out form incorrectly
+        And I fill in "Name" with " "
+        And I click on "Submit"
+        Then I should see "Name can't be blank"

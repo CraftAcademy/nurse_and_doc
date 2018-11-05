@@ -14,7 +14,7 @@ class JobsController < ApplicationController
     if job.persisted?
       redirect_to root_path, notice: 'The job was successfully created'
     else
-      errors = user.errors.full_messages
+      errors = job.errors.full_messages
       render json: { message: errors }, status: 422
     end
   end
