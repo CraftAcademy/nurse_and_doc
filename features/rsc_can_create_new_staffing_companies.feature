@@ -13,7 +13,6 @@ Feature: RSC creates a staffing companies
         Given I am on the landing page
 
     Scenario: RSC can successfully add new companies
-        Then I should see "RSC Dashboard"
         And I click on "Staffing Companies" within the "#sidebar" section
         And I should see "Company 1"
         Then I click on "Add new company"
