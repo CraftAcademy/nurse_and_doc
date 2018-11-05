@@ -1,16 +1,13 @@
 
-- content_for :modal_content do
-  .login-card
-    .card-background
-      .card-text
-        %h2 Add new RSC user
-      = form_with scope: :user, url: users_path, id: :create_user do |form|
-        #error_messages
-        .field
-          = form.label :email, class: "email-label"
-        .field
-          = form.text_field :email, class: "email-field", autofocus: true, autocomplete: "email"
-        .field
-          = form.submit "Create account", class: "signup-button"
-          = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+- content_for :modal_content do 
+  .form-header Add new RSC user
+  = form_with scope: :user, url: users_path, id: :create_user do |form|
+    #error_messages
+    .to-field-wrapper
+      .to-field-full-width
+        = form.label :email, class: "form-label"
+        = form.text_field :email, class: "form-input-field", autofocus: true, autocomplete: "email"
+    .to-field-wrapper
+      = form.submit "Create account", class: 'button'
+      = button_tag 'Cancel', id: 'cancel_modal', class: 'button'
 = render partial: 'partials/modal'
