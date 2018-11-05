@@ -13,8 +13,8 @@ Feature: RSC Can See List of Hospitals
     Scenario: 
         Given I am on the landing page
         And I click on "Hospitals" within the "#sidebar" section
-        Then I should see "Hospital 1" within the ".card" section
-        And I should not see "Hospital 3" within the ".card" section
+        Then I should see "Hospital 1" within the ".list-card" section
+        And I should not see "Hospital 3" within the ".list-card" section
     
 
 
