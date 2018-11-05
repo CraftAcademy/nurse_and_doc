@@ -37,3 +37,16 @@ end
 Then("I should not see {string}") do |message|
     expect(page).not_to have_content(message)
 end
+
+Then("I fill in job form") do
+    fill_in 'Name', with: 'Heart Surgeon'
+    fill_in 'Profession', with: 'doctor'
+    fill_in 'Hospital', with: 'stockholm sjukhuset'
+    fill_in 'Department', with: 'Surgery'
+    fill_in 'License', with: 'Work'
+    fill_in 'Caretype', with: 'Elderly'
+    fill_in 'Scope', with: 'Scope'
+    fill_in 'Working hours', with: '9 hours'
+    fill_in 'Date start', with: 'Tomorrow'
+    fill_in 'Date finish', with: 'Next Year'
+end

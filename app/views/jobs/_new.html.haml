@@ -1,0 +1,30 @@
+- content_for :modal_content do
+    .card
+    .inner-card
+        .card-title
+            %h1.text-center.mt-6 Create New Job
+        = form_with scope: :job, url: jobs_path, id: :create_job do |form|
+            #error_messages
+            = form.label :name
+            = form.text_field :name, placeholder: "Name", class: "add-field-placeholder"
+            = form.label :profession
+            = form.text_field :profession, placeholder: "Profession", class: "add-field-placeholder"
+            = form.label :hospital
+            = form.text_field :hospital, placeholder: "Hospital", class: "add-field-placeholder"
+            = form.label :department
+            = form.text_field :department, placeholder: "Department", class: "add-field-placeholder"
+            = form.label :license
+            = form.text_field :license, placeholder: "License/s", class: "add-field-placeholder"
+            = form.label :caretype
+            = form.text_field :caretype, placeholder: "Caretype", class: "add-field-placeholder"
+            = form.label :scope
+            = form.text_field :scope, placeholder: "Scope", class: "add-field-placeholder"
+            = form.label :working_hours
+            = form.text_field :working_hours, placeholder: "hours", class: "add-field-placeholder"
+            = form.label :date_start
+            = form.text_field :date_start, placeholder: "y/d/m", class: "add-field-placeholder"
+            = form.label :date_finish
+            = form.text_field :date_finish, placeholder: "y/d/m", class: "add-field-placeholder"
+            = form.submit value: "Submit", class: "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"
+            = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
+= render partial: 'partials/modal'
