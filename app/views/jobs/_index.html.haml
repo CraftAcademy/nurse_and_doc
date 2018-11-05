@@ -1,11 +1,12 @@
-.card
-  .inner-card
-    .card-title
-      %h1 Jobs
-    #list-item.flex
-    - @jobs.each do |job|
-      #form-name
-        %p= job.name
-      #form-button
+.list-card
+  .form-header Jobs
+  #list-item.flex
+  - @jobs.each do |job|
+    #list-grid  
+      #list-name= job.name
+      #list-button-area
         %button.button Remove
-    = link_to "Add New Job", new_job_path, class: "button", remote: true
+  #list-grid
+    %input.form-input-field{placeholder: "Add new job"}
+    #list-button-area
+      = link_to "Add New Job", new_job_path, class: "button text-center", remote: true

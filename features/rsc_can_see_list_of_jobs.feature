@@ -14,7 +14,7 @@ Feature: RSC Can See List of Jobs
     Scenario: RSC Can See List of Jobs on the dashboard
         Given I am on the staffing companies page
         And I click on "Jobs" within the "#sidebar" section
-        And I should see "Doctor" within the ".card" section
-        And I should see "Nurse" within the ".card" section
-        And I should see "Assistant Nurse" within the ".card" section
+        And I should see "Doctor" within the ".list-card" section
+        And I should see "Nurse" within the ".list-card" section
+        And I should see "Assistant Nurse" within the ".list-card" section
        
