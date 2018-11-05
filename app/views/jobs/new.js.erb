@@ -11,9 +11,3 @@ form.addEventListener('ajax:error', (event) => {
     let message = event.detail[0].message
     errorMessageDisplayElement.innerHTML = message
 })
-
-form.addEventListener('ajax:success', (event) => {
-    let messageDisplayElement = document.getElementById('messages')
-    let message = event.detail[0].message
-    messageDisplayElement.innerHTML = message
-})
