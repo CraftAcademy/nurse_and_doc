@@ -3,7 +3,7 @@
 class StaffcosController < ApplicationController
 
   def index
-    @staffco = Staffco.all
+    @staffcos = Staffco.all
   end
 
   def new
@@ -11,7 +11,7 @@ class StaffcosController < ApplicationController
   end
 
   def create
-    unless Staffco.exists?(staffco_params)
+    unless Staffco.exists?(:email => params[:email])
 
     staffco = Staffco.create(staffco_params)
     if staffco.persisted?
