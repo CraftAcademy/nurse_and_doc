@@ -51,19 +51,11 @@ Then("I fill in job form") do
     fill_in 'Date finish', with: 'Next Year'
 end
 
-Then("I fill in company form with {string} information") do 
-    fill_in 'Name', with: 'Company 3'
-    fill_in 'Personal name', with: 'Angelica'
-    fill_in "Phone", with: "01234567"
-    fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
-    fill_in "Email", with: "email@email.com"
-end
-
-Then("I fill in company form with {string}") do |email|
+Then("I fill in company form with {string} information") do |email|
     case email
     when 'valid'
         email = 'email@email.com' 
-    when 'existing email'
+    when 'invalid'
         email = 'company1@me.com'
     end
     fill_in 'Name', with: 'Company 3'
@@ -71,5 +63,4 @@ Then("I fill in company form with {string}") do |email|
     fill_in "Phone", with: "01234567"
     fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
     fill_in "Email", with: (email)
-
 end
