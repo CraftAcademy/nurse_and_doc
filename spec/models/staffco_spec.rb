@@ -3,6 +3,8 @@ RSpec.describe Staffco, type: :model do
   describe "db columns" do 
     it { is_expected.to have_db_column :name }
     it { is_expected.to have_db_column :email }
+    it { is_expected.to have_db_column :personal_name }
+    it { is_expected.to have_db_column :phone }
   end
 
   describe 'Validations' do

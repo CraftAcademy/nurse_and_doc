@@ -7,9 +7,9 @@ Feature: RSC creates a staffing companies
 
     Background: 
         Given the following staffing companies exists
-            | name        | email           |
-            | Company 1   | company1@me.com |
-            | Company 2   | company2@me.com |
+            | name        | email           |  personal_name  | phone       |
+            | Company 1   | company1@me.com |  Alexander      | 01234566    |
+            | Company 2   | company2@me.com |  Sharon         | 0123345676  |
 
     Scenario: RSC can successfully add new companies
         Given I am on the landing page
