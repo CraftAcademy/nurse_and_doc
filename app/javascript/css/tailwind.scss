@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 .card {
-    @apply w-full items-center bg-grey-darker font-sans font-thin;
+    @apply w-full items-center bg-grey-darker ;
 }
 
 .inner-card {
-    @apply bg-white rounded shadow p-6 m-4 w-full;
+    @apply bg-white p-6 m-4 w-full;
 }
 
 .card-title {
@@ -28,7 +28,8 @@
     display: grid;
     grid-template-columns: 0.8fr 0.2fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "form-name form-button";
+    grid-template-areas: "form-name form-button-area";
+    @apply py-2;
 }
 
 #form-name {
@@ -37,10 +38,10 @@
     @apply align-text-bottom text-left w-full text-grey-darkest font-sans font-thin mt-5;
 }
 
-#form-button {
-    grid-area: form-button;
+#form-button-area {
+    grid-area: form-button-area;
     display: grid;
-    @apply text-right font-thin;
+    // @apply text-right font-thin;
 }
 
 .add-field {
