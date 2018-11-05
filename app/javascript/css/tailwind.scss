@@ -133,9 +133,9 @@
     @apply pb-2 pt-2;
 }
 
-.form-label {
-    @apply inline-flex leading-tight text-grey-darker font-sans font-thin;
-}
+// .form-label {
+//     @apply inline-flex leading-tight text-grey-darker font-sans font-thin;
+// }
 
 .form-field {
     @apply block shadow appearance-none border rounded w-2/3 py-2 px-2 text-grey-darker leading-tight;
@@ -212,7 +212,7 @@ a {
     }
 }
 
-.to-form-label {
+.form-label {
     @apply block uppercase tracking-wide text-grey-darker text-xs mb-2 ; 
 }
 
