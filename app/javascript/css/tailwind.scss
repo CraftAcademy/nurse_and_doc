@@ -80,6 +80,27 @@
     @apply flex justify-between items-center py-4;
 }
 
+.clickable-block {
+    @apply block text-center  py-6 border-l-4 border-transparent ;
+    
+    @screen xl {
+        @apply flex items-center text-left shadow-none py-2 px-4 ;
+    }
+
+    &:hover {
+        @apply bg-black ;
+    }
+}
+
+.clickable-block-inner {
+    @apply h-6 w-6 text-grey-darker fill-current ;
+
+    @screen xl {
+        @apply mr-2 ;
+    }
+}
+
+
 .header-field {
     @apply bg-grey-darker w-full;
 }
