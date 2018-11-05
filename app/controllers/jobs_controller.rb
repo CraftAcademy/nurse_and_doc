@@ -5,10 +5,6 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
-  def new
-    Job.new
-  end
-
   def create
     job = Job.create(job_params)
     if job.persisted?
