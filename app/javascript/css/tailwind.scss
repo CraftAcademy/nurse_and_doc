@@ -41,6 +41,7 @@
 #form-button-area {
     grid-area: form-button-area;
     display: grid;
+    @apply pb-3;
     // @apply text-right font-thin;
 }
 
@@ -216,7 +217,7 @@ a {
 }
 
 .to-form-input-field {
-    @apply appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight ;
+    @apply appearance-none block w-full bg-grey-lighter text-grey-darker py-3 px-4 mb-3 leading-tight ;
 
     &:focus {
         @apply outline-none ;
