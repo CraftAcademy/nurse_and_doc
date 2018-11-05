@@ -17,12 +17,13 @@ Feature: RSC creates a new rsc user
     Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I fill in "Email" with "newrsc@email.com"
         And I click on "Create account"
-        Then I should see the message "RSC user newrsc@email.com created, currently logged in as email@email.com."
+        Then I should see the message "RSC user newrsc@email.com created."
+        And I should see "Currently logged in as email@email.com."
 
     Scenario: RSC unsucessfully create another RSC user with invalid email or password
         Given I fill in "Email" with "new_rsc"
         And I click on "Create account"
-        Then I should see the message "Invalid Email"
+        Then I should see the message "Email is invalid"
 
     Scenario: RSC logs out and try to log in with an incorrect email
         Given I click on "Cancel"

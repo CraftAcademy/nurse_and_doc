@@ -1,7 +1,8 @@
 
 - content_for :modal_content do 
   .form-header Add new RSC user
-  = form_with scope: :user, url: users_path, local: true, class: 'form' do |form|
+  = form_with scope: :user, url: users_path, id: :create_user do |form|
+    #error_messages
     .to-field-wrapper
       .to-field-full-width
         = form.label :email, class: "form-label"
