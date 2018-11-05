@@ -11,14 +11,14 @@ class StaffcosController < ApplicationController
   end
 
   def create
-    unless Staffco.exists?(:email => params[:email])
+    unless Staffco.exists?(email: params[:email])
 
     staffco = Staffco.create(staffco_params)
     if staffco.persisted?
       redirect_to staffcos_path, notice: 'The staffing company was successfully created'
-      #waiting for rsc can create jobs pr to include accessibility errors
-      # errors = user.errors.full_messages
-      # render json: { message: errors }, status: 422
+    else
+      errors = staffco.errors.full_messages
+      render json: { message: errors }, status: 422
       end
     end
   end

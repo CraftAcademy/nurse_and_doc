@@ -35,4 +35,4 @@ Feature: RSC creates a staffing companies
         And I fill in "Webhook" with "https://api.webhook.com/v2/company3.json?"
         And I fill in "Email" with "company2@me.com"
         And I click on "Add Company"
-        Then I should not see "Company 4"
+        Then I should see "Email has already been taken"
