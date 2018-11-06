@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class StaffcosController < ApplicationController
-
+  before_action :authenticate_user!
   def index
     @staffcos = Staffco.all
   end
