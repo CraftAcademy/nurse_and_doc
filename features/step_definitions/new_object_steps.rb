@@ -26,3 +26,10 @@ Given("the following registered RSC exist") do |table|
     FactoryBot.create(:user, user)
     end
 end
+
+
+Given("the user is logged in as {string}") do |email|
+    user = User.find_by(email: email)
+    login_as(user, scope: :user)
+end
+
