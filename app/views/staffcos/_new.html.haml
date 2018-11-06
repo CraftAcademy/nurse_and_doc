@@ -6,20 +6,23 @@
         = form_with scope: :staffco, url: staffcos_path, id: :create_sc do |form|
             #error_messages
             .to-field-wrapper
-                = form.label :name, class: "form-label"
-                = form.text_field :name, class: "form-input-field"
-                %br
-                = form.label :contact_name, class: "form-label"
-                = form.text_field :contact_name, class: "form-input-field"
-                %br
-                = form.label :phone, class: "form-label"
-                = form.text_field :phone, class: "form-input-field"
-                %br
-                = form.label :email, class: "form-label"
-                = form.text_area :email, class: "form-input-field"
-                %br
-                = form.label :webhook, class: "form-label"
-                = form.text_area :webhook, class: "form-input-field"
+                .to-field-full-width
+                    = form.label :name, class: "form-label"
+                    = form.text_field :name, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :contact_name, class: "form-label"
+                    = form.text_field :contact_name, class: "form-input-field"
+                    = form.label :phone, class: "form-label"
+                    = form.text_field :phone, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :email, class: "form-label"
+                    = form.text_area :email, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :webhook, class: "form-label"
+                    = form.text_area :webhook, class: "form-input-field"
             .to-field-wrapper
                 = form.submit value: "Add Company", class: "button"
 = render partial: 'partials/modal'
