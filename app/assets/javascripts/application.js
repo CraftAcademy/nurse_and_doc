@@ -13,8 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require select2
 //= require_tree .
+//= require select2
 
 const sharedDeviseLinkHandler = (event) => {
     if (event.target.classList.contains('shared_devise_link')){
@@ -62,9 +62,37 @@ document.addEventListener('turbolinks:load', () => {
     App.tempContent = document.getElementById('temp_content')
 })
 
-document.ready(function() {
-    ('.js-example-basic-multiple').select2();
-});
 
-$(document).ready(function(){ $('#license').select2();
-});
+document.addEventListener('DOMContentLoaded', () => {
+    renderLicense()
+    const addLicense = document.querySelector('')
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderContacts()
+        const addContactForm = document.querySelector('.new-contact-form')
+        const addContactBtn = document.querySelector('.add-contact')
+    
+        addContactBtn.addEventListener('click', () => addContactForm.classList.remove('hidden'))
+    
+        addContactForm.addEventListener('click', event => {
+          event.preventDefault()
+          
+      
+          const {
+            name,
+          } = addContactForm.elements
+      
+          const contact = {
+            id: Date.now(),
+            twitter: twitter.value,
+          }
+          console.log(`Saving the following contact: ${JSON.stringify(contact)}`);
+            
+            let contacts = JSON.parse(storage.getItem('contacts')) || []
+            contacts.push(contact)
+            storage.setItem('contacts', JSON.stringify(contacts))        
+            addContactForm.classList.add('hidden')
+            renderContacts()
+            addContactForm.reset()
+        })
+      })
