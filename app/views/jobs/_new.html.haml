@@ -1,6 +1,7 @@
 - content_for :modal_content do
     .card
     .inner-card
+        = button_tag 'X', id: 'cancel_modal', class: "cancel-button"
         .card-title
             %h1.text-center.mt-6 Create New Job
         = form_with scope: :job, url: jobs_path, id: :create_job do |form|
@@ -26,5 +27,4 @@
             = form.label :date_finish, class: "form-label"
             = form.text_field :date_finish, placeholder: "y/d/m", class: "form-input-field"
             = form.submit value: "Submit", class: "button"
-            = button_tag 'Cancel', id: 'cancel_modal', class: 'button'
 = render partial: 'partials/modal'
