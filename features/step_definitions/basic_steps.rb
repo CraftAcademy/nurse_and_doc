@@ -28,9 +28,9 @@ And("I click on {string} within the {string} section") do |link, section|
   }
 end
 
-Then("I fill in {string}") do |content|
-  fill_in with: content 
-end
+# Then("I fill in {string}") do |content|
+#   fill_in with: content 
+# end
 
 Given("stop") do
   binding.pry

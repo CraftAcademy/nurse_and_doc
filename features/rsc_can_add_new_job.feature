@@ -10,9 +10,12 @@ Feature: Rsc can add new job
 
     Scenario: RSC creates a new job
         Then I should see "Create New Job"
-        And I fill in job form
+        And I fill in "Name" with "Heart Surgeon"
+        And I fill in "Hospital" with "Karolinska"
+        And I fill in "Date finish" with "7/7/2019"
         And I click on "Submit"
         Then I should see "The job was successfully created"
+        Then stop
         And I should see "Heart Surgeon"
 
     Scenario: RSC fills out form incorrectly
