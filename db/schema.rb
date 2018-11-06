@@ -40,10 +40,6 @@ ActiveRecord::Schema.define(version: 2018_11_05_105919) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email"
-    t.string "personal_name"
-    t.string "phone"
-    t.string "webhook"
   end
 
   create_table "users", force: :cascade do |t|
