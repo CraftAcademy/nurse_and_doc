@@ -14,7 +14,7 @@
             = form.label :department, class: "form-label"
             = form.text_field :department, placeholder: "Department", class: "form-input-field"
             = form.label :license, class: "form-label"
-            = form.text_field :license, placeholder: "License/s", class: "form-input-field"
+            = form.select :license, License.all.collect {|c| [ c.name ] }, {include_blank: 'License'}, id: "License"
             = form.label :caretype, class: "form-label"
             = form.text_field :caretype, placeholder: "Caretype", class: "form-input-field"
             = form.label :scope, class: "form-label"

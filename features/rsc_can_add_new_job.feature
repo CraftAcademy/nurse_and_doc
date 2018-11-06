@@ -5,6 +5,9 @@ Feature: Rsc can add new job
     I would like to click on the “+” button and fill in the jobs information.
 
     Background: Landing page, clicking new and being on form page
+        Given the following licenses exists
+            | name    | 
+            | Kirurgi |     
         Given I am on the landing page
         And I click on "Add New Job"
 

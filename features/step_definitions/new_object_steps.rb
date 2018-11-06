@@ -26,3 +26,8 @@ Given("the following registered RSC exist") do |table|
     FactoryBot.create(:user, user)
     end
 end
+
+Given("the following licenses exists") do |table|
+    table.hashes.each do |license|
+    FactoryBot.create(:license, license)
+end

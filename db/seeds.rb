@@ -1,7 +1,7 @@
 Hospital.destroy_all
 Job.destroy_all
 Staffco.destroy_all
-Category.destroy_all
+License.destroy_all
 
 Hospital.create!(name: "Karolinska")
 Hospital.create!(name: "Södersjukhuset")
@@ -18,4 +18,4 @@ Staffco.create!(name: "Nurses 4 U")
 Staffco.create!(name: "Psychologists agency")
 Staffco.create!(name: "Eyedoctors United")
 
-Category.create!([{ name: 'Allmän internmedicin' }, { name: 'Anestesiologi'}, { name: 'Urologi'}, { name: 'Kirurgi'}, { name: 'Allmänmedicin'}, { name: 'Ortopedi'}])
+License.create!([{ name: 'Allmän internmedicin' }, { name: 'Anestesiologi'}, { name: 'Urologi'}, { name: 'Kirurgi'}, { name: 'Allmänmedicin'}, { name: 'Ortopedi'}])
