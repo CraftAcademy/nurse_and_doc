@@ -3,10 +3,6 @@ class HospitalsController < ApplicationController
     @hospitals = Hospital.all
   end
 
-  def new
-    @hospital = Hospital.new
-  end
-  
   def create
     unless Hospital.exists?(hospital_params)
     
@@ -17,10 +13,6 @@ class HospitalsController < ApplicationController
       redirect_to hospitals_path, notice: 'Hospital already exists. Your hospital could not be saved'
       end
     end
-  end
-
-  def show
-    @hospitals = Hospital.find(params[:id])
   end
 
   private

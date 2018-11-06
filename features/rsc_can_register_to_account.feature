@@ -12,7 +12,7 @@ Feature: RSC creates a new rsc user
 
         And the RSC user is logged in as "email@email.com"
         And I am on the landing page
-        And I click on "Create RSC account"
+        And I click on "Create RSC Account" within the "#sidebar" section
 
     Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I fill in "Email" with "newrsc@email.com"

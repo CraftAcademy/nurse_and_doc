@@ -1,19 +1,16 @@
-.card
-  .inner-card
-    .card-title
-      %h1 Hospitals
-    #list-item.flex
-    - @hospitals.each do |hospital|
-      #form-name
-        %p= hospital.name
-      #form-button
+.list-card
+  .form-header Hospitals 
+  #list-item.flex
+  - @hospitals.each do |hospital|
+    #list-grid
+      #list-name= hospital.name
+      #list-button-area
         %button.button Remove
-    .add-field
-      = form_with url: hospitals_path, scope: :hospital  do |f|
-        = f.label :name
-        = f.text_field :name, class: "add-field-placeholder"
-        %br
-        %button.button
-          = f.submit value: "Add Hospital"
-      
+  = form_with url: hospitals_path, scope: :hospital  do |f|
+    #list-grid
+      #list-name
+      = f.text_field :name, id: "Name", class: "form-input-field"
+      #list-button-area
+      = f.submit value: "Add Hospital", class: "button text-center"
+  
 

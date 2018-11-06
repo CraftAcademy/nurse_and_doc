@@ -16,7 +16,7 @@
 //= require_tree .
 
 const sharedDeviseLinkHandler = (event) => {
-    if (event.target.classList.contains('.shared_devise_link')){
+    if (event.target.classList.contains('shared_devise_link')){
         var modalElement = document.getElementById('modal')
         modalElement.remove()
     }

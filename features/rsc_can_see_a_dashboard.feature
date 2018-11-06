@@ -6,7 +6,7 @@ Feature: RSC Dashboard
 
     Scenario: RSC can see the dashboard
         Given I am on the landing page
-        Then I should see "RSC Dashboard"
+        Then I should see "StaffingPortal"
         And I should see "Jobs" within the "#sidebar" section
         And I should see "Hospitals" within the "#sidebar" section
         And I should see "Staffing Companies" within the "#sidebar" section
