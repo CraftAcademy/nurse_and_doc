@@ -58,7 +58,7 @@ When("I fill in company form with {string} information") do |email|
     when 'invalid'
         email = 'company1@me.com'
     end
-    fill_in 'Name', with: 'Company 3'
+    fill_in 'Name', with: 'DocsRus'
     fill_in 'Contact name', with: 'Angelica'
     fill_in "Phone", with: "01234567"
     fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
