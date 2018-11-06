@@ -11,9 +11,9 @@ class HospitalsController < ApplicationController
       redirect_to hospitals_path, notice: 'Hospital added'
     else
       redirect_to hospitals_path, notice: 'Hospital already exists. Your hospital could not be saved'
-      end
     end
   end
+end 
 
   private
 
