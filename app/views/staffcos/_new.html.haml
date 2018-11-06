@@ -1,5 +1,7 @@
 - content_for :modal_content do
-    .list-grid
+    .card
+    .inner-card
+        = button_tag 'X', id: 'cancel_modal', class: 'cancel-button'
         .form-header Staffing Companies
         = form_with scope: :staffco, url: staffcos_path, id: :create_sc do |form|
             #error_messages
@@ -19,5 +21,4 @@
             = form.text_area :webhook, class: "add-field-placeholder"
             %br
             = form.submit value: "Add Company", class: "signup-button"
-            = button_tag 'Cancel', id: 'cancel_modal', class: 'signup-button'
 = render partial: 'partials/modal'
