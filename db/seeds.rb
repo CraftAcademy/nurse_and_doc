@@ -18,6 +18,13 @@ Staffco.create!([
 ])
 
 License.create!([
-    { name: "Allmän internmedicin" }, { name: "Anestesiologi" }, { name: "Urologi" }, 
-    { name: "Kirurgi" }, { name: "Allmänmedicin" }, { name: "Ortopedi" }
+    { name: "Allmän internmedicin" }, { name: "Anestesiologi" }, { name: "Urologi" }, { name: "Lungsjukdomar" }, 
+    { name: "Kirurgi" }, { name: "Allmänmedicin" }, { name: "Ortopedi" }, { name: "Ortopedi" }, { name: "Klinisk cytologi" }, 
+    { name: "Hematologi" }, { name: "Medicinsk radiologi" }, { name: "Ögonsjukdomar" }, { name: "Öron-, näs- och halssjukdomar" },
+    { name: "Obstetrik och gynekologi" }, { name: "Allmän kirurgi" }, { name: "Urologisk kirurgi" }, { name: "Klinisk kemi" },
+    { name: "Röntgendiagnostik" }, { name: "Tumörsjukdomar" }, { name: "Europaläkarkompetens" }, { name: "Ortopedisk kirurgi" },
+    { name: "Barnaålderns invärtes sjukdomar" }, { name: "Plastikkirurgi" }, { name: "Hjärtsjukdomar" }, { name: "Hudsjukdomar och veneriska sjukdomar" },
+    { name: "Onkologi" }, { name: "Psykiatri" }, { name: "Företagshälsovård" }, { name: "Socialmedicin" },
+    { name: "Anestesi och intensivvård" }, { name: "Barn- och ungdomsallergologi" }, { name: "Klinisk patologi" }, { name: "Barn- och ungdomsmedicin" },
+    { name: "Kardiologi" }, { name: "Internmedicin" }, { name: "Klinisk bakteriologi" }, { name: "Geriatrik" }
 ])
