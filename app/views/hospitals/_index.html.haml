@@ -1,16 +1,16 @@
 .list-card
   .form-header Hospitals 
-  #list-item.flex
+  .list-item.flex
   - @hospitals.each do |hospital|
-    #list-grid
-      #list-name= hospital.name
-      #list-button-area
+    .list-grid
+      .list-name= hospital.name
+      .list-button-area
         %button.button Remove
   = form_with url: hospitals_path, scope: :hospital  do |f|
-    #list-grid
-      #list-name
+    .list-grid
+      .list-name
       = f.text_field :name, id: "Name", class: "form-input-field"
-      #list-button-area
+      .list-button-area
       = f.submit value: "Add Hospital", class: "button text-center"
   
 
