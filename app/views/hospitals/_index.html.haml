@@ -1,12 +1,12 @@
 .list-card
   .form-header Hospitals 
-  #list-item.flex
+  .list-item.flex
   - @hospitals.each do |hospital|
-    #list-grid
-      #list-name= hospital.name
-      #list-button-area
+    .list-grid
+      .list-name= hospital.name
+      .list-button-area
         %button.button Remove
-  #list-grid
+  .list-grid
     %input.form-input-field{placeholder: "Add Hospitals"}
-    #list-button-area
+    .list-button-area
       %button.button Add
