@@ -5,6 +5,7 @@ class SessionsController < Devise::SessionsController
     end
   
     def create
+      binding.pry
       self.resource = warden.authenticate(auth_options)
       if resource
         sign_in(resource_name, resource)
