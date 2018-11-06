@@ -1,12 +1,12 @@
 .list-card
   .form-header Staffing Companies
-  #list-item.flex
+  .list-item.flex
   - @staffcos.each do |staffcos|
-    #list-grid
-      #list-name= staffcos.name
-      #list-button-area
+    .list-grid
+      .list-name= staffcos.name
+      .list-button-area
         %button.button Remove
-  #list-grid
+  .list-grid
     %input.form-input-field{placeholder: "Add"}
-    #list-button-area
+    .list-button-area
       %button.button Add
