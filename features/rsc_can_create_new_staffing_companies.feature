@@ -16,13 +16,13 @@ Feature: RSC creates a staffing companies
         And I click on "Staffing Companies" within the "#sidebar" section
         And I should see "Company 1"
         Then I click on "Add new company"
-        And I fill in company form with "valid" information
+        When I fill in company form with "valid" information
         And I click on "Add Company"
         Then I should see "The staffing company was successfully created"
 
     Scenario: RSC cannot add companies if it already exists
         And I click on "Staffing Companies" within the "#sidebar" section
         Then I click on "Add new company"
-        And I fill in company form with "invalid" information
+        When I fill in company form with "invalid" information
         And I click on "Add Company"
         Then I should see "Email has already been taken"

@@ -38,7 +38,7 @@ Then("I should not see {string}") do |message|
     expect(page).not_to have_content(message)
 end
 
-Then("I fill in job form") do
+When("I fill in job form") do
     fill_in 'Name', with: 'Heart Surgeon'
     fill_in 'Profession', with: 'doctor'
     fill_in 'Hospital', with: 'stockholm sjukhuset'
@@ -51,7 +51,7 @@ Then("I fill in job form") do
     fill_in 'Date finish', with: 'Next Year'
 end
 
-Then("I fill in company form with {string} information") do |email|
+When("I fill in company form with {string} information") do |email|
     case email
     when 'valid'
         email = 'email@email.com' 
