@@ -34,12 +34,12 @@ Then("I should be on the jobs index") do
     expect(page).to have_current_path(root_path)
 end
 
-Then("I fill in job form") do
+Then("I fill in the job form") do
     fill_in 'Name', with: 'Heart Surgeon'
     fill_in 'Profession', with: 'doctor'
-    fill_in 'Hospital', with: 'stockholm sjukhuset'
+    select 'stockholm sjukhuset', from: 'Hospital'
     fill_in 'Department', with: 'Surgery'
-    fill_in 'License', with: 'Work'
+    select 'Kirurgi', from: 'Profession'
     fill_in 'Caretype', with: 'Elderly'
     fill_in 'Scope', with: 'Scope'
     fill_in 'Working hours', with: '9 hours'
