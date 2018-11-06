@@ -14,7 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require select2
 
 const sharedDeviseLinkHandler = (event) => {
     if (event.target.classList.contains('shared_devise_link')){
@@ -76,3 +75,9 @@ document.addEventListener('turbolinks:load', () => {
         }
     });
 })();
+
+let licenseShow = JSON.parse(storage.getItem('license')) || []
+        contacts.push(contact)
+        storage.setItem('contacts', JSON.stringify(contacts))        
+        addContactForm.classList.add('hidden')
+        renderContacts()

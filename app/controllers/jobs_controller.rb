@@ -5,6 +5,11 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
+  def new
+    binding.pry
+    @licenses = License.all
+  end
+
   def create
     job = Job.create(job_params)
     if job.persisted?
