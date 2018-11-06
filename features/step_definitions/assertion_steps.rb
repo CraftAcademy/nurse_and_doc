@@ -39,7 +39,7 @@ Then("I fill in the job form") do
     fill_in 'Profession', with: 'doctor'
     select 'stockholm sjukhuset', from: 'Hospital'
     fill_in 'Department', with: 'Surgery'
-    select 'Kirurgi', from: 'Profession'
+    select 'Kirurgi', from: 'License'
     fill_in 'Caretype', with: 'Elderly'
     fill_in 'Scope', with: 'Scope'
     fill_in 'Working hours', with: '9 hours'
