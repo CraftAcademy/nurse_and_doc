@@ -14,7 +14,6 @@ Feature: RSC creates a staffing companies
 
     Scenario: RSC can successfully add new companies
         And I click on "Staffing Companies" within the "#sidebar" section
-        And I should see "Nurse&Co"
         Then I click on "Add new company"
         When I fill in company form with "valid" information
         And I click on "Add Company"
