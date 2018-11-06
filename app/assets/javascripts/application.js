@@ -63,36 +63,16 @@ document.addEventListener('turbolinks:load', () => {
 })
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderLicense()
-    const addLicense = document.querySelector('')
+(function(values,select) {
 
-    document.addEventListener('DOMContentLoaded', () => {
-        renderContacts()
-        const addContactForm = document.querySelector('.new-contact-form')
-        const addContactBtn = document.querySelector('.add-contact')
-    
-        addContactBtn.addEventListener('click', () => addContactForm.classList.remove('hidden'))
-    
-        addContactForm.addEventListener('click', event => {
-          event.preventDefault()
-          
+    var select = document.querySelector('select');
+    values = new Array(sel.length);
+  
+    select.addEventListener('click', function(e) {
       
-          const {
-            name,
-          } = addContactForm.elements
-      
-          const contact = {
-            id: Date.now(),
-            twitter: twitter.value,
-          }
-          console.log(`Saving the following contact: ${JSON.stringify(contact)}`);
-            
-            let contacts = JSON.parse(storage.getItem('contacts')) || []
-            contacts.push(contact)
-            storage.setItem('contacts', JSON.stringify(contacts))        
-            addContactForm.classList.add('hidden')
-            renderContacts()
-            addContactForm.reset()
-        })
-      })
+        values[e.target.index] = !values[e.target.index];    
+        for(var i=0;i<values.length;++i) {
+            sel.options[i].selected = values[i];
+        }
+    });
+})();
