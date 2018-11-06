@@ -15,7 +15,6 @@ Feature: Rsc can add new job
         And I fill in "Date finish" with "7/7/2019"
         And I click on "Submit"
         Then I should see "The job was successfully created"
-        Then stop
         And I should see "Heart Surgeon"
 
     Scenario: RSC fills out form incorrectly

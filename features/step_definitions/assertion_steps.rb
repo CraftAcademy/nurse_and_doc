@@ -34,9 +34,6 @@ Then("I should be on the jobs index") do
     expect(page).to have_current_path(root_path)
 end
 
-Then("I see {string}") do |content|
-    expect(page).to have_content content
-end
 
 Then("I fill in job form") do
     fill_in 'Name', with: 'Heart Surgeon'
