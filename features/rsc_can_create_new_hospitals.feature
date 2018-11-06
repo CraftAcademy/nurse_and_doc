@@ -10,11 +10,8 @@ Feature: RSC creates a new hospital
             | name        | 
             | Hospital 2  |
         Given I am on the landing page
-        And I click on "Hospitals"
-        Then I see "Hospital"
 
     Scenario: RSC can successfully add new hospitals
-        Given I am on the landing page
         And I click on "Hospitals"
         Then I should see "Hospital"
         And I fill in "Name" with "Hospital 3"
