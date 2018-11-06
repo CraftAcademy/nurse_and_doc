@@ -17,7 +17,6 @@ gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
 gem 'devise'
 gem "loofah", ">= 2.2.3"
-gem 'select2-rails' 
 
 group :development, :test do
   gem 'coveralls', require: false
