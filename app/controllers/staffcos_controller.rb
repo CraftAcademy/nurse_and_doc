@@ -21,7 +21,7 @@ class StaffcosController < ApplicationController
 
   private
   def staffco_params
-    params.require(:staffco).permit(:name, :email, :personal_name, :phone, :webhook)
+    params.require(:staffco).permit(:name, :email, :contact_name, :phone, :webhook)
   end
 
 end

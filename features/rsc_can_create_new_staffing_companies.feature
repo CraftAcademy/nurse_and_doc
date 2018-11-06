@@ -7,7 +7,7 @@ Feature: RSC creates a staffing companies
 
     Background: 
         Given the following staffing companies exists
-            | name        | email           |  personal_name  | phone       |  webhook                                      |
+            | name        | email           |  contact_name  | phone       |  webhook                                      |
             | Company 1   | company1@me.com |  Alexander      | 01234566    | https://api.webhook.com/v2/company.json?      |
             | Company 2   | company2@me.com |  Sharon         | 0123345676  | https://api.webhook.com/v2/company2.json?     |
         Given I am on the landing page
