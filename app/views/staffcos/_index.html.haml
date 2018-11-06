@@ -6,7 +6,5 @@
       .list-name= staffcos.name
       .list-button-area
         %button.button Remove
-  .list-grid
-    %input.form-input-field{placeholder: "Add"}
-    .list-button-area
-      %button.button Add
+  .list-button-area
+    = link_to "Add new company", new_staffco_path, class: "add-button", remote: true
