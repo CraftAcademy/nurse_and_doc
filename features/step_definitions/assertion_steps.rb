@@ -62,5 +62,5 @@ When("I fill in company form with {string} information") do |email|
     fill_in 'Personal name', with: 'Angelica'
     fill_in "Phone", with: "01234567"
     fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
-    fill_in "Email", with: (email)
+    fill_in "Email", with: email
 end
