@@ -4,16 +4,13 @@ class HospitalsController < ApplicationController
   end
 
   def create
-    unless Hospital.exists?(hospital_params)
-    
     hospital = Hospital.create(hospital_params)
     if hospital.persisted?
       redirect_to hospitals_path, notice: 'Hospital added'
     else
       redirect_to hospitals_path, notice: 'Hospital already exists. Your hospital could not be saved'
     end
-  end
-end 
+  end 
 
   private
 
