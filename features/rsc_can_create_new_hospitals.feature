@@ -14,13 +14,14 @@ Feature: RSC creates a new hospital
     Scenario: RSC can successfully add new hospitals
         And I click on "Hospitals"
         Then I should see "Hospital"
-        Then stop
         And I fill in "Name" with "Hospital 3"
         And I click on "Add Hospital"
         And I should see "Hospital added"
         Then I should see "Hospital 3"
         
-    Scenario: RSC cannot add hospitals if it already exists 
+   Scenario: RSC cannot add hospitals if it already exists 
+        And I click on "Hospitals"
+        Then I should see "Hospital"
         And I fill in "Name" with "Hospital 2"
         And I click on "Add Hospital"
         Then I should see "Hospital already exists. Your hospital could not be saved"
