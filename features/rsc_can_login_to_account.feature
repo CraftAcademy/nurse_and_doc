@@ -13,8 +13,8 @@ Feature: RSC creates a new rsc user
     Scenario: User Can Successfully Login
         Given I am on the landing page 
         And I click on "Login/Register"
-        And I fill in "email" with "email@email.com"
-        And I fill in "password" with "mypassword"
+        And I fill in "Email" with "email@email.com"
+        And I fill in "Password" with "mypassword"
         And I click on "Log in"
-        Then I should see "You are logged in"
+        Then I should see "Signed in successfully."
         
