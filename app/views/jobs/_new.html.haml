@@ -15,7 +15,7 @@
             = form.label :department, class: "form-label"
             = form.text_field :department, placeholder: "Department", class: "form-input-field"
             = form.label :license, class: "form-label"
-            = form.text_field :license, License.all.collect {|c| [ c.name ] }, {include_blank: 'Please select'}, id: "License"
+            = form.select :license, License.all.collect {|c| [ c.name ] }, {include_blank: 'Please select'}, id: "License"
             = form.label :caretype, class: "form-label"
             = form.text_field :caretype, placeholder: "Caretype", class: "form-input-field"
             = form.label :scope, class: "form-label"
@@ -27,4 +27,12 @@
             = form.label :date_finish, class: "form-label"
             = form.text_field :date_finish, placeholder: "y/d/m", class: "form-input-field"
             = form.submit value: "Submit", class: "button"
+            %select.js-example-basic-multiple{:multiple => "multiple", :name => "states[]"}
+                %option{:value => "AL"} Alabama
+                %option{:value => "WY"} Wyoming
+        %div{:class => "”field”"}
+            = f.label :license
+            %br
+            = f.select :license, License.all.collect {|c| [c.name] }
+
 = render partial: 'partials/modal'
