@@ -14,7 +14,7 @@ Feature: RSC Can See List of Staffing Companies
             | email            | password   |
             | email@email.com  | mypassword |
         And the user is logged in as "email@email.com"
-
+            
     Scenario: RSC can see list of staffing companies on the dashboard page
         Given I am on the landing page
         Then I should see "StaffingPortal"

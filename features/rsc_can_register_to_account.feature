@@ -7,8 +7,8 @@ Feature: RSC creates a new rsc user
 
     Background:
         Given the following registered RSC exist
-            | email            | password   |
-            | email@email.com  | mypassword |
+            | email           | password   |
+            | email@email.com | mypassword |
 
         And the RSC user is logged in as "email@email.com"
         And I am on the landing page
@@ -28,16 +28,17 @@ Feature: RSC creates a new rsc user
     Scenario: RSC logs out and try to log in with an incorrect email
         Given I click on "X"
         And I click on "Logout"
+        Then I should see "Log in" 
         And I fill in "Email" with "wrong@email.com"
         And I fill in "Password" with "password"
         And I click on "Log in"
+        # Then stop
         Then I should see the message "Invalid email or password"
 
     Scenario: RSC logs out and try to log in with an the incorrect password
         Given I click on "X"
         And I click on "Logout"
-        Then I should be on the landing page
-        And I click on "Login"
+        Then I should see "Log in" 
         And I fill in "Email" with "email@email.com"
         And I fill in "Password" with "pass"
         And I click on "Log in"

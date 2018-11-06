@@ -13,6 +13,9 @@ Feature: RSC creates a new hospital
             | email            | password   |
             | email@email.com  | mypassword |
         And the user is logged in as "email@email.com"
+
+            
+            
         Given I am on the landing page
         And I click on "Hospitals"
 
