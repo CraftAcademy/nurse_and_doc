@@ -34,7 +34,6 @@ Then("I should be on the jobs index") do
     expect(page).to have_current_path(root_path)
 end
 
-
 Then("I fill in job form") do
     fill_in 'Name', with: 'Heart Surgeon'
     fill_in 'Profession', with: 'doctor'
