@@ -54,8 +54,8 @@ Then("I fill in the job form with {string} information") do |content|
     fill_in 'Caretype', with: 'Elderly'
     fill_in 'Scope', with: 'Scope'
     fill_in 'Working hours', with: '9 hours'
-    fill_in 'Date start', with: 'Tomorrow'
-    fill_in 'Date finish', with: 'Next Year'
+    fill_in 'Date start', with: '1122018'
+    fill_in 'Date finish', with: '1122019'
 end
 
 When("I fill in company form with {string} information") do |email|
