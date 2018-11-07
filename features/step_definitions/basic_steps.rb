@@ -29,7 +29,7 @@ And("I click on {string} within the {string} section") do |link, section|
 end
  
 Given("I am on the login page") do
-visit user_session_path
+  visit user_session_path
 end
 
 Given("stop") do

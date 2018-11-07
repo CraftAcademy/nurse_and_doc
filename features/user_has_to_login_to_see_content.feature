@@ -21,3 +21,9 @@ Feature: User has to login to see content of website
         And I click on "Log in"
         Then I should see "intern"
        
+       Scenario: User tries to access content without logging in
+       Given I am on the landing page
+       Then I should see "Log in"
+       And I should not see "intern"
+       Then I should see "You need to sign in or sign up before continuing."
+       
