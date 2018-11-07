@@ -9,7 +9,7 @@ Hospital.create!([
 ])
 
 Job.create!([
-    { profession: "Doctor" }, { profession: "Nurse" }, { profession: "Assistant Nurse" }
+    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", license: "Endokrinologi", caretype: "Primary Care", scope: "Full Time", working_hours: "Day", date_start: "12122018", date_finish: "12122018"  }
 ])
 
 Staffco.create!([

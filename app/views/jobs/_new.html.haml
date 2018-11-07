@@ -6,7 +6,6 @@
             %h1.text-center.mt-6 Create New Job
         = form_with scope: :job, url: jobs_path, id: :create_job do |form|
             #error_messages
-            = form.label :name, class: "form-label"
             = form.text_field :name, placeholder: "Name", class: "form-input-field"
             = form.label :profession, class: "form-label"
             = form.text_field :profession, placeholder: "Profession", class: "form-input-field"
