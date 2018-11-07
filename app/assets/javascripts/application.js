@@ -56,7 +56,6 @@ const displayModal = html => {
     closeModalListener('cancel_modal')
 }
 
-
 document.addEventListener('turbolinks:load', () => {
     App.mainContent = document.getElementById('main_content')
     App.tempContent = document.getElementById('temp_content')

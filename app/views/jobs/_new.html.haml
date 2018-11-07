@@ -6,16 +6,14 @@
             %h1.text-center.mt-6 Create New Job
         = form_with scope: :job, url: jobs_path, id: :create_job do |form|
             #error_messages
-            = form.label :name, class: "form-label"
-            = form.text_field :name, placeholder: "Name", class: "form-input-field"
             = form.label :profession, class: "form-label"
             = form.text_field :profession, placeholder: "Profession", class: "form-input-field"
             = form.label :hospital, class: "form-label"
-            = form.text_field :hospital, placeholder: "Hospital", class: "form-input-field"
+            = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, {include_blank: 'Please select'}, id: "Hospital", class: "form-input-field"
             = form.label :department, class: "form-label"
             = form.text_field :department, placeholder: "Department", class: "form-input-field"
             = form.label :license, class: "form-label"
-            = form.text_field :license, placeholder: "License/s", class: "form-input-field"
+            = form.select :license, License.all.collect {|c| [ c.name ] }, {include_blank: 'Please select'}, class: "form-input-field"
             = form.label :caretype, class: "form-label"
             = form.text_field :caretype, placeholder: "Caretype", class: "form-input-field"
             = form.label :scope, class: "form-label"
@@ -23,8 +21,8 @@
             = form.label :working_hours, class: "form-label"
             = form.text_field :working_hours, placeholder: "hours", class: "form-input-field"
             = form.label :date_start, class: "form-label"
-            = form.text_field :date_start, placeholder: "y/d/m", class: "form-input-field"
+            = form.date_field :date_start, max: "2999-12-31",  class: "form-input-field"
             = form.label :date_finish, class: "form-label"
-            = form.text_field :date_finish, placeholder: "y/d/m", class: "form-input-field"
+            = form.date_field :date_finish, max: "2999-12-31", class: "form-input-field"
             = form.submit value: "Submit", class: "button"
 = render partial: 'partials/modal'

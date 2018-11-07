@@ -33,3 +33,8 @@ Given("the user is logged in as {string}") do |email|
     login_as(user, scope: :user)
 end
 
+Given("the following licenses exists") do |table|
+    table.hashes.each do |license|
+    FactoryBot.create(:license, license)
+    end
+end

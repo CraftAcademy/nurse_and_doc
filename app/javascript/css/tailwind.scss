@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+#error_messages {
+    @apply text-red tracking-wide text-sm;
+}
+
 .list-card {
     @apply w-full items-center bg-grey-darker bg-white p-6;
 }
