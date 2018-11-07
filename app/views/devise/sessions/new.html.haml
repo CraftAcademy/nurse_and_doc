@@ -1,1 +1,11 @@
+- content_for :extras do 
+    :javascript
+        var form = document.getElementById('user_login')
+
+        form.addEventListener('ajax:error', (event) => {
+            let errorMessageDisplayElement = document.getElementById('error_messages')
+            let message = event.detail[0].message
+            errorMessageDisplayElement.innerHTML = message
+        })
+
 = render partial: 'new'

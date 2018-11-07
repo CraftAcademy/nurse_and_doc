@@ -32,7 +32,6 @@ Feature: RSC creates a new rsc user
         And I fill in "Email" with "wrong@email.com"
         And I fill in "Password" with "password"
         And I click on "Log in"
-        # Then stop
         Then I should see the message "Invalid email or password"
 
     Scenario: RSC logs out and try to log in with an the incorrect password

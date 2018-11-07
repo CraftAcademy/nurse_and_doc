@@ -1,4 +1,4 @@
-@javascript
+@javascript @no_user
 Feature: User has to login to see content of website
     As a visitor,
     In order to see content,
