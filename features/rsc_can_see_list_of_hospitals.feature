@@ -10,7 +10,6 @@ Feature: RSC Can See List of Hospitals
             | Hospital 1  | 
             | Hospital 2  |
 
-
     Scenario: 
         Given I am on the landing page
         And I click on "Hospitals" within the "#sidebar" section

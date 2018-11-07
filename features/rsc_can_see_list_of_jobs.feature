@@ -11,7 +11,6 @@ Feature: RSC Can See List of Jobs
             | Nurse             |
             | Assistant Nurse   |
 
-
     Scenario: RSC Can See List of Jobs on the dashboard
         Given I am on the staffing companies page
         And I click on "Jobs" within the "#sidebar" section
