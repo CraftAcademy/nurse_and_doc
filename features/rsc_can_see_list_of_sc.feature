@@ -10,10 +10,7 @@ Feature: RSC Can See List of Staffing Companies
             | name        | email           |
             | Nurse&co    | company1@me.com |
             | Docs&Co     | company2@me.com |
-        Given the following registered RSC exist
-            | email            | password   |
-            | email@email.com  | mypassword |
-        And the user is logged in as "email@email.com"
+
             
     Scenario: RSC can see list of staffing companies on the dashboard page
         Given I am on the landing page

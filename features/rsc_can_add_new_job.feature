@@ -5,11 +5,7 @@ Feature: Rsc can add new job
     I would like to click on the “+” button and fill in the jobs information.
 
     Background: Landing page, clicking new and being on form page
-        Given the following registered RSC exist
-            | email            | password   |
-            | email@email.com  | mypassword |
-        And the user is logged in as "email@email.com"
-        And I am on the landing page
+        Given I am on the landing page
         And I click on "Add New Job"
 
     Scenario: RSC creates a new job

@@ -8,14 +8,7 @@ Feature: RSC creates a new hospital
     Background: 
         Given the following hospitals exists
             | name        | 
-            | Hospital 2  |
-        Given the following registered RSC exist
-            | email            | password   |
-            | email@email.com  | mypassword |
-        And the user is logged in as "email@email.com"
-
-            
-            
+            | Hospital 2  |   
         Given I am on the landing page
         And I click on "Hospitals"
 
