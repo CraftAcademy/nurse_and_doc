@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 #error_messages {
-    @apply text-red ;
+    @apply text-red tracking-wide list-reset;
 }
 
 .list-card {
