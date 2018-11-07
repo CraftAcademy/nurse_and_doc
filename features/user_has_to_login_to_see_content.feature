@@ -9,8 +9,8 @@ Feature: User has to login to see content of website
             | email           | password   |
             | email@email.com | mypassword |
         And the following jobs exist in the database
-            | name     |
-            | intern   |
+            | profession |
+            | intern     |
         And I am on the landing page 
         And I click on "Logout" 
 
