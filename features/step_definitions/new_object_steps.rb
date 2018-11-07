@@ -21,6 +21,12 @@ Given("the following jobs exist in the database") do |table|
     end
 end
 
+Given("the following region exist") do |table|
+    table.hashes.each do |region|
+        create(:region, region)   
+    end 
+  end
+
 Given("the following registered RSC exist") do |table|
     table.hashes.each do |user|
     FactoryBot.create(:user, user)
