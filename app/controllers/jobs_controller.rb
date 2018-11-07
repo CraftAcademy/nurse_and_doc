@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class JobsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @jobs = Job.all
   end

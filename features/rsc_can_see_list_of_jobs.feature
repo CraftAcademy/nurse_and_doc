@@ -10,6 +10,10 @@ Feature: RSC Can See List of Jobs
             | Doctor            |
             | Nurse             |
             | Assistant Nurse   |
+        Given the following registered RSC exist
+            | email            | password   |
+            | email@email.com  | mypassword |
+        And the user is logged in as "email@email.com"
 
     Scenario: RSC Can See List of Jobs on the dashboard
         Given I am on the staffing companies page

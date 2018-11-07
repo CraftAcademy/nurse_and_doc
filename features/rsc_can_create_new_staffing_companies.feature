@@ -7,9 +7,13 @@ Feature: RSC creates a staffing companies
 
     Background: 
         Given the following staffing companies exists
-            | name        | email           |  contact_name  | phone       |  webhook                                      |
+            | name        | email           |  contact_name   | phone       |  webhook                                      |
             | Nurse&Co    | company1@me.com |  Alexander      | 01234566    | https://api.webhook.com/v2/company.json?      |
             | Docs&Co     | company2@me.com |  Sharon         | 0123345676  | https://api.webhook.com/v2/company2.json?     |
+        Given the following registered RSC exist
+            | email            | password   |
+            | email@email.com  | mypassword |
+        And the user is logged in as "email@email.com"
         Given I am on the landing page
 
     Scenario: RSC can successfully add new companies
