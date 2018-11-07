@@ -22,8 +22,8 @@
             = form.label :working_hours, class: "form-label"
             = form.text_field :working_hours, placeholder: "hours", class: "form-input-field"
             = form.label :date_start, class: "form-label"
-            = form.date_field :date_start, class: "form-input-field"
+            = form.date_field :date_start, max: "2999-12-31",  class: "form-input-field"
             = form.label :date_finish, class: "form-label"
-            = form.date_field :date_finish, class: "form-input-field"
+            = form.date_field :date_finish, max: "2999-12-31", class: "form-input-field"
             = form.submit value: "Submit", class: "button"
 = render partial: 'partials/modal'
