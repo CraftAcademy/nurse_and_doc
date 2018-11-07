@@ -6,7 +6,7 @@ Feature: RSC Can See List of Jobs
 
     Background: Jobs
         Given the following jobs exist in the database
-            | name              |
+            | profession        |
             | Doctor            |
             | Nurse             |
             | Assistant Nurse   |
