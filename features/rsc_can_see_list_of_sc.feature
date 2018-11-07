@@ -10,7 +10,7 @@ Feature: RSC Can See List of Staffing Companies
             | name        | email           |
             | Nurse&co    | company1@me.com |
             | Docs&Co     | company2@me.com |
-
+       
     Scenario: RSC can see list of staffing companies on the dashboard page
         Given I am on the landing page
         Then I should see "StaffingPortal"

@@ -1,4 +1,11 @@
 
+
+<% content_for :extras do %>
+  <%= button_tag 'X', id: 'cancel_modal', class: "cancel-button" %>
+<% end %>
+
+
+
 var templateContent = '<%= escape_javascript(render partial: 'new') %>'
 displayModal(templateContent)
 

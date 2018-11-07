@@ -8,7 +8,7 @@ Feature: RSC creates a new hospital
     Background: 
         Given the following hospitals exists
             | name        | 
-            | Hospital 2  |
+            | Hospital 2  |   
         Given I am on the landing page
         And I click on "Hospitals"
 

@@ -27,6 +27,16 @@ Capybara.register_driver :chrome do |app|
   )
 end
 
+Before do 
+  @user = FactoryBot.create(:user)
+  login_as @user
+end
+
+After do 
+  logout @user
+end 
+
+
 Capybara.server = :puma
 Capybara.javascript_driver = :chrome
 
