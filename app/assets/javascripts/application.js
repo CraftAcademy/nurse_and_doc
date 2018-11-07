@@ -60,24 +60,3 @@ document.addEventListener('turbolinks:load', () => {
     App.mainContent = document.getElementById('main_content')
     App.tempContent = document.getElementById('temp_content')
 })
-
-
-(function(values,select) {
-
-    var select = document.querySelector('select');
-    values = new Array(sel.length);
-  
-    select.addEventListener('click', function(e) {
-      
-        values[e.target.index] = !values[e.target.index];    
-        for(var i=0;i<values.length;++i) {
-            sel.options[i].selected = values[i];
-        }
-    });
-})();
-
-let licenseShow = JSON.parse(storage.getItem('license')) || []
-        contacts.push(contact)
-        storage.setItem('contacts', JSON.stringify(contacts))        
-        addContactForm.classList.add('hidden')
-        renderContacts()
