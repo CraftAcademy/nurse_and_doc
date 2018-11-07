@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class StaffcosController < ApplicationController
-
   def index
     @staffcos = Staffco.all
   end
