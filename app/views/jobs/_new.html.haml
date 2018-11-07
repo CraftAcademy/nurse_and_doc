@@ -23,8 +23,8 @@
             = form.label :working_hours, class: "form-label"
             = form.text_field :working_hours, placeholder: "hours", class: "form-input-field"
             = form.label :date_start, class: "form-label"
-            = form.text_field :date_start, placeholder: "y/d/m", class: "form-input-field"
+            = form.date_field :date_start, placeholder: "y/d/m", class: "form-input-field"
             = form.label :date_finish, class: "form-label"
-            = form.text_field :date_finish, placeholder: "y/d/m", class: "form-input-field"
+            = form.date_field :date_finish, placeholder: "y/d/m", class: "form-input-field"
             = form.submit value: "Submit", class: "button"
 = render partial: 'partials/modal'
