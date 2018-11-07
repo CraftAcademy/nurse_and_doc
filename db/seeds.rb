@@ -9,7 +9,7 @@ Hospital.create!([
 ])
 
 Job.create!([
-    { name: "Doctor" }, { name: "Nurse" }, { name: "Assistant Nurse" }
+    { profession: "Doctor" }, { profession: "Nurse" }, { profession: "Assistant Nurse" }
 ])
 
 Staffco.create!([

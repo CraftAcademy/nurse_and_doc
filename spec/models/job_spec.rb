@@ -1,6 +1,5 @@
 RSpec.describe Job, type: :model do
   describe 'DB table' do
-  it { is_expected.to have_db_column :name }
   it { is_expected.to have_db_column :profession }
   it { is_expected.to have_db_column :hospital }
   it { is_expected.to have_db_column :department }
@@ -12,7 +11,7 @@ RSpec.describe Job, type: :model do
 end
 
   describe 'Validations' do
-    it { is_expected.to validate_presence_of :name }
+    it { is_expected.to validate_presence_of :profession }
   end
 
   describe 'Factory' do

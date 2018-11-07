@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :job do
-    name { "MyString" }
     profession { "MyString" }
     hospital { "MyString" }
     department { "MyString" }
