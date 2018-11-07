@@ -16,14 +16,15 @@ Feature: Rsc can add new job
 
     Scenario: RSC creates a new job
         Then I should see "Create New Job"
-        And I fill in the job form
+        And I fill in the job form with "valid" information        
         And I click on "Submit"
         Then I should see "The job was successfully created"
         And I should see "Heart Surgeon"
 
     Scenario: RSC fills out form incorrectly
+        And I fill in the job form with "invalid" information
         And I click on "Submit"
-        Then I should see "Name can't be blank"
+        Then I should see "Profession can't be blank"
 
     Scenario: RSC wants to add new job but decides not to
         And I click on "X"

@@ -38,9 +38,16 @@ Then("I should not see {string}") do |message|
     expect(page).not_to have_content(message)
 end
 
-Then("I fill in the job form") do
+Then("I fill in the job form with {string} information") do |content|
+    case content
+    when 'valid'
+        content = 'Doctor'
+    when 'invalid'
+        content = ' '
+    end
+
     fill_in 'Name', with: 'Heart Surgeon'
-    fill_in 'Profession', with: 'doctor'
+    fill_in 'Profession', with: content
     select 'stockholm sjukhuset', from: 'Hospital'
     fill_in 'Department', with: 'Surgery'
     select 'Kirurgi', from: 'License'
