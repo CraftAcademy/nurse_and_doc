@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2018_11_06_083824) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
-    t.string "personal_name"
+    t.string "contact_name"
     t.string "phone"
     t.string "webhook"
   end

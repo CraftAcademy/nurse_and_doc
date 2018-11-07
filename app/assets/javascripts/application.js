@@ -13,7 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require select2
 //= require_tree .
 
 const sharedDeviseLinkHandler = (event) => {
@@ -62,9 +61,23 @@ document.addEventListener('turbolinks:load', () => {
     App.tempContent = document.getElementById('temp_content')
 })
 
-document.ready(function() {
-    ('.js-example-basic-multiple').select2();
-});
 
-$(document).ready(function(){ $('#license').select2();
-});
+(function(values,select) {
+
+    var select = document.querySelector('select');
+    values = new Array(sel.length);
+  
+    select.addEventListener('click', function(e) {
+      
+        values[e.target.index] = !values[e.target.index];    
+        for(var i=0;i<values.length;++i) {
+            sel.options[i].selected = values[i];
+        }
+    });
+})();
+
+let licenseShow = JSON.parse(storage.getItem('license')) || []
+        contacts.push(contact)
+        storage.setItem('contacts', JSON.stringify(contacts))        
+        addContactForm.classList.add('hidden')
+        renderContacts()

@@ -13,8 +13,8 @@ Job.create!([
 ])
 
 Staffco.create!([
-    { name: "Doctors r us" }, { name: "Nurses 4 U" }, { name: "Psychologists agency" }, 
-    { name: "Eyedoctors United" }
+    { name: "Doctors r us", email: "zak@zak.com" }, { name: "Nurses 4 U", email: "rhon@rhon.com" }, { name: "Psychologists agency", email: "noel@noel.com" }, 
+    { name: "Eyedoctors United", email: "rupert@rupert.com" }, { name: "Nip Tuck", email: "angie@angie.com" }
 ])
 
 License.create!([

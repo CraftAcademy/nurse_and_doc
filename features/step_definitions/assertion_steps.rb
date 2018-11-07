@@ -34,6 +34,10 @@ Then("I should be on the jobs index") do
     expect(page).to have_current_path(root_path)
 end
 
+Then("I should not see {string}") do |message|
+    expect(page).not_to have_content(message)
+end
+
 Then("I fill in the job form") do
     fill_in 'Name', with: 'Heart Surgeon'
     fill_in 'Profession', with: 'doctor'
@@ -45,4 +49,18 @@ Then("I fill in the job form") do
     fill_in 'Working hours', with: '9 hours'
     fill_in 'Date start', with: 'Tomorrow'
     fill_in 'Date finish', with: 'Next Year'
+end
+
+When("I fill in company form with {string} information") do |email|
+    case email
+    when 'valid'
+        email = 'email@email.com' 
+    when 'invalid'
+        email = 'company1@me.com'
+    end
+    fill_in 'Name', with: 'DocsRus'
+    fill_in 'Contact name', with: 'Angelica'
+    fill_in "Phone", with: "01234567"
+    fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
+    fill_in "Email", with: email
 end
