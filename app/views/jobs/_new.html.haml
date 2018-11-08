@@ -7,7 +7,7 @@
         = form_with scope: :job, url: jobs_path, id: :create_job do |form|
             #error_messages
             = form.label :profession, class: "form-label"
-            = form.text_field :profession, placeholder: "Profession", class: "form-input-field"
+            = form.select :profession, options_for_select([["Doctor"], ["Nurse"], ["Assistant Nurse"]]), { include_blank: "Please select" }, class: "form-input-field"
             = form.label :hospital, class: "form-label"
             = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, {include_blank: 'Please select'}, id: "Hospital", class: "form-input-field"
             = form.label :department, class: "form-label"
