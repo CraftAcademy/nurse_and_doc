@@ -11,15 +11,24 @@ Feature: Rsc can add new job
         Given the following hospitals exists
             | name                |
             | stockholm sjukhuset |
+        Given the following profession exists
+            | name       |
+            | Doctor     |
+        Given the following department exists
+            | name       |
+            | Surgery    |
+        Given the following caretype exists
+            | name       |
+            | Homecare   |
         Given I am on the landing page
         And I click on "Add New Job"
 
     Scenario: RSC creates a new job
         Then I should see "Create New Job"
-        And I fill in the job form with "valid" information        
+        And I fill in the job form with "valid" information     
         And I click on "Submit"
         Then I should see "The job was successfully created"
-        And I should see "Heart Surgeon"
+        And I should see "Doctor"
 
     Scenario: RSC fills out form incorrectly
         And I fill in the job form with "invalid" information

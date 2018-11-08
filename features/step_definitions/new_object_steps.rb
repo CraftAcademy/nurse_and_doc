@@ -25,11 +25,11 @@ Given("the following regions exist") do |table|
     table.hashes.each do |region|
     create(:region, region)   
     end 
-  end
+end
 
 Given("the following registered RSC exist") do |table|
     table.hashes.each do |user|
-    create(:user, user)
+        create(:user, user)
     end
 end
 
@@ -40,6 +40,24 @@ end
 
 Given("the following licenses exists") do |table|
     table.hashes.each do |license|
-    create(:license, license)
+        create(:license, license)
+    end
+end
+
+Given("the following profession exists") do |table|
+    table.hashes.each do |profession|
+        create(:profession, profession)
+    end
+end
+
+Given("the following department exists") do |table|
+    table.hashes.each do |department|
+        create(:department, department)
+    end
+end
+
+Given("the following caretype exists") do |table|
+    table.hashes.each do |caretype|
+        create(:care_type, caretype)
     end
 end
