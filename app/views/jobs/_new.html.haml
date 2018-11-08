@@ -11,7 +11,7 @@
             = form.label :hospital, class: "form-label"
             = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, { include_blank: true }, id: "Hospital", class: "form-input-field"
             = form.label :department, class: "form-label"
-            = form.text_field :department, placeholder: "Department", class: "form-input-field"
+            = form.select :department, options_for_select(@departments), { include_blank: true }, class: "form-input-field"
             = form.label :license, class: "form-label"
             = form.select :license, License.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
             = form.label :caretype, class: "form-label"
