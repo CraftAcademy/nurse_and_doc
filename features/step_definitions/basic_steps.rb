@@ -36,6 +36,6 @@ Given("stop") do
   binding.pry
 end
 
-Then("I select a region option {string}") do |region|
-  page.find("#region-selector").click
+Then("I select a region option") do
+  select "stockholm", from: "Region"
 end

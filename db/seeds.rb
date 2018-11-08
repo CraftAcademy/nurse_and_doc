@@ -28,3 +28,7 @@ License.create!([
     { name: "Anestesi och intensivvård" }, { name: "Barn- och ungdomsallergologi" }, { name: "Klinisk patologi" }, { name: "Barn- och ungdomsmedicin" },
     { name: "Kardiologi" }, { name: "Internmedicin" }, { name: "Klinisk bakteriologi" }, { name: "Geriatrik" }
 ])
+
+Region.create!([
+    { name: "Ångermanland"}, { name: "Lappland"}, { name: "Öland"}, { name: "Småland"}
+])
