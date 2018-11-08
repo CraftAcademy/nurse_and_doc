@@ -41,18 +41,18 @@ end
 Then("I fill in the job form with {string} information") do |content|
     case content
     when 'valid'
-        content = 'Heart Surgeon'
+        content = 'Doctor'
     when 'invalid'
-        content = ' '
+        content = ''
     end
 
-    fill_in 'Profession', with: content
+    select content, from: 'Profession'
     select 'stockholm sjukhuset', from: 'Hospital'
-    fill_in 'Department', with: 'Surgery'
+    select 'Surgery', from: 'Department'
     select 'Kirurgi', from: 'License'
-    fill_in 'Caretype', with: 'Elderly'
-    fill_in 'Scope', with: 'Scope'
-    fill_in 'Working hours', with: '9 hours'
+    select 'Hospital', from: 'Caretype'
+    select 'Part Time', from: 'Scope'
+    select 'Weekend', from: 'Working hours'
     fill_in 'Date start', with: '0202020'
     fill_in 'Date finish', with: '1202021'
 end

@@ -19,7 +19,7 @@ Feature: Rsc can add new job
         And I fill in the job form with "valid" information        
         And I click on "Submit"
         Then I should see "The job was successfully created"
-        And I should see "Heart Surgeon"
+        And I should see "Doctor"
 
     Scenario: RSC fills out form incorrectly
         And I fill in the job form with "invalid" information
