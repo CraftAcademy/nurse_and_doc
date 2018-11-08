@@ -37,5 +37,5 @@ Given("stop") do
 end
 
 Given("I select a region option") do
-  find(".form-control[id='region']").select_option
+  find(".form-input-field[id='Region']").select_option
 end

@@ -1,7 +1,9 @@
 class RegionsController < ApplicationController
-    has_many :users
-
+    
     def index
        @regions = Region.all 
     end
+
+    def create
+    end 
 end

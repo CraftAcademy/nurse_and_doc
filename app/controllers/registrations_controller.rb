@@ -10,7 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
     if resource.save
-      flash[:notice] = 'Welcome! You have signed up successfully.'
+      flash[:notice] = "RSC user #{User.last.email} created within #{User.last.region} region."
       sign_up(resource_name, resource)
       redirect_to after_sign_in_path_for(resource)
     else

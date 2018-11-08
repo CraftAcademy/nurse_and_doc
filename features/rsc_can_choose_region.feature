@@ -9,19 +9,18 @@ Feature: Rsc can choose region during signup process
             | name      |  
             | stockholm |
             | uppsala   |
-        Given the following registered RSC exist
-            | email           | password   |
-            | email@email.com | mypassword |
-        Then stop
+        And I am on the landing page 
         And I click on "Logout" 
         
         Scenario: user choose region while signing up
-            And I am on the landing page 
+            Given I click on "Sign up"
             Then I fill in "Email" with "newrsc@email.com"
             And I fill in "Password" with "password"
-            And I fill in "Password Confirmation" with "password"
+            And I fill in "Password confirmation" with "password"
+            # Then stop
             And I select a region option
-            And I click on "Create account"
+            And I click on "Sign up"
+            # Then stop
             Then I should see the message "RSC user newrsc@email.com created within Stockholm region."
 
  
