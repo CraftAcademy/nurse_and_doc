@@ -25,7 +25,7 @@ Feature: Rsc can add new job
 
     Scenario: RSC creates a new job
         Then I should see "Create New Job"
-        And I fill in the job form with "valid" information        
+        And I fill in the job form with "valid" information     
         And I click on "Submit"
         Then I should see "The job was successfully created"
         And I should see "Doctor"

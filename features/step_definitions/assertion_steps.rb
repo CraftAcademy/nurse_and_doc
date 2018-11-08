@@ -50,7 +50,7 @@ Then("I fill in the job form with {string} information") do |content|
     select 'stockholm sjukhuset', from: 'Hospital'
     select 'Surgery', from: 'Department'
     select 'Kirurgi', from: 'License'
-    select 'Homecare', from: 'Caretype'
+    select 'Homecare', from: 'Care type'
     select 'Part Time', from: 'Scope'
     select 'Weekend', from: 'Working hours'
     fill_in 'Date start', with: '0202020'
