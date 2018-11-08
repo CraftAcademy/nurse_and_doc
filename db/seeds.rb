@@ -2,6 +2,9 @@ Hospital.destroy_all
 Job.destroy_all
 Staffco.destroy_all
 License.destroy_all
+Profession.destroy_all
+Department.destroy_all
+CareType.destroy_all
 
 Hospital.create!([
     { name: "Karolinska" }, { name: 'Södersjukhuset' }, { name: "Martina Childrens Hospital" },
@@ -14,7 +17,7 @@ Staffco.create!([
 ])
 
 Job.create!([
-    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", license: "Endokrinologi", caretype: "Primary Care", scope: "Full Time", working_hours: "Day", date_start: "12122018", date_finish: "12122018"  }
+    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", license: "Endokrinologi", care_type: "Primary Care", scope: "Full Time", working_hours: "Day", date_start: "12122018", date_finish: "12122018"  }
 ])
 
 License.create!([
@@ -29,3 +32,21 @@ License.create!([
     { name: "Kardiologi" }, { name: "Internmedicin" }, { name: "Klinisk bakteriologi" }, { name: "Geriatrik" }
 ])
 
+Profession.create!([
+    { name: "Doctor" },
+    { name: "Nurse" },
+    { name: "Assistant Nurse" }
+])
+
+Department.create!([
+    { name: "Surgery" },
+    { name: "Quarantine" }
+])
+
+CareType.create!([
+    { name: "Homecare" },
+    { name: "Primarycare" },
+    { name: "Hospital" },
+    { name: "Geriatric" },
+    { name: "Other" }
+])
