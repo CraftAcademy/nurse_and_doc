@@ -2,19 +2,22 @@ Hospital.destroy_all
 Job.destroy_all
 Staffco.destroy_all
 License.destroy_all
+Profession.destroy_all
+Department.destroy_all
+CareType.destroy_all
 
 Hospital.create!([
     { name: "Karolinska" }, { name: 'Södersjukhuset' }, { name: "Martina Childrens Hospital" },
     { name: "Stockholms Sjukhem" }, { name: "GHP Arytmi Center Stockholm" }
 ])
 
-Job.create!([
-    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", license: "Endokrinologi", caretype: "Primary Care", scope: "Full Time", working_hours: "Day", date_start: "12122018", date_finish: "12122018"  }
-])
-
 Staffco.create!([
     { name: "Doctors r us", email: "zak@zak.com" }, { name: "Nurses 4 U", email: "rhon@rhon.com" }, { name: "Psychologists agency", email: "noel@noel.com" }, 
     { name: "Eyedoctors United", email: "rupert@rupert.com" }, { name: "Nip Tuck", email: "angie@angie.com" }
+])
+
+Job.create!([
+    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", license: "Endokrinologi", care_type: "Primary Care", scope: "Full Time", working_hours: "Day", date_start: "12122018", date_finish: "12122018"  }
 ])
 
 License.create!([
@@ -27,4 +30,23 @@ License.create!([
     { name: "Onkologi" }, { name: "Psykiatri" }, { name: "Företagshälsovård" }, { name: "Socialmedicin" },
     { name: "Anestesi och intensivvård" }, { name: "Barn- och ungdomsallergologi" }, { name: "Klinisk patologi" }, { name: "Barn- och ungdomsmedicin" },
     { name: "Kardiologi" }, { name: "Internmedicin" }, { name: "Klinisk bakteriologi" }, { name: "Geriatrik" }
+])
+
+Profession.create!([
+    { name: "Doctor" },
+    { name: "Nurse" },
+    { name: "Assistant Nurse" }
+])
+
+Department.create!([
+    { name: "Surgery" },
+    { name: "Quarantine" }
+])
+
+CareType.create!([
+    { name: "Homecare" },
+    { name: "Primarycare" },
+    { name: "Hospital" },
+    { name: "Geriatric" },
+    { name: "Other" }
 ])
