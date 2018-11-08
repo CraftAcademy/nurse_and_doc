@@ -23,13 +23,13 @@ end
 
 Given("the following regions exist") do |table|
     table.hashes.each do |region|
-    FactoryBot.create(:region, region)   
+    create(:region, region)   
     end 
   end
 
 Given("the following registered RSC exist") do |table|
     table.hashes.each do |user|
-    FactoryBot.create(:user, user)
+    create(:user, user)
     end
 end
 
@@ -40,6 +40,6 @@ end
 
 Given("the following licenses exists") do |table|
     table.hashes.each do |license|
-    FactoryBot.create(:license, license)
+    create(:license, license)
     end
 end

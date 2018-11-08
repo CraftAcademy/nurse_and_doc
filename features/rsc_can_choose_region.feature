@@ -17,10 +17,8 @@ Feature: Rsc can choose region during signup process
             Then I fill in "Email" with "newrsc@email.com"
             And I fill in "Password" with "password"
             And I fill in "Password confirmation" with "password"
-            # Then stop
             And I select a region option
             And I click on "Sign up"
-            # Then stop
             Then I should see the message "RSC user newrsc@email.com created within stockholm region."
 
  
