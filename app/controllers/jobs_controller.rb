@@ -15,6 +15,14 @@ class JobsController < ApplicationController
     end
   end
 
+  def new
+    @professions = [["Doctor"], ["Nurse"], ["Assistant Nurse"]]
+    @departments = [["Psychiatric"], ["Surgery"]]
+    @caretypes = [["Hospital"], ["Primarycare"], ["Homecare"], ["Geriatric"], ["Other"]]
+    @scopes = [["Full Time"], ["Part Time"], ["Shifts"]]
+    @working_hours = [["Day"], ["Evening"], ["Night"], ["Weekend"], ["On Call"]] 
+  end
+
   def job_params
     params.require(:job).permit(:profession, :hospital, :department, :license, :caretype, :scope, :working_hours, :date_start, :date_finish)
   end
