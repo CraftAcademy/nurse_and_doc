@@ -7,7 +7,7 @@
         = form_with scope: :job, url: jobs_path, id: :create_job do |form|
             #error_messages
             = form.label :profession, class: "form-label"
-            = form.select :profession, options_for_select(@professions), { include_blank: true }, class: "form-input-field"
+            = form.select :profession, Profession.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
             = form.label :hospital, class: "form-label"
             = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, { include_blank: true }, id: "Hospital", class: "form-input-field"
             = form.label :department, class: "form-label"
@@ -15,7 +15,7 @@
             = form.label :license, class: "form-label"
             = form.select :license, License.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
             = form.label :caretype, class: "form-label"
-            = form.select :caretype, options_for_select(@caretypes), { include_blank: true }, class: "form-input-field"
+            = form.select :caretype, options_for_select(@care_types), { include_blank: true }, class: "form-input-field"
             = form.label :scope, class: "form-label"
             = form.select :scope, options_for_select(@scopes), { include_blank: true }, class: "form-input-field"
             = form.label :working_hours, class: "form-label"
