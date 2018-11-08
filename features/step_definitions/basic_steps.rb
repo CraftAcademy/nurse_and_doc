@@ -36,6 +36,6 @@ Given("stop") do
   binding.pry
 end
 
-Given("I select a region option") do
-  find(".form-input-field[id='Region']").select_option
+Then("I select a region option {string}") do |region|
+  page.find("#region-selector").click
 end
