@@ -32,9 +32,6 @@ Before do
   login_as @user
 end
 
-Before '@no_user' do 
-  logout @user
-end
 
 After do 
   logout @user
