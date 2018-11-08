@@ -18,9 +18,9 @@ class JobsController < ApplicationController
   def new
     @professions = [["Doctor"], ["Nurse"], ["Assistant Nurse"]]
     @departments = [["Psychiatric"], ["Surgery"]]
-    @careTypes = [["Hospital"], ["Primarycare"], ["Homecare"], ["Geriatric"], ["Other"]]
+    @care_types = [["Hospital"], ["Primarycare"], ["Homecare"], ["Geriatric"], ["Other"]]
     @scopes = [["Full Time"], ["Part Time"], ["Shifts"]]
-    @workingHours = [["Day"], ["Evening"], ["Night"], ["Weekend"], ["On Call"]] 
+    @working_hours = [["Day"], ["Evening"], ["Night"], ["Weekend"], ["On Call"]] 
   end
 
   def job_params
