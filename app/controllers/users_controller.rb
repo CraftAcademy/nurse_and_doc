@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  belongs_to :region
   def index; end
 
   def new; end
