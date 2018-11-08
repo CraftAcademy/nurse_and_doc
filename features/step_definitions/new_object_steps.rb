@@ -38,3 +38,21 @@ Given("the following licenses exists") do |table|
     FactoryBot.create(:license, license)
     end
 end
+
+Given("the following profession exists") do |table|
+    table.hashes.each do |profession|
+    FactoryBot.create(:profession, profession)
+    end
+end
+
+Given("the following department exists") do |table|
+    table.hashes.each do |department|
+    FactoryBot.create(:department, department)
+    end
+end
+
+Given("the following caretype exists") do |table|
+    table.hashes.each do |caretype|
+    FactoryBot.create(:care_type, caretype)
+    end
+end

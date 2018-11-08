@@ -11,6 +11,15 @@ Feature: Rsc can add new job
         Given the following hospitals exists
             | name                |
             | stockholm sjukhuset |
+        Given the following profession exists
+            | name       |
+            | Doctor     |
+        Given the following department exists
+            | name       |
+            | Surgery    |
+        Given the following caretype exists
+            | name       |
+            | Homecare   |
         Given I am on the landing page
         And I click on "Add New Job"
 
