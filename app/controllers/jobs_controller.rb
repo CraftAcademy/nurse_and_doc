@@ -18,6 +18,7 @@ class JobsController < ApplicationController
   def new
     @professions = [["Doctor"], ["Nurse"], ["Assistant Nurse"]]
     @departments = [["Psychiatric"], ["Surgery"]]
+    @caretypes = [["Hospital"], ["Primarycare"], ["Homecare"], ["Geriatric"], ["Other"]]
   end
 
   def job_params

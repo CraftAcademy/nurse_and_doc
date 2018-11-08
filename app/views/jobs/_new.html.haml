@@ -15,7 +15,7 @@
             = form.label :license, class: "form-label"
             = form.select :license, License.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
             = form.label :caretype, class: "form-label"
-            = form.text_field :caretype, placeholder: "Caretype", class: "form-input-field"
+            = form.select :caretype, options_for_select(@caretypes), { include_blank: true }, class: "form-input-field"
             = form.label :scope, class: "form-label"
             = form.text_field :scope, placeholder: "Scope", class: "form-input-field"
             = form.label :working_hours, class: "form-label"
