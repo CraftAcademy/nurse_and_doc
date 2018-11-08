@@ -2,6 +2,7 @@ Hospital.destroy_all
 Job.destroy_all
 Staffco.destroy_all
 License.destroy_all
+Region.destroy_all
 
 Hospital.create!([
     { name: "Karolinska" }, { name: 'Södersjukhuset' }, { name: "Martina Childrens Hospital" },
@@ -30,5 +31,6 @@ License.create!([
 ])
 
 Region.create!([
-    { name: "Ångermanland"}, { name: "Lappland"}, { name: "Öland"}, { name: "Småland"}
+    { name: "Ångermanland"}, { name: "Lappland"}, { name: "Öland"}, { name: "Småland"}, { name: "Blekinge"}, { name: "Bohuslän"}, { name: "Öland"}, { name: "Småland"}
 ])
+

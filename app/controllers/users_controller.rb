@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def new; end
 
   def create
+    binding.pry
     user = User.create(user_params.merge(password: Devise.friendly_token[0, 20]))
     if user.persisted?
       message = " Currently logged in as #{current_user.email}" if user_signed_in?

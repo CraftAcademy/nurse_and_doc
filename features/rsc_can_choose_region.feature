@@ -20,7 +20,7 @@ Feature: Rsc can choose region during signup process
             # Then stop
             And I select a region option
             And I click on "Sign up"
-            Then stop
+            # Then stop
             Then I should see the message "RSC user newrsc@email.com created within stockholm region."
 
  

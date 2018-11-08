@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_105213) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "region"
     t.bigint "region_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["region_id"], name: "index_users_on_region_id"
