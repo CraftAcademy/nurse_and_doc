@@ -27,11 +27,15 @@ And("I click on {string} within the {string} section") do |link, section|
     click_link link
   }
 end
- 
+
 Given("I am on the login page") do
   visit user_session_path
 end
 
 Given("stop") do
   binding.pry
+end
+
+Then("I select a region option") do
+  select "stockholm", from: "Region"
 end

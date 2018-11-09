@@ -15,7 +15,12 @@ class JobsController < ApplicationController
     end
   end
 
+  def new
+    @scopes = [["Full Time"], ["Part Time"], ["Shifts"]]
+    @working_hours = [["Day"], ["Evening"], ["Night"], ["Weekend"], ["On Call"]] 
+  end
+
   def job_params
-    params.require(:job).permit(:profession, :hospital, :department, :license, :caretype, :scope, :working_hours, :date_start, :date_finish)
+    params.require(:job).permit(:scope, :working_hours, :date_start, :date_finish, :profession, :hospital, :license, :care_type, :department)
   end
 end
