@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_142228) do
+ActiveRecord::Schema.define(version: 2018_11_09_110744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_11_08_142228) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_hospitals_on_region_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -89,5 +91,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_142228) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "hospitals", "regions"
   add_foreign_key "users", "regions"
 end
