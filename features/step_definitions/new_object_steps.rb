@@ -61,3 +61,4 @@ Given("the following caretype exists") do |table|
         create(:care_type, caretype)
     end
 end
+
