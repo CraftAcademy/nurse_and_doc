@@ -5,3 +5,4 @@ class ApplicationPolicy
     @user = user
   end
   
+end
