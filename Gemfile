@@ -30,6 +30,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'email_spec'
 end
 
 group :development do
