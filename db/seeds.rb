@@ -2,6 +2,7 @@ Hospital.destroy_all
 Job.destroy_all
 Staffco.destroy_all
 License.destroy_all
+Region.destroy_all
 Profession.destroy_all
 Department.destroy_all
 CareType.destroy_all
@@ -30,6 +31,10 @@ License.create!([
     { name: "Onkologi" }, { name: "Psykiatri" }, { name: "Företagshälsovård" }, { name: "Socialmedicin" },
     { name: "Anestesi och intensivvård" }, { name: "Barn- och ungdomsallergologi" }, { name: "Klinisk patologi" }, { name: "Barn- och ungdomsmedicin" },
     { name: "Kardiologi" }, { name: "Internmedicin" }, { name: "Klinisk bakteriologi" }, { name: "Geriatrik" }
+])
+
+Region.create!([
+    { name: "Ångermanland"}, { name: "Lappland"}, { name: "Öland"}, { name: "Småland"}, { name: "Blekinge"}, { name: "Bohuslän"}, { name: "Öland"}, { name: "Småland"}
 ])
 
 Profession.create!([

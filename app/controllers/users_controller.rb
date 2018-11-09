@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    user = User.create(user_params.merge(password: Devise.friendly_token[0, 20]))
+    region = current_user.region 
+    user = User.create(user_params.merge(password: Devise.friendly_token[0, 20], region: region))
     if user.persisted?
       message = " Currently logged in as #{current_user.email}" if user_signed_in?
       redirect_to root_path, notice: "RSC user #{User.last.email} created. #{message}."

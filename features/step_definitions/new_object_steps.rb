@@ -21,12 +21,17 @@ Given("the following jobs exist in the database") do |table|
     end
 end
 
+Given("the following regions exist") do |table|
+    table.hashes.each do |region|
+    create(:region, region)   
+    end 
+end
+
 Given("the following registered RSC exist") do |table|
     table.hashes.each do |user|
         create(:user, user)
     end
 end
-
 
 Given("the user is logged in as {string}") do |email|
     user = User.find_by(email: email)
