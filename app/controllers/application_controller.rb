@@ -12,11 +12,7 @@ class ApplicationController < ActionController::Base
 
     def configure_permitted_parameters
         devise_parameter_sanitizer.permit(:sign_up, keys: [:region])
+        devise_parameter_sanitizer.permit(:accept_invitation, keys: [:password, :password_confirmation, :invitation_token])
     end
 
-    def configure_permitted_parameters
-        devise_parameter_sanitizer.for(:accept_invitation) do |u|
-            u.permit(:first_name, :last_name, :phone, :password, :password_confirmation,
-            :invitation_token)
-    end
 end
