@@ -32,6 +32,7 @@ Before do
   login_as @user
 end
 
+
 After do 
   logout @user
 end 
