@@ -18,6 +18,7 @@ gem 'tailwindcss', '~> 0.2.0'
 gem 'devise'
 gem 'devise_invitable', '~> 1.7.0'
 gem "loofah", ">= 2.2.3"
+gem 'action_mailer_cache_delivery'
 
 group :development, :test do
   gem 'coveralls', require: false
