@@ -16,13 +16,13 @@ Feature: Logged in user can only see content in their own region
             | name        | region    |
             | karolinska  | stockholm |
             | swehospital | uppsala   |
-        Then stop
+        # Then stop
         And the following registered RSC exist
             | email            | region    |
             | rupert@email.com | stockholm |
             | noel@email.com   | uppsala   |
         And I am on the landing page
-        And I click on "Log out"
+        And I click on "Logout"
 
     Scenario: Logged in user can only see content in the stockholm region
         Given the RSC user is logged in as "rupert@email.com"

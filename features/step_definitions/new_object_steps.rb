@@ -4,8 +4,10 @@ Given("the RSC user is logged in as {string}") do |email|
 end
 
 Given("the following hospitals exists") do |table|
-    table.hashes.each do |hospital|
-        create(:hospital, hospital)
+    table.hashes.each do |hospital_hash|
+        region = Region.find_by(name: hospital_hash[:region])
+        hospital_hash.except!("region")
+        create(:hospital, hospital_hash.merge(region: region))
     end
 end
 
@@ -28,8 +30,10 @@ Given("the following regions exist") do |table|
 end
 
 Given("the following registered RSC exist") do |table|
-    table.hashes.each do |user|
-        create(:user, user)
+    table.hashes.each do |user_hash|
+        region = Region.find_by(name: user_hash[:region])
+        user_hash.except!("region")
+        create(:user, user_hash.merge(region: region))
     end
 end
 
