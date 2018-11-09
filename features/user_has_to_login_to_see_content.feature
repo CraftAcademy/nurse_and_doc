@@ -26,7 +26,7 @@ Feature: User has to login to see content of website
        And I should not see "intern"
        Then I should see "You need to sign in or sign up before continuing."
 
-    Scenario: User switches between signup and login
+    Scenario: User can switch between signup and login
         Given I am on the landing page 
         Then I should see "Log in"
         Then I should see "EMAIL"
