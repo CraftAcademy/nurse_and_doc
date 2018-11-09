@@ -31,7 +31,6 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'email_spec'
-  gem 'mailcatcher'
   gem 'action_mailer_cache_delivery'
 end
 

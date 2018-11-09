@@ -99,7 +99,6 @@ GEM
       railties (>= 4, < 6)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
-    daemons (1.2.6)
     database_cleaner (1.7.0)
     devise (4.5.0)
       bcrypt (~> 3.0)
@@ -118,7 +117,6 @@ GEM
       mail (~> 2.7)
     erubi (1.7.1)
     erubis (2.7.0)
-    eventmachine (1.2.7)
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -159,16 +157,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    mailcatcher (0.2.4)
-      eventmachine
-      haml
-      i18n
-      json
-      mail
-      sinatra
-      skinny (>= 0.1.2)
-      sqlite3-ruby
-      thin
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
@@ -182,7 +170,6 @@ GEM
     msgpack (1.2.4)
     multi_json (1.13.1)
     multi_test (0.1.2)
-    mustermann (1.0.3)
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
@@ -199,8 +186,6 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)
-    rack-protection (2.0.4)
-      rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -279,14 +264,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    sinatra (2.0.4)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.4)
-      tilt (~> 2.0)
-    skinny (0.2.2)
-      eventmachine (~> 1.0)
-      thin
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -299,18 +276,11 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
-    sqlite3-ruby (1.3.3)
-      sqlite3 (>= 1.3.3)
     tailwindcss (0.2.0)
       railties (>= 4.1.0, < 6.0)
     temple (0.8.0)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
-    thin (1.7.2)
-      daemons (~> 1.0, >= 1.0.9)
-      eventmachine (~> 1.0, >= 1.0.4)
-      rack (>= 1, < 3)
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -357,7 +327,6 @@ DEPENDENCIES
   haml-rails (~> 1.0)
   listen (>= 3.0.5, < 3.2)
   loofah (>= 2.2.3)
-  mailcatcher
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
