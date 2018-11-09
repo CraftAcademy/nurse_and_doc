@@ -1,12 +1,12 @@
 class PostPolicy
     attr_reader :region, :user
   
-    def initialize(region, user)
-      @region = region
+    def initialize(user, hospital)
       @user = user
+      @hospital = hospital
     end
   
     def show?
-      user.region?
+      user.region.hospital(:region)?
     end
 end

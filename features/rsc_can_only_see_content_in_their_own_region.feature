@@ -11,12 +11,10 @@ Feature: Logged in user can only see content in their own region
             | name      |
             | stockholm |
             | uppsala   |
-        # Then stop
         And the following hospitals exists
             | name        | region    |
             | karolinska  | stockholm |
             | swehospital | uppsala   |
-        # Then stop
         And the following registered RSC exist
             | email            | password  | region    |
             | rupert@email.com | password0 | stockholm |
@@ -30,6 +28,7 @@ Feature: Logged in user can only see content in their own region
         And I click on "Log in"
         And I click on "Hospitals" within the "#sidebar" section
         Then I should see "karolinska"
+        # Then stop
         And I should not see "swehospital" 
 
     Scenario: Logged in user can only see content in the uppsala region
