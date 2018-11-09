@@ -18,26 +18,28 @@ Feature: Logged in user can only see content in their own region
             | swehospital | uppsala   |
         # Then stop
         And the following registered RSC exist
-            | email            | region    |
-            | rupert@email.com | stockholm |
-            | noel@email.com   | uppsala   |
+            | email            | password  | region    |
+            | rupert@email.com | password0 | stockholm |
+            | noel@email.com   | password1 | uppsala   |
         And I am on the landing page
         And I click on "Logout"
 
     Scenario: Logged in user can only see content in the stockholm region
-        Given the RSC user is logged in as "rupert@email.com"
+        Given I fill in "Email" with "rupert@email.com"
+        And I fill in "Password" with "password0"
+        And I click on "Log in"
         And I click on "Hospitals" within the "#sidebar" section
         Then I should see "karolinska"
+        And I should not see "swehospital" 
 
     Scenario: Logged in user can only see content in the uppsala region
-        Given the RSC user is logged in as "noel@email.com"
+        Given I fill in "Email" with "noel@email.com"
+        And I fill in "Password" with "password1"
+        And I click on "Log in"
         And I click on "Hospitals" within the "#sidebar" section
         Then I should see "swehospital"
-
-    Scenario: Logged in user cannot see content in the uppsala region
-        Given the RSC user is logged in as "rupert@email.com"
-        And I click on "Hospitals" within the "#sidebar" section
         Then I should not see "karolinska"
+   
 
 
 
