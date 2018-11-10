@@ -1,0 +1,2 @@
+class OtherRequirement < ApplicationRecord
+end

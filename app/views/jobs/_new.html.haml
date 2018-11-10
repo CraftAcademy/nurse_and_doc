@@ -18,6 +18,8 @@
             = form.select :care_type, CareType.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
             = form.label :scope, class: "form-label"
             = form.select :scope, options_for_select(@scopes), { include_blank: true }, class: "form-input-field"
+            = form.label :requirements, class: "form-label"
+            = form.text_field :requirements, class: "form-input-field"
             = form.label :working_hours, class: "form-label"
             = form.select :working_hours, options_for_select(@working_hours), { include_blank: true }, class: "form-input-field"
             = form.label :date_start, class: "form-label"
