@@ -26,7 +26,9 @@ Feature: Logged in user can only see content in their own region
         Given I fill in "Email" with "rupert@email.com"
         And I fill in "Password" with "password0"
         And I click on "Log in"
+        # Then stop
         And I click on "Hospitals" within the "#sidebar" section
+        # Then stop
         Then I should see "karolinska"
         # Then stop
         And I should not see "swehospital" 

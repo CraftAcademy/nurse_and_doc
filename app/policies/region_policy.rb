@@ -1,13 +1,15 @@
-class PostPolicy < ApplicationPolicy
-    # attr_reader :region, :user
+class RegionPolicy < ApplicationPolicy
+  # attr_reader :region, :user
+
+  def initialize(user, resource)
+    @user = user
+    @resource = resource
+  end
   
-    # def initialize(user, resource)
-    #   @user = user
-    #   @resource = resource
-    # end
-  
-    def show?
-      binding.pry
-      # user.region.hospital(:region)?
-    end
+  def index?
+    @user.region?
+    # binding.pry
+    # user.region.hospital(:region)?
+  end
+
 end
