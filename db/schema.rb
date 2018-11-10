@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_142228) do
+ActiveRecord::Schema.define(version: 2018_11_10_110830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,21 @@ ActiveRecord::Schema.define(version: 2018_11_08_142228) do
     t.string "department"
     t.string "license"
     t.string "care_type"
+    t.text "requirements"
+    t.string "other_requirements"
+    t.text "description"
+    t.integer "years_experience"
+    t.string "application_deadline"
+    t.boolean "accomodation_arrangement"
+    t.string "accomodation_budget"
+    t.text "accomodation_comment"
+    t.boolean "travel_arranged"
+    t.string "travel_budget"
+    t.text "travel_comment"
+    t.boolean "other_pay"
+    t.string "other_budget"
+    t.text "other_comment"
+    t.string "reference_number"
   end
 
   create_table "licenses", force: :cascade do |t|
