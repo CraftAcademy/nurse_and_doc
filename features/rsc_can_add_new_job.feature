@@ -20,6 +20,9 @@ Feature: Rsc can add new job
         Given the following caretype exists
             | name       |
             | Homecare   |
+        Given the following other requirement exists
+            | name            |
+            | Drivers License |
         Given I am on the landing page
         And I click on "Add New Job"
 
