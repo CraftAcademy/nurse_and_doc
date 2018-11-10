@@ -1,15 +1,21 @@
 class RegionPolicy < ApplicationPolicy
-  # attr_reader :region, :user
+  class Scope
+  attr_reader :user, :scope
 
-  def initialize(user, resource)
+  def initialize(user, scope)
     @user = user
-    @resource = resource
+    @scope = scope
   end
   
-  def index?
-    @user.region?
-    # binding.pry
-    # user.region.hospital(:region)?
+  def resolve
+    if user.region?
+      scope.all
+    end
   end
+  def index?
+   @user.region?
+  #   # binding.pry
+  #   # user.region.hospital(:region)?
+   end
 
 end

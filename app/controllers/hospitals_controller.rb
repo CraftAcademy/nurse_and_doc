@@ -1,7 +1,6 @@
 class HospitalsController < ApplicationController
   
   def index
-    @user = authorize User.find(params[:id])
     @hospitals = Hospital.all
   end
 
