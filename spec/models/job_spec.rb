@@ -14,6 +14,15 @@ RSpec.describe Job, type: :model do
     it { is_expected.to have_db_column :years_experience }
     it { is_expected.to have_db_column :application_deadline }
     it { is_expected.to have_db_column :reference_number }
+    it { is_expected.to have_db_column :accomodation_arrangement }
+    it { is_expected.to have_db_column :accomodation_budget }
+    it { is_expected.to have_db_column :accomodation_comment }
+    it { is_expected.to have_db_column :travel_arranged }
+    it { is_expected.to have_db_column :travel_budget }
+    it { is_expected.to have_db_column :travel_comment }
+    it { is_expected.to have_db_column :other_pay }
+    it { is_expected.to have_db_column :other_comment }
+    it { is_expected.to have_db_column :other_budget }
     it { is_expected.to have_db_column :scope }
   end
 
