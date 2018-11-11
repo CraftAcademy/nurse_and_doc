@@ -8,7 +8,6 @@ Department.destroy_all
 CareType.destroy_all
 OtherRequirement.destroy_all
 
-
 Hospital.create!([
     { name: "Karolinska" }, 
     { name: 'Södersjukhuset' }, 
@@ -52,7 +51,19 @@ Job.create!([
       accomodation_budget: "1000:- per month", accomodation_comment: "Many hostels to choose from",
       travel_arranged: true, travel_budget: "70% of all expenses", travel_comment: "Walking/running is good for you.",
       other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
-      reference_number: "101020304050"  }
+      reference_number: "101020304050"  },
+
+    { profession: "Nurse", hospital: "Södersjukhuset", department: "Surgery", 
+      license: "Ortopedi", care_type: "Home Care", scope: "Part Time", 
+      working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
+      requirements: "Private surgery travelling around all of Stockholm.",
+      other_requirements: "Previous experience with team management is a plus",
+      description: "You will have your own company car and it is going to be great.",
+      years_experience: 3, application_deadline: "12-01-2019", accomodation_arrangement: true,
+      accomodation_budget: "4000:- per month", accomodation_comment: "Many Air BnBs to choose from",
+      travel_arranged: true, travel_budget: "20% of all expenses", travel_comment: "Drive fast.",
+      other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
+      reference_number: "202032145413"  }
 ])
 
 License.create!([
