@@ -4,10 +4,10 @@
   - @jobs.each do |job|
     .list-grid  
       .list-name= job.profession
-      .item-info= job.hospital
-      .item-info= job.department
-      .item-info= job.date_start
-      .item-info= job.application_deadline
+      .item-info= "Hospital: #{job.hospital}"
+      .item-info= "Department: #{job.department}"
+      .item-info= "Start: #{job.date_start}"
+      .item-info= "Deadline: #{job.application_deadline}"
 
       .list-button-area
         %button.button Remove
