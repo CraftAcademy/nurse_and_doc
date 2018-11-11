@@ -21,6 +21,14 @@ class JobsController < ApplicationController
   end
 
   def job_params
-    params.require(:job).permit(:scope, :working_hours, :date_start, :date_finish, :profession, :hospital, :license, :care_type, :department)
+    params.require(:job).permit(:scope, :working_hours, 
+                                :date_start, :date_finish, 
+                                :profession, :hospital, 
+                                :license, :care_type, 
+                                :department, :requirements,
+                                :other_requirements, :description,
+                                :years_experience, :application_deadline,
+                                :reference_number
+                                )
   end
 end
