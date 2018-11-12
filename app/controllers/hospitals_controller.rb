@@ -5,7 +5,7 @@ class HospitalsController < ApplicationController
   end
 
   def create
-    hospital = Hospital.create(hospital_params)
+    hospital = Hospital.create(hospital_params.merge(region: current_user.region))
     if hospital.persisted?
       redirect_to hospitals_path, notice: 'Hospital added'
     else

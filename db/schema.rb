@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_09_110744) do
+ActiveRecord::Schema.define(version: 2018_11_12_190926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2018_11_09_110744) do
     t.string "department"
     t.string "license"
     t.string "care_type"
+    t.bigint "hospital_id"
+    t.index ["hospital_id"], name: "index_jobs_on_hospital_id"
   end
 
   create_table "licenses", force: :cascade do |t|
@@ -104,5 +106,6 @@ ActiveRecord::Schema.define(version: 2018_11_09_110744) do
   end
 
   add_foreign_key "hospitals", "regions"
+  add_foreign_key "jobs", "hospitals"
   add_foreign_key "users", "regions"
 end

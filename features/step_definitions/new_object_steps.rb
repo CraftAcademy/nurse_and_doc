@@ -5,7 +5,7 @@ end
 
 Given("the following hospitals exists") do |table|
     table.hashes.each do |hospital_hash|
-        region = Region.find_by(name: hospital_hash[:region])
+        region = Region.find_or_create_by(name: hospital_hash[:region])
         hospital_hash.except!("region")
         create(:hospital, hospital_hash.merge(region: region))
     end
