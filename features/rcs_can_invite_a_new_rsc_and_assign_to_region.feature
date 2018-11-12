@@ -16,6 +16,7 @@ Feature: RSC creates a new rsc user
         Then "example@example.com" should receive an email
         Then I should see the message "RSC user example@example.com created."
         And I should see "Currently logged in as mystring@me.com."
+        And the invited user should belong to the same region as the inviter
 
     Scenario: RSC unsucessfully create another RSC user with invalid email or password
         Given I fill in "Email" with "new_rsc"
