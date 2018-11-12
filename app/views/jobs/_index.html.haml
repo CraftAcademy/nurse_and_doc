@@ -9,7 +9,7 @@
       .item-info= "Deadline: #{job.application_deadline}"
 
       .list-button-area
-        = link_to "Remove", job_path(job, locale: I18n.locale), method: :delete, data: {confirm: 'Are you sure?'}, remote: true
+        = link_to "Remove", job_path(job, locale: I18n.locale), method: :delete, data: {confirm: 'Are you sure?'}, remote: true, class: "button"
   .list-grid
     .list-button-area
       = link_to "Add New Job", new_job_path, class: "button text-center", remote: true
