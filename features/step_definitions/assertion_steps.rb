@@ -89,3 +89,7 @@ When("I fill in company form with {string} information") do |email|
     fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
     fill_in "Email", with: email
 end
+
+Then("I confirm popup") do
+    page.driver.browser.switch_to.alert.accept
+end

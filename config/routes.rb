@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       sessions: :sessions
     }
     root controller: :jobs, action: :index
-    resources :jobs, only: [:new, :create]
+    resources :jobs, only: [:new, :create, :destroy]
     resources :users, only: [:create, :new]
     resources :staffcos, only: [:create, :index, :new]
     resources :hospitals, only: [:index, :create, :new]

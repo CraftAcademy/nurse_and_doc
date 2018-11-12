@@ -20,6 +20,16 @@ class JobsController < ApplicationController
     @working_hours = [["Day"], ["Evening"], ["Night"], ["Weekend"], ["On Call"]] 
   end
 
+  def destroy
+    @job = Job.find(params[:id])
+    if @job.destroy
+      redirect_to root_path, notice: 'Job was successfully deleted.'
+    else
+      errors = job.errors.full_messages
+      render json: { message: errors }, status: 422
+    end
+  end
+
   def job_params
     params.require(:job).permit(:scope, :working_hours, 
                                 :date_start, :date_finish, 

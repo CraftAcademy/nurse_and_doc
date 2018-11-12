@@ -12,7 +12,6 @@ Feature: Rsc can add new job
 
     Scenario: Rsc deletes a job
         Then I click on "Remove"
-        Then I should see "Are you sure?"
-        And I click on "OK"
+        And I confirm popup
         Then I should see "Job was successfully deleted."
         And I should not see "Doctor"
