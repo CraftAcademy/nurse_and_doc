@@ -4,9 +4,12 @@
   - @jobs.each do |job|
     .list-grid  
       .list-name= job.profession
+      .item-info= "Hospital: #{job.hospital}, #{job.department}"
+      .item-info= "Start: #{job.date_start} End: #{job.date_finish}"
+      .item-info= "Deadline: #{job.application_deadline}"
+
       .list-button-area
-        %button.button Remove
+        = link_to "Remove", job_path(job, locale: I18n.locale), method: :delete, data: {confirm: 'Are you sure?'}, remote: true, class: "button"
   .list-grid
-    %input.form-input-field{placeholder: "Add new job"}
     .list-button-area
       = link_to "Add New Job", new_job_path, class: "button text-center", remote: true

@@ -71,3 +71,9 @@ Given('the following caretype exists') do |table|
     create(:care_type, caretype)
   end
 end
+
+Given("the following other requirement exists") do |table|
+    table.hashes.each do |other_requirement|
+        create(:other_requirement, other_requirement)
+    end
+end

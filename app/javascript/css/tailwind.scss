@@ -24,6 +24,11 @@
     @apply flex mb-4 items-center;
 }
 
+.item-info {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .list-grid {
     display: grid;
     grid-template-columns: 0.8fr 0.2fr;
