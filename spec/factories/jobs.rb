@@ -1,6 +1,5 @@
 FactoryBot.define do
-  factory :job do
-    hospital 
+  factory :job do 
     profession { "MyString" }
     care_type { "MyString" }
     department { "MyString" }
@@ -9,5 +8,6 @@ FactoryBot.define do
     working_hours { "MyString" }
     date_start { "MyString" }
     date_finish { "MyString" }
+    hospital 
   end
 end

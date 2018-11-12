@@ -18,8 +18,8 @@ Given("the following staffing companies exists") do |table|
 end
 
 Given("the following jobs exist in the database") do |table|
-    table.hashes.each do |job|
-        create(:job, job)
+    table.hashes.each do |job_hash|
+        create(:job, job_hash)
     end
 end
 
@@ -31,7 +31,7 @@ end
 
 Given("the following registered RSC exist") do |table|
     table.hashes.each do |user_hash|
-        region = Region.find_by(name: user_hash[:region])
+        region = Region.find_or_create_by(name: user_hash[:region])
         user_hash.except!("region")
         create(:user, user_hash.merge(region: region))
     end
