@@ -25,8 +25,7 @@ class JobsController < ApplicationController
     if @job.destroy
       redirect_to root_path, notice: 'Job was successfully deleted.'
     else
-      errors = job.errors.full_messages
-      render json: { message: errors }, status: 422
+      redirect_to root_path, notice: 'Something went wrong, job not deleted.'
     end
   end
 
