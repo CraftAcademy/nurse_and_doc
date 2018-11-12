@@ -2,7 +2,6 @@
 
 class InvitationsController < Devise::InvitationsController
 
-
     def create
         super do 
             message = " Currently logged in as #{current_user.email}" if user_signed_in?
@@ -12,6 +11,7 @@ class InvitationsController < Devise::InvitationsController
             end
         end
     end
+
   def invite_resource
     super do |u|
       u.region = current_user.region
@@ -19,8 +19,8 @@ class InvitationsController < Devise::InvitationsController
     end
   end
 
-
   protected 
+  
   def set_flash_message(key, message, options = {})
     if options[:now]
       flash.now[key] = message 
