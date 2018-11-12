@@ -6,23 +6,102 @@
             %h1.text-center.mt-6 Create New Job
         = form_with scope: :job, url: jobs_path, id: :create_job do |form|
             #error_messages
-            = form.label :profession, class: "form-label"
-            = form.select :profession, Profession.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
-            = form.label :hospital, class: "form-label"
-            = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, { include_blank: true }, id: "Hospital", class: "form-input-field"
-            = form.label :department, class: "form-label"
-            = form.select :department, Department.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
-            = form.label :license, class: "form-label"
-            = form.select :license, License.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
-            = form.label :care_type, class: "form-label"
-            = form.select :care_type, CareType.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
-            = form.label :scope, class: "form-label"
-            = form.select :scope, options_for_select(@scopes), { include_blank: true }, class: "form-input-field"
-            = form.label :working_hours, class: "form-label"
-            = form.select :working_hours, options_for_select(@working_hours), { include_blank: true }, class: "form-input-field"
-            = form.label :date_start, class: "form-label"
-            = form.date_field :date_start, max: "2999-12-31",  class: "form-input-field"
-            = form.label :date_finish, class: "form-label"
-            = form.date_field :date_finish, max: "2999-12-31", class: "form-input-field"
-            = form.submit value: "Submit", class: "button"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :profession, class: "form-label"
+                    = form.select :profession, Profession.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :hospital, class: "form-label"
+                    = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, { include_blank: true }, id: "Hospital", class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :department, class: "form-label"
+                    = form.select :department, Department.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :license, class: "form-label"
+                    = form.select :license, License.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :care_type, class: "form-label"
+                    = form.select :care_type, CareType.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :scope, class: "form-label"
+                    = form.select :scope, options_for_select(@scopes), { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :requirements, class: "form-label"            
+                    = form.text_field :requirements, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :other_requirements, class: "form-label"
+                    = form.select :other_requirements, OtherRequirement.all.collect {|c| [ c.name ] }, { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :description, class: "form-label"            
+                    = form.text_area :description, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :accomodation_arrangement, class: "form-label"
+                    = form.check_box :accomodation_arrangement
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :accomodation_budget, class: "form-label"
+                    = form.text_field :accomodation_budget, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :accomodation_comment, class: "form-label"
+                    = form.text_area :accomodation_comment, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :travel_arranged, class: "form-label"
+                    = form.check_box :travel_arranged
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :travel_budget, class: "form-label"
+                    = form.text_field :travel_budget, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :travel_comment, class: "form-label"
+                    = form.text_area :travel_comment, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :other_pay, class: "form-label"
+                    = form.check_box :other_pay
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :other_budget, class: "form-label"
+                    = form.text_field :other_budget, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :other_comment, class: "form-label"
+                    = form.text_area :other_comment, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :reference_number, class: "form-label"
+                    = form.text_field :reference_number, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :years_experience, class: "form-label"
+                    = form.select :years_experience, (0..10), { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :working_hours, class: "form-label"
+                    = form.select :working_hours, options_for_select(@working_hours), { include_blank: true }, class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :date_start, class: "form-label"
+                    = form.date_field :date_start, max: "2999-12-31",  class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :date_finish, class: "form-label"
+                    = form.date_field :date_finish, max: "2999-12-31", class: "form-input-field"
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :application_deadline, class: "form-label"
+                    = form.date_field :application_deadline, max: "2999-12-31", class: "form-input-field"
+            .to-field-wrapper
+                = form.submit value: "Submit", class: "button"
 = render partial: 'partials/modal'

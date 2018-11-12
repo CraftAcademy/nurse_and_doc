@@ -18,6 +18,7 @@ gem 'tailwindcss', '~> 0.2.0'
 gem 'devise'
 gem 'devise_invitable', '~> 1.7', '>= 1.7.5'
 gem "loofah", ">= 2.2.3"
+gem "pundit"
 
 group :development, :test do
   gem 'coveralls', require: false
@@ -32,6 +33,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'email_spec'
   gem 'letter_opener'
+  gem 'pundit-matchers'
+
 end
 
 group :development do

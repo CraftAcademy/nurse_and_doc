@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :hospital do
-    name { "MyString" }
+    sequence(:name) {|n| "Hospital #{n}" }
+    region
   end
 end

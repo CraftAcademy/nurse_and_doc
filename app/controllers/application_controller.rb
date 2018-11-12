@@ -2,11 +2,14 @@ class ApplicationController < ActionController::Base
     before_action :authenticate_user!
     before_action :set_locale
     before_action :configure_permitted_parameters, if: :devise_controller?
+    include Pundit
+    protect_from_forgery
 
     private
     def set_locale
         I18n.locale = params[:locale] || I18n.default_locale
     end
+    
  
     protected
 
