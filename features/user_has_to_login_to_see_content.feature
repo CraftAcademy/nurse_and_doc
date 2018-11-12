@@ -25,4 +25,19 @@ Feature: User has to login to see content of website
        Then I should see "Log in"
        And I should not see "intern"
        Then I should see "You need to sign in or sign up before continuing."
+
+    Scenario: User can switch between signup and login
+        Given I am on the landing page 
+        Then I should see "Log in"
+        Then I should see "EMAIL"
+        And I should see "PASSWORD" 
+        Then I click on "Sign up"
+        And I should see "EMAIL"
+        And I should see "PASSWORD"       
+        And I should see "PASSWORD CONFIRMATION"
+        And I should see "REGION"
+        Then I click on "Log in"
+        And I should not see "REGION"
        
+   
+

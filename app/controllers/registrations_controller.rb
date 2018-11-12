@@ -20,6 +20,4 @@ class RegistrationsController < Devise::RegistrationsController
       render json: { message: errors }, status: 422
     end
   end
-
-
 end
