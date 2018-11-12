@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_142228) do
+ActiveRecord::Schema.define(version: 2018_11_10_115440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,9 +45,30 @@ ActiveRecord::Schema.define(version: 2018_11_08_142228) do
     t.string "department"
     t.string "license"
     t.string "care_type"
+    t.text "requirements"
+    t.string "other_requirements"
+    t.text "description"
+    t.integer "years_experience"
+    t.string "application_deadline"
+    t.boolean "accomodation_arrangement"
+    t.string "accomodation_budget"
+    t.text "accomodation_comment"
+    t.boolean "travel_arranged"
+    t.string "travel_budget"
+    t.text "travel_comment"
+    t.boolean "other_pay"
+    t.string "other_budget"
+    t.text "other_comment"
+    t.string "reference_number"
   end
 
   create_table "licenses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "other_requirements", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -83,6 +104,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_142228) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "region_id"
     t.string "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -91,7 +113,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_142228) do
     t.string "invited_by_type"
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
-    t.bigint "region_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invitations_count"], name: "index_users_on_invitations_count"

@@ -20,6 +20,9 @@ Feature: Rsc can add new job
         Given the following caretype exists
             | name       |
             | Homecare   |
+        Given the following other requirement exists
+            | name            |
+            | Drivers License |
         Given I am on the landing page
         And I click on "Add New Job"
 
@@ -33,7 +36,7 @@ Feature: Rsc can add new job
     Scenario: RSC fills out form incorrectly
         And I fill in the job form with "invalid" information
         And I click on "Submit"
-        Then I should see "Profession can't be blank"
+        Then I should see "Profession can't be blank,License can't be blank,Scope can't be blank"
 
     Scenario: RSC wants to add new job but decides not to
         And I click on "X"
