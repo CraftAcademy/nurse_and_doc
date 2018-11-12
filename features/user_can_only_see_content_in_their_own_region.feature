@@ -24,7 +24,6 @@ Feature: Logged in user can only see content in their own region
 
         And the default user is logged out
 
-
     Scenario: Logged in user can only see content in the stockholm region
         Given I am logged in as "rupert@email.com"
         And I am on the landing page
