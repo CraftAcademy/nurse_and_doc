@@ -35,3 +35,17 @@ Then("I fill in the job form with {string} information") do |content|
     fill_in 'Date finish', with: '1202021'
     fill_in 'Application deadline', with: '01012019'
 end
+
+When("I fill in company form with {string} information") do |email|
+    case email
+    when 'valid'
+        email = 'email@email.com' 
+    when 'invalid'
+        email = 'company1@me.com'
+    end
+    fill_in 'Name', with: 'DocsRus'
+    fill_in 'Contact name', with: 'Angelica'
+    fill_in "Phone", with: "01234567"
+    fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
+    fill_in "Email", with: email
+end
