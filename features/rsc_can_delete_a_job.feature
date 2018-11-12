@@ -1,3 +1,4 @@
+@javascript
 Feature: Rsc can add new job
     As an RSC,
     In order to manage the jobs list,
@@ -10,7 +11,7 @@ Feature: Rsc can add new job
         Given I am on the landing page
 
     Scenario: Rsc deletes a job
-        Then I click on "remove"
+        Then I click on "Remove"
         Then I should see "Are you sure?"
         And I click on "OK"
         Then I should see "Job was successfully deleted."
