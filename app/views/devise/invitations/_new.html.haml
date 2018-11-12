@@ -2,7 +2,7 @@
 - content_for :modal_content do 
   = button_tag 'X', id: 'cancel_modal', class: "cancel-button"
   .form-header Add new RSC user
-  = form_with scope: :user, url: users_path, id: :create_user do |form|
+  = form_with scope: :user, url: user_invitation_path, id: :create_user do |form| 
     #error_messages
     .to-field-wrapper
       .to-field-full-width

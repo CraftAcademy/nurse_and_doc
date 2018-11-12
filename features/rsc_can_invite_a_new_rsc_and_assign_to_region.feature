@@ -10,10 +10,13 @@ Feature: RSC creates a new rsc user
         And I click on "Create RSC Account" within the "#sidebar" section
 
     Scenario: RSC can sucessfully add another RSC user to access the platform
-        Given I fill in "Email" with "newrsc@email.com"
+        Given I fill in "Email" with "example@example.com"
         And I click on "Create account"
-        Then I should see the message "RSC user newrsc@email.com created."
+        Then I should see the message "RSC user example@example.com created. Currently logged in as mystring@me.com."
+        And I wait 1 seconds
+        Then "example@example.com" should receive an email
         And I should see "Currently logged in as mystring@me.com."
+        And the invited user should belong to the same region as the inviter
 
     Scenario: RSC unsucessfully create another RSC user with invalid email or password
         Given I fill in "Email" with "new_rsc"
