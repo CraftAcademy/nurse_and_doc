@@ -90,6 +90,13 @@ When("I fill in company form with {string} information") do |email|
     fill_in "Email", with: email
 end
 
+<<<<<<< HEAD
 Then("I confirm popup") do
     page.driver.browser.switch_to.alert.accept
 end
+=======
+Then("the invited user should belong to the same region as the inviter") do
+    new_user = User.last
+    expect(new_user.region).to eq @user.region
+end
+>>>>>>> 43ed0f6be49fd7d96c551cd2a66e5f294df26820

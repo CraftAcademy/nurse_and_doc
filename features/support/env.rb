@@ -1,4 +1,7 @@
 require 'coveralls'
+require 'email_spec'
+require 'email_spec/cucumber'
+
 Coveralls.wear_merged!('rails')
 
 require 'cucumber/rails'
