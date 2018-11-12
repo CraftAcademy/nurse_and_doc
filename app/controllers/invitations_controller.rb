@@ -2,6 +2,9 @@
 
 class InvitationsController < Devise::InvitationsController
 
+  def new
+  end
+
     def create
         super do 
             message = " Currently logged in as #{current_user.email}" if user_signed_in?
