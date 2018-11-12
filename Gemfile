@@ -32,7 +32,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'email_spec'
   gem 'letter_opener'
-  gem 'action_mailer_cache_delivery'
 end
 
 group :development do
