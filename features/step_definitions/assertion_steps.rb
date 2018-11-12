@@ -70,3 +70,8 @@ When("I fill in company form with {string} information") do |email|
     fill_in "Webhook", with: "https://api.webhook.com/v2/company3.json?"
     fill_in "Email", with: email
 end
+
+Then("the invited user should belong to the same region as the inviter") do
+    new_user = User.last
+    expect(new_user.region).to eq @user.region
+end

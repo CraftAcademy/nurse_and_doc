@@ -39,3 +39,7 @@ end
 Then("I select a region option") do
   select "stockholm", from: "Region"
 end
+
+Given("I wait {int} second(s)") do |int|
+  sleep int
+end
