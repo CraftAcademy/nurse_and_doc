@@ -33,6 +33,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'email_spec'
   gem 'letter_opener'
+  gem 'pundit-matchers'
+
 end
 
 group :development do
