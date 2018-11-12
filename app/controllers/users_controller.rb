@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if user.persisted?
       User.invite!(email: user.email)
       message = " Currently logged in as #{current_user.email}" if user_signed_in?
-      redirect_to root_path, notice: "RSC user #{User.last.email} created. #{message}."
+      redirect_to root_path, notice: "RSC user #{user.email} created. #{message}."
     else
       errors = user.errors.full_messages
       render json: { message: errors }, status: 422

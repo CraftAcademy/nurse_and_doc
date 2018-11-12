@@ -14,7 +14,7 @@ Feature: RSC creates a new rsc user
         And I click on "Create account"
         And I wait 2 seconds
         Then "example@example.com" should receive an email
-        Then I should see the message "RSC user newrsc@email.com created."
+        Then I should see the message "RSC user example@example.com created."
         And I should see "Currently logged in as mystring@me.com."
 
     Scenario: RSC unsucessfully create another RSC user with invalid email or password
