@@ -12,6 +12,7 @@ Feature: RSC creates a new rsc user
     Scenario: RSC can sucessfully add another RSC user to access the platform
         Given I fill in "Email" with "example@example.com"
         And I click on "Create account"
+        And I wait 2 seconds
         Then "example@example.com" should receive an email
         Then I should see the message "RSC user newrsc@email.com created."
         And I should see "Currently logged in as mystring@me.com."
