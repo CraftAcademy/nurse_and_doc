@@ -1,4 +1,5 @@
 class Job < ApplicationRecord
+    belongs_to :hospital
     validates_presence_of :profession, 
                           :department, 
                           :license, 
@@ -13,4 +14,5 @@ class Job < ApplicationRecord
                           :years_experience,
                           :application_deadline,
                           :reference_number
+
 end

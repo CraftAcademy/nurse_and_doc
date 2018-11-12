@@ -6,7 +6,9 @@ class JobsController < ApplicationController
   end
 
   def create
-    job = Job.create(job_params)
+    hospital = Hospital.find_by(name: params[:job][:hospital])
+    job = hospital.jobs.create(job_params)
+    # job = Job.create(job_params.merge(hospital: hospital))
     if job.persisted?
       redirect_to root_path, notice: 'The job was successfully created'
     else
@@ -29,9 +31,10 @@ class JobsController < ApplicationController
   end
 
   def job_params
+
     params.require(:job).permit(:scope, :working_hours, 
                                 :date_start, :date_finish, 
-                                :profession, :hospital, 
+                                :profession, 
                                 :license, :care_type, 
                                 :department, :requirements,
                                 :other_requirements, :description,
