@@ -1,7 +1,7 @@
 class HospitalsController < ApplicationController
   
   def index
-    @hospitals = Hospital.all
+    @hospitals = policy_scope(Hospital)
   end
 
   def create
