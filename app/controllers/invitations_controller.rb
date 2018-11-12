@@ -7,6 +7,9 @@ class InvitationsController < Devise::InvitationsController
         super do 
             message = " Currently logged in as #{current_user.email}" if user_signed_in?
             set_flash_message :notice, "RSC user #{resource.email} created. #{message}."
+            if resource.invalid?
+                set_flash_message :error "Email is invalid"
+            end
         end
     end
   def invite_resource
