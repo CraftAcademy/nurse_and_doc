@@ -21,7 +21,8 @@ end
 
 Given('the following jobs exist in the database') do |table|
   table.hashes.each do |job_hash|
-    create(:job, job_hash)
+    hospital = Hospital.find_or_create_by(name: job_hash[:hospital] )
+    create(:job, job_hash.except(job_hash[:hospital]).merge(hospital: hospital))
   end
 end
 
