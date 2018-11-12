@@ -1,5 +1,5 @@
 .form-header Log in
-= form_with(model: resource, scope: resource_name, url: session_path(resource_name), id: :user_login) do |f|
+= form_with(scope: resource_name, url: session_path(resource_name), id: :user_login) do |f|
     #error_messages
     .field
         = f.label :email, class: "form-label"
