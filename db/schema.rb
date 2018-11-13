@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_190926) do
-
+ActiveRecord::Schema.define(version: 2018_11_13_122417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +46,6 @@ ActiveRecord::Schema.define(version: 2018_11_12_190926) do
     t.string "department"
     t.string "license"
     t.string "care_type"
-    t.bigint "hospital_id"
     t.text "requirements"
     t.string "other_requirements"
     t.text "description"
@@ -63,9 +61,8 @@ ActiveRecord::Schema.define(version: 2018_11_12_190926) do
     t.string "other_budget"
     t.text "other_comment"
     t.string "reference_number"
-    
+    t.bigint "hospital_id"
     t.index ["hospital_id"], name: "index_jobs_on_hospital_id"
-
   end
 
   create_table "licenses", force: :cascade do |t|
@@ -110,7 +107,6 @@ ActiveRecord::Schema.define(version: 2018_11_12_190926) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "region_id"
     t.string "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -119,6 +115,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_190926) do
     t.string "invited_by_type"
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
+    t.bigint "region_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invitations_count"], name: "index_users_on_invitations_count"

@@ -1,5 +1,6 @@
-Hospital.destroy_all
+User.destroy_all
 Job.destroy_all
+Hospital.destroy_all
 Staffco.destroy_all
 License.destroy_all
 Region.destroy_all
@@ -8,40 +9,23 @@ Department.destroy_all
 CareType.destroy_all
 OtherRequirement.destroy_all
 
-Hospital.create!([
-    { name: "Karolinska" }, 
-    { name: 'Södersjukhuset' }, 
-    { name: "Martina Childrens Hospital" },
-    { name: "Stockholms Sjukhem" }, 
-    { name: "GHP Arytmi Center Stockholm" }
+region = Region.create!([
+    { name: 'Ångermanland' },
+    { name: 'Lappland' },
+    { name: 'öland' },
+    { name: 'småland' }
 ])
 
-Department.create!([
-    { name: "Surgery" },
-    { name: "Quarantine" }
-])
-
-Region.create!([
-    { name: "Ångermanland"}, 
-    { name: "Lappland"}, 
-    { name: "Öland"}, 
-    { name: "Småland"}, 
-    { name: "Blekinge"}, 
-    { name: "Bohuslän"}, 
-    { name: "Öland"}, 
-    { name: "Småland"}
-])
-
-Staffco.create!([
-    { name: "Doctors r us", email: "zak@zak.com" }, 
-    { name: "Nurses 4 U", email: "rhon@rhon.com" }, 
-    { name: "Psychologists agency", email: "noel@noel.com" }, 
-    { name: "Eyedoctors United", email: "rupert@rupert.com" }, 
-    { name: "Nip Tuck", email: "angie@angie.com" }
+hospital = Hospital.create!([
+    { name: 'Martina Childrens Hospital', region: region[0] },
+    { name: 'Karolinska', region: region[0] },
+    { name: 'Södersjukhuset', region: region[0] },
+    { name: 'Stockholms Sjukhem', region: region[2] },
+    { name: 'GHP Arytmi Center Stockholm', region: region[3] }
 ])
 
 Job.create!([
-    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", 
+    { profession: "Doctor", hospital: hospital[0], department: "Radiology", 
       license: "Endokrinologi", care_type: "Primary Care", scope: "Full Time", 
       working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
       requirements: "A well rounded doctor who cares about his patients.",
@@ -53,7 +37,7 @@ Job.create!([
       other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
       reference_number: "101020304050"  },
 
-    { profession: "Nurse", hospital: "Södersjukhuset", department: "Surgery", 
+    { profession: "Nurse", hospital: hospital[3], department: "Surgery", 
       license: "Ortopedi", care_type: "Home Care", scope: "Part Time", 
       working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
       requirements: "Private surgery travelling around all of Stockholm.",
@@ -64,6 +48,19 @@ Job.create!([
       travel_arranged: true, travel_budget: "20% of all expenses", travel_comment: "Drive fast.",
       other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
       reference_number: "202032145413"  }
+])
+
+Department.create!([
+    { name: "Surgery" },
+    { name: "Quarantine" }
+])
+
+Staffco.create!([
+    { name: "Doctors r us", email: "zak@zak.com" }, 
+    { name: "Nurses 4 U", email: "rhon@rhon.com" }, 
+    { name: "Psychologists agency", email: "noel@noel.com" }, 
+    { name: "Eyedoctors United", email: "rupert@rupert.com" }, 
+    { name: "Nip Tuck", email: "angie@angie.com" }
 ])
 
 License.create!([
