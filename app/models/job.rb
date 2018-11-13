@@ -1,5 +1,6 @@
 class Job < ApplicationRecord
-    belongs_to :hospital
+    belongs_to :hospital 
+    belongs_to :region
     validates_presence_of :profession, 
                           :department, 
                           :license, 

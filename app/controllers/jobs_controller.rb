@@ -2,13 +2,12 @@
 
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = policy_scope(Job)
   end
-
+  
   def create
     hospital = Hospital.find_by(name: params[:job][:hospital])
-    job = hospital.jobs.create(job_params)
-    # job = Job.create(job_params.merge(hospital: hospital))
+    job = hospital.jobs.create(job_params.merge( region: current_user.region))
     if job.persisted?
       redirect_to root_path, notice: 'The job was successfully created'
     else
