@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :job do 
-    profession { "MyString" }
+    sequence(:profession) {|n| "Job #{n}" }
     care_type { "MyString" }
     department { "MyString" }
     license { "MyString" }
