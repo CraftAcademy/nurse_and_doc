@@ -13,9 +13,9 @@ Feature: Logged in user can only see Staffing Companies in their own region
             | gothenburg |
 
         And the following staffing companies exists
-            | name    | region     |
-            | Trib AB | stockholm  |
-            | Adecco  | gothenburg |
+            | name    | email           | region     |
+            | Trib AB | company1@me.com | stockholm  |
+            | Adecco  | company2@me.com | gothenburg |
 
         And the following registered RSC exist
             | email          | password  | region     |
