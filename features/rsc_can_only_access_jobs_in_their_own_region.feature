@@ -7,15 +7,10 @@ Feature: Rsc Can Only See Jobs In Their Own Region
     I would like to see Jobs in my region.
 
     Background:
-        # Given the following regions exist
-        #     | name       |
-        #     | stockholm  |
-        #     | gothenburg |
-        # Then stop
-        And the following jobs exist in the database
-            | profession | hospital    | region     |
-            | doctor     | Karolinska  | stockholm  |
-            | nurse      | Sahlgrenska | gothenburg |
+        Given the following jobs exist in the database
+            | profession | region     |
+            | doctor     | stockholm  |
+            | nurse      | gothenburg |
 
         And the following registered RSC exist
             | email            | password  | region     |
