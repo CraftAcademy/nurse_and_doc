@@ -2,11 +2,11 @@
 
 class StaffcosController < ApplicationController
   def index
-    @staffcos = Staffco.all
+    @staffcos = policy_scope(Staffco)
   end
 
   def create
-    staffco = Staffco.create(staffco_params)
+    staffco = Staffco.create(staffco_params.merge(region: current_user.region))
     if staffco.persisted?
       redirect_to staffcos_path, notice: 'The staffing company was successfully created'
     else
