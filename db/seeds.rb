@@ -8,29 +8,47 @@ Department.destroy_all
 CareType.destroy_all
 OtherRequirement.destroy_all
 
+ångermanland = Region.create!(name: 'Ångermanland')
 Hospital.create!([
-    { name: "Karolinska" }, 
-    { name: 'Södersjukhuset' }, 
-    { name: "Martina Childrens Hospital" },
-    { name: "Stockholms Sjukhem" }, 
-    { name: "GHP Arytmi Center Stockholm" }
+    { name: 'Karolinska', region: ångermanland },
+    { name: 'Södersjukhuset', region: ångermanland }
 ])
+
+lappland = Region.create!(name: 'Lappland')
+Hospital.create!([
+    { name: 'Martina Childrens Hospital', region: lappland }
+])
+
+öland = Region.create!(name: 'öland')
+Hospital.create!([
+    { name: 'Stockholms Sjukhem', region: öland }
+])
+
+småland = Region.create!(name: 'småland')
+Hospital.create!([
+    { name: 'GHP Arytmi Center Stockholm', region: småland },
+])
+
+# Region.create!([
+#     { name: "Ångermanland", region_id: 1}, 
+#     { name: "Lappland"}, 
+#     { name: "Öland"}, 
+#     { name: "Småland"}, 
+# ])
+
+# Hospital.create!([
+#     { name: "Karolinska", region_id: 1 }, 
+#     { name: "Södersjukhuset", region_id: "Ångermanland" }, 
+#     { name: "Martina Childrens Hospital", region_id: "Öland" },
+#     { name: "Stockholms Sjukhem", region_id: "Lappland" }, 
+#     { name: "GHP Arytmi Center Stockholm", region_id: "Småland" }
+# ])
 
 Department.create!([
     { name: "Surgery" },
     { name: "Quarantine" }
 ])
 
-Region.create!([
-    { name: "Ångermanland"}, 
-    { name: "Lappland"}, 
-    { name: "Öland"}, 
-    { name: "Småland"}, 
-    { name: "Blekinge"}, 
-    { name: "Bohuslän"}, 
-    { name: "Öland"}, 
-    { name: "Småland"}
-])
 
 Staffco.create!([
     { name: "Doctors r us", email: "zak@zak.com" }, 
@@ -40,31 +58,31 @@ Staffco.create!([
     { name: "Nip Tuck", email: "angie@angie.com" }
 ])
 
-Job.create!([
-    { profession: "Doctor", hospital: "Karolinska", department: "Radiology", 
-      license: "Endokrinologi", care_type: "Primary Care", scope: "Full Time", 
-      working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
-      requirements: "A well rounded doctor who cares about his patients.",
-      other_requirements: "Previous experience with team management is a plus",
-      description: "You will be working as a doctor in a team and other stuff.",
-      years_experience: 7, application_deadline: "10-01-2019", accomodation_arrangement: true,
-      accomodation_budget: "1000:- per month", accomodation_comment: "Many hostels to choose from",
-      travel_arranged: true, travel_budget: "70% of all expenses", travel_comment: "Walking/running is good for you.",
-      other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
-      reference_number: "101020304050"  },
+# Job.create!([
+#     { profession: "Doctor", hospital: "Karolinska", department: "Radiology", 
+#       license: "Endokrinologi", care_type: "Primary Care", scope: "Full Time", 
+#       working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
+#       requirements: "A well rounded doctor who cares about his patients.",
+#       other_requirements: "Previous experience with team management is a plus",
+#       description: "You will be working as a doctor in a team and other stuff.",
+#       years_experience: 7, application_deadline: "10-01-2019", accomodation_arrangement: true,
+#       accomodation_budget: "1000:- per month", accomodation_comment: "Many hostels to choose from",
+#       travel_arranged: true, travel_budget: "70% of all expenses", travel_comment: "Walking/running is good for you.",
+#       other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
+#       reference_number: "101020304050"  },
 
-    { profession: "Nurse", hospital: "Södersjukhuset", department: "Surgery", 
-      license: "Ortopedi", care_type: "Home Care", scope: "Part Time", 
-      working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
-      requirements: "Private surgery travelling around all of Stockholm.",
-      other_requirements: "Previous experience with team management is a plus",
-      description: "You will have your own company car and it is going to be great.",
-      years_experience: 3, application_deadline: "12-01-2019", accomodation_arrangement: true,
-      accomodation_budget: "4000:- per month", accomodation_comment: "Many Air BnBs to choose from",
-      travel_arranged: true, travel_budget: "20% of all expenses", travel_comment: "Drive fast.",
-      other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
-      reference_number: "202032145413"  }
-])
+#     { profession: "Nurse", hospital: "Södersjukhuset", department: "Surgery", 
+#       license: "Ortopedi", care_type: "Home Care", scope: "Part Time", 
+#       working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
+#       requirements: "Private surgery travelling around all of Stockholm.",
+#       other_requirements: "Previous experience with team management is a plus",
+#       description: "You will have your own company car and it is going to be great.",
+#       years_experience: 3, application_deadline: "12-01-2019", accomodation_arrangement: true,
+#       accomodation_budget: "4000:- per month", accomodation_comment: "Many Air BnBs to choose from",
+#       travel_arranged: true, travel_budget: "20% of all expenses", travel_comment: "Drive fast.",
+#       other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
+#       reference_number: "202032145413"  }
+# ])
 
 License.create!([
     { name: "Allmän internmedicin" }, { name: "Anestesiologi" }, 
