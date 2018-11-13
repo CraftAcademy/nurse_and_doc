@@ -56,11 +56,11 @@ Department.create!([
 ])
 
 Staffco.create!([
-    { name: "Doctors r us", email: "zak@zak.com" }, 
-    { name: "Nurses 4 U", email: "rhon@rhon.com" }, 
-    { name: "Psychologists agency", email: "noel@noel.com" }, 
-    { name: "Eyedoctors United", email: "rupert@rupert.com" }, 
-    { name: "Nip Tuck", email: "angie@angie.com" }
+    { name: "Doctors r us", email: "zak@zak.com", region: region[0] }, 
+    { name: "Nurses 4 U", email: "rhon@rhon.com", region: region[0] }, 
+    { name: "Psychologists agency", email: "noel@noel.com", region: region[1] }, 
+    { name: "Eyedoctors United", email: "rupert@rupert.com", region: region[2] }, 
+    { name: "Nip Tuck", email: "angie@angie.com", region: region[3] }
 ])
 
 License.create!([
