@@ -5,5 +5,6 @@ FactoryBot.define do
     contact_name { "MyString" }
     phone { "MyString" }
     webhook { "MyString" }
+    region
   end
 end

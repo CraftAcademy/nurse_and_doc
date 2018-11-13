@@ -14,8 +14,10 @@ Given('the following hospitals exists') do |table|
 end
 
 Given('the following staffing companies exists') do |table|
-  table.hashes.each do |staffco|
-    create(:staffco, staffco)
+  table.hashes.each do |staffco_hash|
+    region = Region.find_or_create_by(name: staffco_hash[:region])
+    staffco_hash.except!('region')
+    create(:staffco, staffco_hash.merge(region: region))
   end
 end
 
