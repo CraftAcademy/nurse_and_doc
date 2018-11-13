@@ -24,5 +24,6 @@ FactoryBot.define do
     other_comment { "MyText" }
     reference_number { "MyString" }
     hospital
+    region
   end
 end
