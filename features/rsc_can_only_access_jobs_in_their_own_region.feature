@@ -8,9 +8,9 @@ Feature: Rsc Can Only See Jobs In Their Own Region
 
     Background:
         Given the following jobs exist in the database
-            | profession | region     |
-            | doctor     | stockholm  |
-            | nurse      | gothenburg |
+            | profession | region     | hospital |
+            | doctor     | stockholm  | sodra    |
+            | nurse      | gothenburg | karo     |
 
         And the following registered RSC exist
             | email            | password  | region     |

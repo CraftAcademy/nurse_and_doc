@@ -22,7 +22,7 @@ end
 Given('the following jobs exist in the database') do |table|
   table.hashes.each do |job_hash|
     region = Region.find_or_create_by(name: job_hash[:region])
-    hospital = Hospital.find_or_create_by(name: job_hash[:hospital] )
+    hospital = Hospital.find_or_create_by(name: job_hash[:hospital], region: region )
     job_hash.except!(job_hash[:hospital]).except!(job_hash[:region]).merge!(hospital: hospital).merge!(region: region)
     create(:job, job_hash)
   end
