@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_122417) do
+ActiveRecord::Schema.define(version: 2018_11_13_150059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,7 +62,9 @@ ActiveRecord::Schema.define(version: 2018_11_13_122417) do
     t.text "other_comment"
     t.string "reference_number"
     t.bigint "hospital_id"
+    t.bigint "region_id"
     t.index ["hospital_id"], name: "index_jobs_on_hospital_id"
+    t.index ["region_id"], name: "index_jobs_on_region_id"
   end
 
   create_table "licenses", force: :cascade do |t|
@@ -97,6 +99,8 @@ ActiveRecord::Schema.define(version: 2018_11_13_122417) do
     t.string "contact_name"
     t.string "phone"
     t.string "webhook"
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_staffcos_on_region_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -127,5 +131,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_122417) do
 
   add_foreign_key "hospitals", "regions"
   add_foreign_key "jobs", "hospitals"
+  add_foreign_key "jobs", "regions"
+  add_foreign_key "staffcos", "regions"
   add_foreign_key "users", "regions"
 end
