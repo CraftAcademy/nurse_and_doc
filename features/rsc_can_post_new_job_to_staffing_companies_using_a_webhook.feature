@@ -1,32 +1,36 @@
 @javascript @webhook
-Feature: Posting a job to staffing companies with webhook
+Feature: Posting a job to staffing companies with a webhook
 
     As a RSC,
-    In order to post information about jobs in my region
-    I would like to use the webhooks that staffing companies provided.
+    In order to send jobs to the staffing companies,
+    I would like to create a new job and send it to staffing companies.
 
     Background:
         Given the following registered RSC exist
-            | email            | password  | region    |
-            | rupert@email.com | password0 | stockholm |
+            | email         | password  | region    |
+            | zak@email.com | password0 | stockholm |
 
-        Given the following licenses exists
+        And the following licenses exists
             | name    |
             | Kirurgi |
 
-        Given the following hospitals exists
+        And the following hospitals exists
             | name                |
             | stockholm sjukhuset |
-        Given the following profession exists
+
+        And the following profession exists
             | name   |
             | Doctor |
-        Given the following department exists
+
+        And the following department exists
             | name    |
             | Surgery |
-        Given the following caretype exists
+
+        And the following caretype exists
             | name     |
             | Homecare |
-        Given the following other requirement exists
+
+        And the following other requirement exists
             | name            |
             | Drivers License |
 
@@ -36,11 +40,11 @@ Feature: Posting a job to staffing companies with webhook
             | Docs&Co  | company2@me.com | Sharon       | 0123345676 | https://api.webhook.com/v2/company2.json? | gothenburg |
 
         And the default user is logged out
-        Given I am logged in as "rupert@email.com"
-        Given I am on the landing page
+        And I am logged in as "zak@email.com"
+        And I am on the landing page
         And I click on "Add New Job"
 
-    Scenario: RSC posts a job to staffing companies using the webhooks provided
+    Scenario: RSC posts a job to staffing companies using a webhook
         Then I should see "Create New Job"
         And I fill in the job form with "valid" information
         And I click on "Submit"
