@@ -6,11 +6,7 @@ Feature: Posting a job to staffing companies with webhook
     I would like to use the webhooks that staffing companies provided.
 
     Background:
-        Given the following jobs exist in the database
-            | profession | region    | department | application_deadline | date_start | date_finish |
-            | Doctor     | stockholm | Radiology  | 10-01-2019           | 12-12-2018 | 12-12-2019  |
-
-        And the following registered RSC exist
+        Given the following registered RSC exist
             | email            | password  | region    |
             | rupert@email.com | password0 | stockholm |
 
