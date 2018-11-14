@@ -1,9 +1,10 @@
 FactoryBot.define do
   factory :staffco do
-    name { "MyString" }
+    sequence(:name) {|n| "Staffco #{n}" }
     email { "mystring@email.com" }
     contact_name { "MyString" }
     phone { "MyString" }
     webhook { "MyString" }
+    region
   end
 end
