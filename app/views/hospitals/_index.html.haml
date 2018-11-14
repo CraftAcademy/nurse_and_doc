@@ -6,11 +6,10 @@
       .list-name= hospital.name
       .list-button-area
         %button.button Remove
+        = link_to "Show", class: "button text-center", remote: true
   = form_with url: hospitals_path, scope: :hospital  do |f|
     .list-grid
       .list-name
         = f.text_field :name, id: "Name", class: "form-input-field"
       .list-button-area
         = f.submit value: "Add Hospital", class: "button text-center"
-  
-

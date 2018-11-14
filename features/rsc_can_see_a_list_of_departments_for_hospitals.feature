@@ -22,6 +22,6 @@ Feature: Hospitals have a list of departments
         And I am on the landing page
         And I click on "Hospitals" within the "#sidebar" section
         Then I should see "karolinska"
-        And I click on "show"  
+        And I click on "Show"  
         Then I should see "Departments"
         And I should see "Quarantine" within "#rightbar" section
