@@ -6,9 +6,15 @@ Feature: Rsc can add new job
 
     Background: On landing page and can see list of jobs
         Given the following jobs exist in the database
-            | profession | department | application_deadline | date_start | date_finish |
-            | Doctor     | Radiology  | 10-01-2019           | 12-12-2018 | 12-12-2019  |
-        Given I am on the landing page
+            | profession | region    | department | application_deadline | date_start | date_finish |
+            | Doctor     | stockholm | Radiology  | 10-01-2019           | 12-12-2018 | 12-12-2019  |
+
+        And the following registered RSC exist
+            | email            | password  | region     |
+            | rupert@email.com | password0 | stockholm  |
+
+        And I am logged in as "rupert@email.com"
+        And I am on the landing page
 
     Scenario: Rsc deletes a job
         Then I click on "Remove"

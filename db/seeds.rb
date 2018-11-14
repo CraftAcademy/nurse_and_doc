@@ -25,7 +25,7 @@ hospital = Hospital.create!([
 ])
 
 Job.create!([
-    { profession: "Doctor", hospital: hospital[0], department: "Radiology", 
+    { profession: "Doctor", hospital: hospital[0], region: region[0], department: "Radiology", 
       license: "Endokrinologi", care_type: "Primary Care", scope: "Full Time", 
       working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
       requirements: "A well rounded doctor who cares about his patients.",
@@ -37,7 +37,7 @@ Job.create!([
       other_pay: true, other_budget: "100kr per day", other_comment: "Other expenses.",
       reference_number: "101020304050"  },
 
-    { profession: "Nurse", hospital: hospital[3], department: "Surgery", 
+    { profession: "Nurse", hospital: hospital[3],region: region[1], department: "Surgery", 
       license: "Ortopedi", care_type: "Home Care", scope: "Part Time", 
       working_hours: "Day", date_start: "12-12-2018", date_finish: "12-12-2018",
       requirements: "Private surgery travelling around all of Stockholm.",
