@@ -2,7 +2,7 @@
 Feature: Rsc can add new job
     As a RSC,
     In order to create jobs,
-    I would like to click on the “+” button and fill in the jobs information.
+    I would like to click on add new job and fill in the jobs information.
 
     Background: Landing page, clicking new and directed to the form page
         Given the following licenses exists
@@ -30,7 +30,7 @@ Feature: Rsc can add new job
         Then I should see "Create New Job"
         And I fill in the job form with "valid" information     
         And I click on "Submit"
-        Then I should see "The job was successfully created"
+        And I should see "The job was successfully created"
         And I should see "Doctor"
 
     Scenario: RSC fills out form incorrectly
