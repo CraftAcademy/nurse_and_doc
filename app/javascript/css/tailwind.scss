@@ -64,6 +64,12 @@
     grid-template-areas: "sidebar content rightbar";
 }
 
+#rightbar { 
+    grid-area: rightbar;
+    display: grid;
+    @apply font-sans antialiased h-screen;
+}
+
 #sidebar { 
     grid-area: sidebar;
     display: grid;
