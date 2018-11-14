@@ -23,8 +23,9 @@ Feature: Posting a job to staffing companies with webhook
         And I click on "Add New Job"
 
     Scenario: RSC posts a job to staffing companies using the webhooks provided
+        Then I should see "Create New Job"
         And I fill in the job form with "valid" information
         And I click on "Submit"
-        Then a post is made to "Nurse&Co" with webhook "https://api.webhook.com/v2/company.json?"
-        And not to "Docs&Co"
-
+        And I should see "The job was successfully created"
+        And a post request should be have been made "Nurse&Co" with webhook "https://api.webhook.com/v2/company.json?"
+        And a post request should not be have been made "Docs&Co" with webhook "https://api.webhook.com/v2/company2.json?"
