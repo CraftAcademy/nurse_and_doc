@@ -6,15 +6,14 @@ Feature: Hospitals have a list of departments
     In order to view departments associated with a specific hospital,
     I would like see a list of departments when i click on a hospital.
 
-   Given the following hospitals exists
+    Background: 
+    Given the following registered RSC exist
+        | email         | password  | region    |
+        | zak@email.com | password0 | stockholm |
+
+    Given the following hospitals exists
         | name        | region    |
         | karolinska  | stockholm |
-        | swehospital | uppsala   |
-
-    And the following registered RSC exist
-        | email          | password  | region     |
-        | zak@email.com  | password0 | gothenburg |
-        | noel@email.com | password1 | stockholm  |
 
     And the default user is logged out
     
@@ -22,6 +21,7 @@ Feature: Hospitals have a list of departments
         Given I am logged in as "zak@email.com"
         And I am on the landing page
         And I click on "Hospitals" within the "#sidebar" section
-        And I click on the "show" button 
+        Then I should see "karolinska"
+        And I click on "show"  
         Then I should see "Departments"
         And I should see "Quarantine" within "#rightbar" section
