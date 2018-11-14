@@ -1,0 +1,11 @@
+#rightbar
+    .sidebar-background
+        .xl:py-2
+            .group.relative.sidebar-item.with-children
+                = link_to root_path, remote: true do
+                    .clickable-block
+                        .clickable-block-inner{height: "24", viewbox: "0 0 24 24", width: "24", xmlns: "http://www.w3.org/2000/svg"}
+                            = image_tag 'jobs_icon.png'
+                        .text-styling= t(:jobs)
+
+
