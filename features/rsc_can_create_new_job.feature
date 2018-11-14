@@ -30,7 +30,6 @@ Feature: Rsc can add new job
         Then I should see "Create New Job"
         And I fill in the job form with "valid" information     
         And I click on "Submit"
-        Then a post should be made to the staffing companies
         And I should see "The job was successfully created"
         And I should see "Doctor"
 
