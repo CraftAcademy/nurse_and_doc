@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe StaffcoPolicy do
   let(:stockholm) { create(:region, name: 'Stockholm') }
   let(:gothenburg) { create(:region, name: 'Göteborg') }
