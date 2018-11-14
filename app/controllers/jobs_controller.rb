@@ -9,6 +9,7 @@ class JobsController < ApplicationController
     hospital = Hospital.find_by(name: params[:job][:hospital])
     job = hospital.jobs.create(job_params.merge( region: current_user.region))
     if job.persisted?
+      #Here we want to make a post request to all staffing co that have given us a url
       redirect_to root_path, notice: 'The job was successfully created'
     else
       errors = job.errors.full_messages
