@@ -9,8 +9,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    # region = Region.find(sign_up_params[:region])
-    # build_resource(sign_up_params.except(sign_up_params[:region]).merge(region: region))
     build_resource(sign_up_params.except(sign_up_params[:region]))
     if resource.save
       # flash[:notice] = "RSC user #{resource.email} created within #{resource.region.name} region."
