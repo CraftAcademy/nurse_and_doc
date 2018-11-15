@@ -5,7 +5,7 @@ Then('I should be on the landing page') do
 end
 
 Then("I should be on the new region page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_current_path(new_region_path)
 end
 
 Then('I should see {string}') do |content|

@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
     include Pundit
     protect_from_forgery
 
+
     private
     def set_locale
         I18n.locale = params[:locale] || I18n.default_locale
