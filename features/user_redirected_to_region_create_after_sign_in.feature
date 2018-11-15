@@ -14,7 +14,6 @@ Feature: abdul rahman
         And I fill in "Password" with "willywonka"
         And I fill in "Password confirmation" with "willywonka"
         And I click on "Sign up"
-        Then I should be on the new region page
         And I fill in "Region" with "Cambodia"
         And I click on "Submit"
         Then I should be on the landing page
