@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     devise_for :users, path: :authentication, controllers: {
       registrations: :registrations,
       sessions: :sessions, 
-      invitations: :invitations
+      invitations: :invitations,
     }
     root controller: :jobs, action: :index
     resources :jobs, only: [:new, :create, :destroy]
