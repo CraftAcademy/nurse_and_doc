@@ -1,4 +1,6 @@
 .list-card
+  .inner-card
+    = button_tag 'X', id: 'cancel_modal', class: "cancel-button"
   .form-header Hospitals 
   .list-item.flex
   - @hospitals.each do |hospital|

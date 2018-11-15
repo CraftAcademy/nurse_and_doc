@@ -24,4 +24,4 @@ Feature: Hospitals have a list of departments
         Then I should see "karolinska"
         And I click on "Show"  
         Then I should see "Departments"
-        And I should see "Quarantine" within "#rightbar" section
+        And I should see "Quarantine" 
