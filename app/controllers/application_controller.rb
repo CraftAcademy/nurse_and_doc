@@ -5,6 +5,15 @@ class ApplicationController < ActionController::Base
     include Pundit
     protect_from_forgery
 
+    def after_sign_in_path_for(resource_or_scope)
+        resource = resource_or_scope
+        if !resource.region
+          flash[:notice] = 'Please set up your region'
+          redirect_to new_region_path
+        else
+          super
+        end
+    end
 
     private
     def set_locale
