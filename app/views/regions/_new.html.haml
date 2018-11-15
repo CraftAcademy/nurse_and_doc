@@ -4,4 +4,12 @@
         = button_tag 'X', id: 'cancel_modal', class: "cancel-button"
         .card-title
             %h1.text-center.mt-6 New Region
+        = form_with scope: :region, url: regions_path, id: :create_region do |form|
+            #error_messages
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :region, class: "form-label"            
+                    = form.text_field :region, class: "form-input-field"
+                .to-field-wrapper
+                    = form.submit value: "Submit", class: "button"
 = render partial: 'partials/modal'
