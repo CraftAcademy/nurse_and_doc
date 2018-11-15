@@ -8,7 +8,9 @@ class JobsController < ApplicationController
   def create
     hospital = Hospital.find_by(name: params[:job][:hospital])
     job = hospital.jobs.create(job_params.merge( region: current_user.region))
-    if job.persisted?
+    if job.persisted? 
+      staff_cos = Staffco.where(region: job.region)
+      NotifyStaffcosJob.perform_now(job, staff_cos)
       redirect_to root_path, notice: 'The job was successfully created'
     else
       errors = job.errors.full_messages
