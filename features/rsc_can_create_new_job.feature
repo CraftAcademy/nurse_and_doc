@@ -36,7 +36,7 @@ Feature: Rsc can add new job
         Then I should see "Create New Job"
         And I fill in the job form with "valid" information     
         And I click on "Submit"
-        And I should see "The job was successfully created"
+        Then I should see "The job was successfully created"
         And I should see "Doctor"
 
     Scenario: RSC fills out form incorrectly
