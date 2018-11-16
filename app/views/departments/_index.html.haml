@@ -1,9 +1,0 @@
-#rightbar
-  .list-card
-    .form-header Departments 
-    .list-item.flex
-    - @hospital.departments.each do |department|
-      .list-grid
-        .list-name= department.name
-        .list-button-area
-          %button.button Remove
