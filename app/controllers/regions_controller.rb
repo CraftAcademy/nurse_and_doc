@@ -8,7 +8,7 @@ before_action :authenticate_user!, only: [:create]
             current_user.save
             redirect_to root_path, notice: 'Welcome to Nurse & Doc!'
         else
-            errors = job.errors.full_messages
+            errors = region.errors.full_messages
             render json: { message: errors }, status: 422      
         end 
     end

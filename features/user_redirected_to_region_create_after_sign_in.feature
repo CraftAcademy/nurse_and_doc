@@ -21,7 +21,3 @@ Feature: User creates region after sign up
         Then my region should be "Cambodia"
         And I should be on the landing page
         And I should see "Welcome to Nurse & Doc!"
-
-    Scenario: User leaves region blank
-        Then I click on "Submit"
-        And I should see "Name cannot be blank"
