@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :jobs, only: [:new, :create, :destroy]
     resources :invitations, only: [:create, :new]
     resources :staffcos, only: [:create, :index, :new]
-    resources :hospitals, only: [:index, :create, :new]
+    resources :hospitals, only: [:index, :create, :new, :destroy]
   end
 end
