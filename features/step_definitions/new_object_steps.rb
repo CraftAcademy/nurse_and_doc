@@ -60,14 +60,17 @@ Given('the following licenses exists') do |table|
 end
 
 Given('the following profession exists') do |table|
+
   table.hashes.each do |profession|
     create(:profession, profession)
   end
 end
 
 Given('the following department exists') do |table|
-  table.hashes.each do |department|
-    create(:department, department)
+  table.hashes.each do |department_hash|
+    hospital = Hospital.find_or_create_by(name: department_hash[:hospital])
+    department_hash.except!(:hospital)
+    create(:department, department_hash.merge(hospital: hospital))
   end
 end
 

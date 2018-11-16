@@ -12,13 +12,14 @@ Feature: Hospitals have a list of departments
             | zak@email.com | password0 | stockholm |
 
         And the following hospitals exists
-            | name       | region    |
-            | karolinska | stockholm |
+            | name        | region     |
+            | karolinska  | stockholm  |
+            | Sahlgrenska | Gothenburg |
 
         And the following department exists
-            | name       |
-            | Surgery    |
-            | Quarantine |
+            | name       | hospital    |
+            | Surgery    | karolinska  |
+            | Quarantine | Sahlgrenska |
 
         And the default user is logged out
 
@@ -30,4 +31,4 @@ Feature: Hospitals have a list of departments
         And I click on "Show"
         Then I should see "Departments"
         And I should see "Surgery"
-        And I should see "Quarantine"
+        And I should not see "Quarantine"
