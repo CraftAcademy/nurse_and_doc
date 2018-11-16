@@ -50,6 +50,10 @@ const displayTemplate = html => {
     App.tempContent.innerHTML = html
 }
 
+const rightTemplate = html => {
+    App.rightContent.innerHTML = html 
+}
+
 const displayModal = html => {
     hideMainContent();
     App.tempContent.innerHTML = html
@@ -59,4 +63,5 @@ const displayModal = html => {
 document.addEventListener('turbolinks:load', () => {
     App.mainContent = document.getElementById('main_content')
     App.tempContent = document.getElementById('temp_content')
+    App.rightContent = document.getElementById('rightbar')
 })
