@@ -19,6 +19,7 @@ gem 'devise'
 gem 'devise_invitable', '~> 1.7', '>= 1.7.5'
 gem "loofah", ">= 2.2.3"
 gem "pundit"
+gem 'rest-client'
 
 group :development, :test do
   gem 'coveralls', require: false
@@ -34,6 +35,7 @@ group :development, :test do
   gem 'email_spec'
   gem 'letter_opener'
   gem 'pundit-matchers'
+  gem 'webmock'
 
 end
 

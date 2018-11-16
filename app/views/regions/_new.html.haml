@@ -1,0 +1,14 @@
+- content_for :modal_content do
+    .card
+    .inner-card
+        .card-title
+            %h1.text-center.mt-6 New Region
+        = form_with scope: :region, url: regions_path, id: :create_region do |form|
+            #error_messages
+            .to-field-wrapper
+                .to-field-full-width
+                    = form.label :name, class: "form-label"            
+                    = form.text_field :name, class: "form-input-field"
+                .to-field-wrapper
+                    = form.submit value: "Submit", class: "button"
+= render partial: 'partials/modal'
