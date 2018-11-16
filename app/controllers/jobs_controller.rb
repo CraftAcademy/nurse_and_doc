@@ -40,7 +40,11 @@ class JobsController < ApplicationController
                                 :department, :requirements,
                                 :other_requirements, :description,
                                 :years_experience, :application_deadline,
-                                :reference_number
+                                :reference_number, :accomodation_arrangement,
+                                :accomodation_budget, :accomodation_comment,
+                                :travel_arranged, :travel_comment,
+                                :travel_budget, :other_budget,
+                                :other_comment, :other_pay
                                 )
   end
 end

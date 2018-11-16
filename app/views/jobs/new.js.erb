@@ -9,6 +9,6 @@ var form = document.getElementById('create_job')
 form.addEventListener('ajax:error', (event) => {
     let errorMessageDisplayElement = document.getElementById('error_messages')
     let message = event.detail[0].message
-    errorMessageDisplayElement.innerHTML =  message 
+    errorMessageDisplayElement.innerHTML =  message
 })
 
