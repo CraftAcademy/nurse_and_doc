@@ -15,6 +15,14 @@ class StaffcosController < ApplicationController
     end
   end
 
+  def destroy
+    if Staffco.find(params[:id]).destroy
+      redirect_to staffcos_path, notice: 'Staffing Company was successfully removed.'
+    else
+      redirect_to staffcos_path, notice: 'Something went wrong, Staffing Company not removed.'
+    end
+  end
+
   private
   def staffco_params
     params.require(:staffco).permit(:name, :email, :contact_name, :phone, :webhook)

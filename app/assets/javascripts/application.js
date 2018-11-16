@@ -59,4 +59,9 @@ const displayModal = html => {
 document.addEventListener('turbolinks:load', () => {
     App.mainContent = document.getElementById('main_content')
     App.tempContent = document.getElementById('temp_content')
+
+    let flashElement = document.getElementById('messages')
+    setTimeout(()=>{ 
+        flashElement.style.display = 'none' 
+    }, 2000);
 })

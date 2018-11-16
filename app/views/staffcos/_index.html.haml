@@ -1,10 +1,10 @@
 .list-card
   .form-header Staffing Companies
   .list-item.flex
-  - @staffcos.each do |staffcos|
+  - @staffcos.each do |staffco|
     .list-grid
-      .list-name= staffcos.name
+      .list-name= staffco.name
       .list-button-area
-        %button.button Remove
+        = link_to "Remove", staffco_path(staffco, locale: I18n.locale), method: :delete, data: {confirm: 'Are you sure?'}, remote: true, class: "button"
   .list-button-area
     = link_to "Add new company", new_staffco_path, class: "add-button", remote: true
