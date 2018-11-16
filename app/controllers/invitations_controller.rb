@@ -8,7 +8,7 @@ class InvitationsController < Devise::InvitationsController
     def create
         super do 
             message = " Currently logged in as #{current_user.email}" if user_signed_in?
-            set_flash_message :notice, "RSC user #{resource.email} created. #{message}."
+            set_flash_message :notice, "Regional Coordinator #{resource.email} created. #{message}."
             if resource.invalid?
                 render json: {message: "Email is invalid" }, status: 422 and return
             end
