@@ -1,6 +1,7 @@
 class DepartmentsController < ApplicationController
 
     def index
-        @departments = Department.all
+        binding.pry
+        @departments = Department.find(params[:id])
     end  
 end
