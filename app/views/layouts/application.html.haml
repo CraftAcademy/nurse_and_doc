@@ -18,9 +18,10 @@
       #content
         #temp_content
         #main_content
-          #messages
-            = notice 
-            = alert 
+          - if notice || alert
+            #messages
+              = notice 
+              = alert 
           = yield
       
     
