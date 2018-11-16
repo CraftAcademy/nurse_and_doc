@@ -1,0 +1,14 @@
+
+var modalContent = '<%= escape_javascript(render partial: 'new') %>'
+App.mainContent.style.visibility = "hidden";
+App.tempContent.innerHTML = modalContent
+closeModalListener('cancel_modal')
+
+var form = document.getElementById('create_region')
+
+form.addEventListener('ajax:error', (event) => {
+    let errorMessageDisplayElement = document.getElementById('error_messages')
+    let message = event.detail[0].message
+    errorMessageDisplayElement.innerHTML =  message 
+})
+

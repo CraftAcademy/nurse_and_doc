@@ -45,6 +45,11 @@ Then('the invited user should belong to the same region as the inviter') do
   expect(new_user.region).to eq @user.region
 end
 
+Then("my region should be {string}") do |region|
+    user = User.last
+    expect(user.region.name).to eq region
+end
+
 Then('a post request should have been made to {string}') do |url|
   expect(a_request(:post, url)).to have_been_made.times(1)
 end
