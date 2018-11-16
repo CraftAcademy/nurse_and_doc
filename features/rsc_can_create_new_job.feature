@@ -8,27 +8,36 @@ Feature: Rsc can add new job
         Given the following licenses exists
             | name    | 
             | Kirurgi |
+
         Given the following hospitals exists
             | name                |
             | stockholm sjukhuset |
+
         Given the following profession exists
             | name       |
             | Doctor     |
+
         Given the following department exists
             | name       |
             | Surgery    |
+
         Given the following caretype exists
             | name       |
             | Homecare   |
+
         Given the following other requirement exists
             | name            |
             | Drivers License |
+
         Given I am on the landing page
         And I click on "Add New Job"
 
     Scenario: RSC creates a new job
         Then I should see "Create New Job"
-        And I fill in the job form with "valid" information     
+        And I fill in the job form with "valid" information  
+        And I select "stockholm sjukhuset" from "Hospital"  
+        Then stop
+        And I select "Surgery" from "Department"
         And I click on "Submit"
         Then I should see "The job was successfully created"
         And I should see "Doctor"

@@ -11,8 +11,8 @@ Then("I fill in the job form with {string} information") do |content|
     end
 
     select profession, from: 'Profession'
-    select 'stockholm sjukhuset', from: 'Hospital'
-    select 'Surgery', from: 'Department'
+    # select 'stockholm sjukhuset', from: 'Hospital'
+    # select 'Surgery', from: 'Department'
     select license, from: 'License'
     select 'Homecare', from: 'Care type'
     select scope, from: 'Scope'
@@ -34,6 +34,10 @@ Then("I fill in the job form with {string} information") do |content|
     fill_in 'Date start', with: '0202020'
     fill_in 'Date finish', with: '1202021'
     fill_in 'Application deadline', with: '01012019'
+end
+
+When("I select {string} from {string}") do |value, selector|
+    select value, from: selector
 end
 
 When("I fill in company form with {string} information") do |email|

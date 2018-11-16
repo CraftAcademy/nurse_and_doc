@@ -5,6 +5,7 @@ App.tempContent.innerHTML = modalContent
 closeModalListener('cancel_modal')
 
 var form = document.getElementById('create_job')
+var hospitalSelect = document.getElementById('select_hospital')
 
 form.addEventListener('ajax:error', (event) => {
     let errorMessageDisplayElement = document.getElementById('error_messages')
@@ -12,3 +13,7 @@ form.addEventListener('ajax:error', (event) => {
     errorMessageDisplayElement.innerHTML =  message 
 })
 
+
+hospitalSelect.addEventListener('select', () => {
+    debugger;
+})
