@@ -1,12 +1,12 @@
 class RegionsController < ApplicationController
-before_action :authenticate_user!, only: [:show]
+before_action :authenticate_user!, only: [:create]
 
     def create
-        user = current_user
-        region = Region.create(params[:region_id])
+        region = Region.create(region_params)
         if region.persisted?
-            # binding.pry
-            user.region_id = region.id
+            current_user.region = region
+            current_user.save
+            redirect_to root_path, notice: 'All good'
         else
         end 
     end

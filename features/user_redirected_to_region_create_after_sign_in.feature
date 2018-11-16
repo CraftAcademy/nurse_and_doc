@@ -17,6 +17,7 @@ Feature: abdul rahman
         Then I should see "New Region"
         And I fill in "Name" with "Cambodia"
         And I click on "Submit"
+        And I wait 2 seconds
         Then my region should be "Cambodia"
         And I should be on the landing page
 

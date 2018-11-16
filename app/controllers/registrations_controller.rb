@@ -13,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
     if resource.save
       # flash[:notice] = "RSC user #{resource.email} created within #{resource.region.name} region."
       flash[:notice] = "RSC user #{resource.email} created."
-      # sign_up(resource_name, resource)
+      sign_up(resource_name, resource)
       redirect_to after_sign_in_path_for(resource)
     else
       errors = resource.errors.full_messages
