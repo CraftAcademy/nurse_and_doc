@@ -11,7 +11,6 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params.except(sign_up_params[:region]))
     if resource.save
-      # flash[:notice] = "RSC user #{resource.email} created within #{resource.region.name} region."
       flash[:notice] = "RSC user #{resource.email} created."
       sign_up(resource_name, resource)
       redirect_to after_sign_in_path_for(resource)

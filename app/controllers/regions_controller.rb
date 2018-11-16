@@ -6,10 +6,13 @@ before_action :authenticate_user!, only: [:create]
         if region.persisted?
             current_user.region = region
             current_user.save
-            redirect_to root_path, notice: 'All good'
+            redirect_to root_path, notice: 'Welcome to Nurse & Doc!'
         else
+            errors = job.errors.full_messages
+            render json: { message: errors }, status: 422      
         end 
     end
+
     private 
 
     def region_params
