@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :departments, only: [:index, :create, :new]
     resources :invitations, only: [:create, :new]
     resources :staffcos, only: [:create, :index, :new]
-    resources :hospitals, only: [:index, :create, :new]
+    resources :hospitals, only: [:index, :create, :new, :show]
   end
 end

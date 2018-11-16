@@ -46,6 +46,7 @@ const hideMainContent = () => {
 }
 
 const displayTemplate = html => {
+    hideRightBar();
     hideMainContent();
     App.tempContent.innerHTML = html
 }
@@ -57,7 +58,13 @@ const rightTemplate = html => {
 const displayModal = html => {
     hideMainContent();
     App.tempContent.innerHTML = html
+    hideRightBar()
     closeModalListener('cancel_modal')
+}
+
+const hideRightBar = () => {
+    let section = document.getElementById('rightbar')
+    section.innerHTML = ""
 }
 
 document.addEventListener('turbolinks:load', () => {

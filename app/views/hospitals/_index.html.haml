@@ -8,7 +8,7 @@
       .list-name= hospital.name
       .list-button-area
         %button.button Remove
-        = link_to "Show", departments_path, class: "button text-center", remote: true
+        = link_to "Show", hospital_path(hospital, locale: I18n.locale), class: "button text-center", remote: true
   = form_with url: hospitals_path, scope: :hospital  do |f|
     .list-grid
       .list-name

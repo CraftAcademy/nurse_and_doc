@@ -13,6 +13,11 @@ class HospitalsController < ApplicationController
     end
   end 
 
+ def show
+   @hospital = Hospital.find(params[:id])
+ end
+ 
+
   private
 
   def hospital_params
