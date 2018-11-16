@@ -35,9 +35,7 @@ Feature: User has to login to see content of website
         And I should see "EMAIL"
         And I should see "PASSWORD"       
         And I should see "PASSWORD CONFIRMATION"
-        And I should see "REGION"
         Then I click on "Log in"
-        And I should not see "REGION"
        
    
 
