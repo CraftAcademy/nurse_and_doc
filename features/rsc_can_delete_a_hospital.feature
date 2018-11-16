@@ -1,5 +1,5 @@
 @javascript
-Feature: Rsc can delete a job
+Feature: Rsc can delete a hospital
     As an RSC,
     In order to manage the hospitals list,
     I would like to be able to delete hospitals.
