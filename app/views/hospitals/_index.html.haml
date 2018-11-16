@@ -5,7 +5,7 @@
     .list-grid
       .list-name= hospital.name
       .list-button-area
-        = link_to "Remove", hospitals_path(hospital, locale: I18n.locale), method: :delete, data: {confirm: 'Are you sure?'}, remote: true, class: "button"
+        = link_to "Remove", hospital_path(hospital, locale: I18n.locale), method: :delete, data: {confirm: 'Are you sure?'}, remote: true, class: "button"
   = form_with url: hospitals_path, scope: :hospital  do |f|
     .list-grid
       .list-name
