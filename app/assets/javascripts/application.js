@@ -16,11 +16,11 @@
 //= require_tree .
 
 const sharedDeviseLinkHandler = (event) => {
-    if (event.target.classList.contains('shared_devise_link')){
+    if (event.target.classList.contains('shared_devise_link')) {
         var modalElement = document.getElementById('modal')
         modalElement.remove()
     }
-} 
+}
 
 const closeModal = (modalElement) => {
     modalElement.remove()
@@ -52,7 +52,7 @@ const displayTemplate = html => {
 }
 
 const rightTemplate = html => {
-    App.rightContent.innerHTML = html 
+    App.rightContent.innerHTML = html
 }
 
 const displayModal = html => {
@@ -63,18 +63,22 @@ const displayModal = html => {
 }
 
 const hideRightBar = () => {
-    let section = document.getElementById('rightbar')
-    section.innerHTML = ""
+    App.rightContent.innerHTML = ""
 }
 
 document.addEventListener('turbolinks:load', () => {
     App.mainContent = document.getElementById('main_content')
     App.tempContent = document.getElementById('temp_content')
     App.rightContent = document.getElementById('rightbar')
+
+    let flashElement = document.getElementById('messages')
+    if (flashElement) {
+        setTimeout(() => {
+            flashElement.style.display = 'none'
+        }, 2000);
+    }
+
 })
 
-let flashElement = document.getElementById('messages')
-setTimeout(()=>{ 
-    flashElement.style.display = 'none' 
-}, 2000);
+
 

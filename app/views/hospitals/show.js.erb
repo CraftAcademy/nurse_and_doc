@@ -1,3 +1,22 @@
 
 var templateContent = '<%= escape_javascript(render partial: 'show') %>'
 rightTemplate(templateContent)
+
+var departmentForm = document.getElementById('create_department')
+    console.log('show panel')
+
+departmentForm.addEventListener('ajax:success', (event) => {
+    templateContent = event.detail[0].html
+    document.getElementById('list').innerHTML = templateContent;
+    var errorMessageDisplayElement = document.getElementById('messages')
+    var message = event.detail[0].message
+    errorMessageDisplayElement.innerHTML =  message
+})
+
+departmentForm.addEventListener('ajax:error', (event) => {
+    console.log('added listener for error...')
+
+    var errorMessageDisplayElement = document.getElementById('error_messages')
+    var message = event.detail[0].message
+    errorMessageDisplayElement.innerHTML =  message
+})

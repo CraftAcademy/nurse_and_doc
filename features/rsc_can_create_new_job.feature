@@ -6,7 +6,7 @@ Feature: Rsc can add new job
 
     Background: Landing page, clicking new and directed to the form page
         Given the following licenses exists
-            | name    | 
+            | name    |
             | Kirurgi |
 
         Given the following hospitals exists
@@ -14,29 +14,29 @@ Feature: Rsc can add new job
             | stockholm sjukhuset |
 
         Given the following profession exists
-            | name       |
-            | Doctor     |
+            | name   |
+            | Doctor |
 
         Given the following department exists
-            | name       |
-            | Surgery    |
+            | name    |
+            | Surgery |
 
         Given the following caretype exists
-            | name       |
-            | Homecare   |
+            | name     |
+            | Homecare |
 
         Given the following other requirement exists
             | name            |
             | Drivers License |
 
-            
+
         Given I am on the landing page
         And I click on "Add New Job"
 
     Scenario: RSC creates a new job
         Then I should see "Create New Job"
-        And I fill in the job form with "valid" information 
-        And I select "stockholm sjukhuset" from "select_hospital"  
+        And I fill in the job form with "valid" information
+        And I select "stockholm sjukhuset" from "select_hospital"
         And I select "Surgery" from "select_department"
         And I click on "Submit"
         Then I should see "The job was successfully created"
@@ -44,6 +44,8 @@ Feature: Rsc can add new job
 
     Scenario: RSC fills out form incorrectly
         And I fill in the job form with "invalid" information
+        And I select "stockholm sjukhuset" from "select_hospital"
+        And I select "Surgery" from "select_department"
         And I click on "Submit"
         Then I should see "Profession can't be blank,License can't be blank,Scope can't be blank"
 

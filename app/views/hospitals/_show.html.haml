@@ -1,13 +1,10 @@
 #rightbar
+  #error_messages
   .list-card
     .form-header Departments 
-    .list-item.flex
-    - @hospital.departments.each do |department|
-      .list-grid
-        .list-name= department.name
-        .list-button-area
-          %button.button Remove
-    = form_with url: departments_path, scope: :department  do |f|
+    .list-item.flex#list
+      = render partial: 'list', locals: {hospital: @hospital}
+    = form_with url: departments_path, scope: :department, id: :create_department  do |f|
       = f.hidden_field :hospital_id, value: @hospital.id
       .list-grid
         .list-name
