@@ -1,10 +1,10 @@
 @javascript
-Feature: Rsc can add new job
+Feature: Rsc can delete a job
     As an RSC,
     In order to manage the jobs list,
     I would like to be able to delete jobs.
 
-    Background: On landing page and can see list of jobs
+    Background: On the landing page and can see list of jobs
         Given the following jobs exist in the database
             | profession | region    | department | application_deadline | date_start | date_finish |
             | Doctor     | stockholm | Radiology  | 10-01-2019           | 12-12-2018 | 12-12-2019  |

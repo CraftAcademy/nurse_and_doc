@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 #error_messages {
-    @apply text-red tracking-wide text-sm;
+    @apply text-red items-center tracking-wide px-4 py-3 text-sm font-bold;
+}
+
+#messages {
+    @apply text-blue border-t border-b border-blue bg-blue-lightest items-center px-4 py-3 text-sm font-bold;
 }
 
 .list-card {

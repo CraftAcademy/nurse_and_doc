@@ -56,8 +56,8 @@ Department.create!([
 ])
 
 Staffco.create!([
-    { name: "Doctors r us", email: "zak@zak.com", region: region[0] }, 
-    { name: "Nurses 4 U", email: "rhon@rhon.com", region: region[0] }, 
+    { name: "Doctors r us", email: "zak@zak.com", region: region[0], webhook: "https://ca-endpoints.herokuapp.com/api/jobs" }, 
+    { name: "Nurses 4 U", email: "rhon@rhon.com", region: region[0], webhook: "https://webhook.site/ee0fa2ef-82de-49d6-b761-f338c11b549c" }, 
     { name: "Psychologists agency", email: "noel@noel.com", region: region[1] }, 
     { name: "Eyedoctors United", email: "rupert@rupert.com", region: region[2] }, 
     { name: "Nip Tuck", email: "angie@angie.com", region: region[3] }

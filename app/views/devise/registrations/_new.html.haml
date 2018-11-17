@@ -17,9 +17,6 @@
     .field
       = f.label :password_confirmation, class: "form-label"
       = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input-field"
-    .field
-      = f.label :region, class: "form-label"
-      = f.select :region, Region.all.collect {|c| [ c.name, c.id ] }, {include_blank: 'Please select'}, class: "form-input-field"
     .actions
       = f.submit "Sign up", class: "button", remote: true
       = content_for :extras

@@ -72,3 +72,9 @@ document.addEventListener('turbolinks:load', () => {
     App.tempContent = document.getElementById('temp_content')
     App.rightContent = document.getElementById('rightbar')
 })
+
+let flashElement = document.getElementById('messages')
+setTimeout(()=>{ 
+    flashElement.style.display = 'none' 
+}, 2000);
+
