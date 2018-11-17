@@ -18,8 +18,8 @@ Feature: Rsc can add new job
             | Doctor |
 
         Given the following department exists
-            | name    |
-            | Surgery |
+            | name    | hospital            |
+            | Surgery | stockholm sjukhuset |
 
         Given the following caretype exists
             | name     |
@@ -37,6 +37,7 @@ Feature: Rsc can add new job
         Then I should see "Create New Job"
         And I fill in the job form with "valid" information
         And I select "stockholm sjukhuset" from "select_hospital"
+        And I wait 3 seconds
         And I select "Surgery" from "select_department"
         And I click on "Submit"
         Then I should see "The job was successfully created"

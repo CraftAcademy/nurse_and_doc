@@ -10,6 +10,12 @@ class DepartmentsController < ApplicationController
     end
   end
 
+  def get_departments
+    hospital = Hospital.find_by_name(params['hospital'])
+    html = render_to_string('hospitals/_department_select', formats: :html, layout: false, locals: { hospital: hospital })
+    render json: { html: html }
+  end
+
   private
 
   def department_params

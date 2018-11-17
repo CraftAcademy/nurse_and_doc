@@ -14,7 +14,15 @@ form.addEventListener('ajax:error', (event) => {
     errorMessageDisplayElement.innerHTML =  message
 })
 
-
 hospitalSelect.addEventListener('change', () => {
-    debugger;
+    var params = `hospital=${hospitalSelect.options[hospitalSelect.selectedIndex].value}`
+    Rails.ajax({
+        type: 'GET',
+        url: '<%= get_departments_path %>',
+        data: params,
+        success: (response) => {
+            departmentSelect.innerHTML = response.html;
+        }
+
+    })
 })

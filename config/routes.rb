@@ -13,5 +13,6 @@ Rails.application.routes.draw do
     resources :staffcos, only: [:create, :index, :new, :destroy]
     resources :hospitals, only: [:index, :create, :new, :show, :destroy]
     resources :regions, only: [:create, :new]
+    get :get_departments, controller: :departments, action: :get_departments
   end
 end

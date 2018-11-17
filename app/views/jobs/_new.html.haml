@@ -14,10 +14,7 @@
                 .to-field-full-width
                     = form.label :hospital, class: "form-label"
                     = form.select :hospital, Hospital.all.collect {|c| [ c.name ] }, { include_blank: true }, id: "select_hospital", class: "form-input-field"
-            .to-field-wrapper
-                .to-field-full-width
-                    = form.label :department, class: "form-label"
-                    = form.select :department, Department.all.collect {|c| [ c.name ] }, { include_blank: true }, id: "select_department", class: "form-input-field"
+            #select_department
             .to-field-wrapper
                 .to-field-full-width
                     = form.label :license, class: "form-label"

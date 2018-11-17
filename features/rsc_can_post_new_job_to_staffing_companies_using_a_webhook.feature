@@ -23,8 +23,8 @@ Feature: Posting a job to staffing companies with a webhook
             | Doctor |
 
         And the following department exists
-            | name    |
-            | Surgery |
+            | name    | hospital            |
+            | Surgery | stockholm sjukhuset |
 
         And the following caretype exists
             | name     |
