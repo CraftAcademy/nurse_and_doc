@@ -7,10 +7,10 @@
         .list-name= department.name
         .list-button-area
           %button.button Remove
-    = form_with url: department_path, scope: :hospital  do |f|
-      = f.hidden_fiels :hospital, value: @hospital.id
-    .list-grid
-      .list-name
-        = f.text_field :name, id: "Name", class: "form-input-field"
-      .list-button-area
-        = f.submit value: "Add Hospital", class: "button text-center"
+    = form_with url: departments_path, scope: :department  do |f|
+      = f.hidden_field :hospital_id, value: @hospital.id
+      .list-grid
+        .list-name
+          = f.text_field :name, class: "form-input-field"
+        .list-button-area
+          = f.submit value: "Add Department", class: "button text-center"
