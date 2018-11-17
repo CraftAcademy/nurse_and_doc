@@ -5,6 +5,8 @@ App.tempContent.innerHTML = modalContent
 closeModalListener('cancel_modal')
 
 var form = document.getElementById('create_job')
+var hospitalSelect = document.getElementById('select_hospital')
+var departmentSelect = document.getElementById('select_department')
 
 form.addEventListener('ajax:error', (event) => {
     let errorMessageDisplayElement = document.getElementById('error_messages')
@@ -12,3 +14,15 @@ form.addEventListener('ajax:error', (event) => {
     errorMessageDisplayElement.innerHTML =  message
 })
 
+hospitalSelect.addEventListener('change', () => {
+    var params = `hospital=${hospitalSelect.options[hospitalSelect.selectedIndex].value}`
+    Rails.ajax({
+        type: 'GET',
+        url: '<%= get_departments_path %>',
+        data: params,
+        success: (response) => {
+            departmentSelect.innerHTML = response.html;
+        }
+
+    })
+})

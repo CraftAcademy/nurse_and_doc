@@ -8,9 +8,11 @@ Rails.application.routes.draw do
     }
     root controller: :jobs, action: :index
     resources :jobs, only: [:new, :create, :destroy]
+    resources :departments, only: [:create]
     resources :invitations, only: [:create, :new]
     resources :staffcos, only: [:create, :index, :new, :destroy]
-    resources :hospitals, only: [:index, :create, :new, :destroy]
+    resources :hospitals, only: [:index, :create, :new, :show, :destroy]
     resources :regions, only: [:create, :new]
+    get :get_departments, controller: :departments, action: :get_departments
   end
 end

@@ -15,13 +15,14 @@
     = render partial: 'partials/header'
     .grid-container.bg-grey-darker
       = render partial: 'partials/sidebar'
+      = render partial: 'partials/rightbar'
       #content
+        - if notice || alert
+          #messages
+            = notice 
+            = alert 
         #temp_content
         #main_content
-          - if notice || alert
-            #messages
-              = notice 
-              = alert 
           = yield
       
     

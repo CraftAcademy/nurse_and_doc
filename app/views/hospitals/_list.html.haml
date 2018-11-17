@@ -1,0 +1,5 @@
+%ul
+    - hospital.departments.each do |department|
+        .list-grid
+            %li.list-name
+                = department.name

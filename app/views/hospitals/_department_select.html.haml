@@ -1,0 +1,5 @@
+.to-field-wrapper
+    .to-field-full-width
+        = label_tag 'job[department]', 'Department', class: "form-label"
+        = select_tag 'job[department]', options_for_select(hospital.departments.collect {|c| [ c.name ] }, { include_blank: true }), id: "select_department", class: "form-input-field"
+

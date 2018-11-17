@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_150059) do
+ActiveRecord::Schema.define(version: 2018_11_16_141742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2018_11_13_150059) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "hospital_id"
+    t.index ["hospital_id"], name: "index_departments_on_hospital_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_150059) do
     t.string "department"
     t.string "license"
     t.string "care_type"
+    t.bigint "hospital_id"
     t.text "requirements"
     t.string "other_requirements"
     t.text "description"
@@ -61,7 +64,6 @@ ActiveRecord::Schema.define(version: 2018_11_13_150059) do
     t.string "other_budget"
     t.text "other_comment"
     t.string "reference_number"
-    t.bigint "hospital_id"
     t.bigint "region_id"
     t.index ["hospital_id"], name: "index_jobs_on_hospital_id"
     t.index ["region_id"], name: "index_jobs_on_region_id"
@@ -129,6 +131,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_150059) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "departments", "hospitals"
   add_foreign_key "hospitals", "regions"
   add_foreign_key "jobs", "hospitals"
   add_foreign_key "jobs", "regions"

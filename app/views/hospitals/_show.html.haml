@@ -1,0 +1,13 @@
+#rightbar
+  #error_messages
+  .list-card
+    .form-header Departments 
+    .list-item.flex#list
+      = render partial: 'list', locals: {hospital: @hospital}
+    = form_with url: departments_path, scope: :department, id: :create_department  do |f|
+      = f.hidden_field :hospital_id, value: @hospital.id
+      .list-grid
+        .list-name
+          = f.text_field :name, class: "form-input-field"
+        .list-button-area
+          = f.submit value: "Add Department", class: "button text-center"

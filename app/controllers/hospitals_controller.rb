@@ -13,6 +13,10 @@ class HospitalsController < ApplicationController
     end
   end 
 
+ def show
+   @hospital = Hospital.find(params[:id])
+ end
+ 
   def destroy
     if Hospital.find(params[:id]).destroy
       redirect_to hospitals_path, notice: 'Hospital was successfully removed.'

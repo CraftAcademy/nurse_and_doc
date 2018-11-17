@@ -23,8 +23,8 @@ Feature: Posting a job to staffing companies with a webhook
             | Doctor |
 
         And the following department exists
-            | name    |
-            | Surgery |
+            | name    | hospital            |
+            | Surgery | stockholm sjukhuset |
 
         And the following caretype exists
             | name     |
@@ -47,6 +47,8 @@ Feature: Posting a job to staffing companies with a webhook
     Scenario: RSC posts a job to staffing companies using a webhook
         Then I should see "Create New Job"
         And I fill in the job form with "valid" information
+        And I select "stockholm sjukhuset" from "select_hospital"
+        And I select "Surgery" from "select_department"
         And I click on "Submit"
         And I should see "The job was successfully created"
         And I wait 2 seconds
